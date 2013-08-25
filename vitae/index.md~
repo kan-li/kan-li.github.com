@@ -1,16 +1,18 @@
 ---
 layout: page
-title: 简历
+title: Resume
 ---
 
-![avatar](http://www.pitt.edu/~lik25/image/myphoto.jpg)
+![avatar](/myphoto.jpg/)
+
+Please refer to the English Version on [Linkedin](www.linkedin.com/pub/kan-li/16/401/a33/).
 
 # 联系方式
 
-地址：A751 Parran Hall, Univ. of Pitt, Pittsburgh,PA；邮编：15261  
-Email：lik25@pitt.edu；主页：<http://www.pitt.edu/~lik25/>
+地址：1200 Herman Pressler Dr | Houston, TX 77030 
+Email：Kan.Li@uth.tmc.edu；主页：<http://kan-li.github.com>
 
-中文简历： [PDF](http://www.pitt.edu/~lik25/file/CV_Kan_Ch.pdf)； Curriculum Vitae： [PDF](http://www.pitt.edu/~lik25/file/CV_Kan.pdf)
+中文简历： [PDF](/Kan_CV_Ch.pdf/); Curriculum Vitae： [PDF](/Kan_CV_Ch.pdf/)
 
 # 研究兴趣
 
@@ -19,22 +21,24 @@ Email：lik25@pitt.edu；主页：<http://www.pitt.edu/~lik25/>
 
 # 教育背景
 
+- 2013.08 ~ 至今    德州大学健康科学中心， 生物统计博士（在读）
 - 2009.08 ~ 2011.05 匹兹堡大学，  工业工程硕士
 - 2005.09 ~ 2009.06 北京理工大学，过程装备与控制学士
 
 # 工作经历
 
-- 2011.9 ~ 至今	   匹兹堡大学公共卫生学院， 研究员
-- 2010.1 ~ 2011.8  匹兹堡大学工业工程系，   助理研究员
-- 2010.8 ~ 2011.5  匹兹堡大学工程学院，	   研究生助教
+- 2011.09 ~ 至今     匹兹堡大学公共卫生学院，  研究员
+- 2010.01 ~ 2011.08  匹兹堡大学工业工程系，    助理研究员
+- 2010.08 ~ 2011.05  匹兹堡大学工程学院，      研究生助教
 
 ### 参与项目
 
-- 2011.9 ~ 至今	Social Mixing And Respiratory Transmission in Schools ([SMART](http://www.smart.pitt.edu/))
-- 2010.1 ~ 2011.8 Vaccine Modeling Initiative ([VMI](https://vaccinemodeling.org/))
+- 2011.09 ~ 至今     Social Mixing And Respiratory Transmission in Schools ([SMART](http://www.smart.pitt.edu/))
+- 2010.01 ~ 2011.08  Vaccine Modeling Initiative ([VMI](https://vaccinemodeling.org/))
 
 # 获得奖励
 
+- 2013.08 德州大学优秀博士新生奖学金
 - 2010.01 匹兹堡大学研究生助研/助教助学金 2010.01~2011.08（全额）
 - 2009.06 北京理工大学2009届优秀毕业生
 - 2009.06 北京理工大学2009届优秀本科毕业论文《超临界直流炉给水控制系统的分析与设计》

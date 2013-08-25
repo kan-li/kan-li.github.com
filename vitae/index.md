@@ -5,14 +5,15 @@ title: Resume
 
 ![avatar](/myphoto.jpg/)
 
-Please refer to the English Version on [Linkedin](www.linkedin.com/pub/kan-li/16/401/a33/).
+Please refer to the English Version on [Linkedin](http://www.linkedin.com/pub/kan-li/16/401/a33/).
 
 # 联系方式
 
 地址：1200 Herman Pressler Dr | Houston, TX 77030 
+
 Email：Kan.Li@uth.tmc.edu；主页：<http://kan-li.github.com>
 
-中文简历： [PDF](/Kan_CV_Ch.pdf/); Curriculum Vitae： [PDF](/Kan_CV_Ch.pdf/)
+中文简历： [PDF](/Kan_CV_Ch.pdf/);  Curriculum Vitae： [PDF](/Kan_CV.pdf/)
 
 # 研究兴趣
 
