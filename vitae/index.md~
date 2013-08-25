@@ -10,7 +10,7 @@ title: 简历
 地址：A751 Parran Hall, Univ. of Pitt, Pittsburgh,PA；邮编：15261  
 Email：lik25@pitt.edu；主页：<http://www.pitt.edu/~lik25/>
 
-中文简历： [PDF](http://www.pitt.edu/~lik23/file/CV_Kan_Ch.pdf)； Curriculum Vitae： [PDF](http://www.pitt.edu/~lik25/file/CV_Kan.pdf)
+中文简历： [PDF](http://www.pitt.edu/~lik25/file/CV_Kan_Ch.pdf)； Curriculum Vitae： [PDF](http://www.pitt.edu/~lik25/file/CV_Kan.pdf)
 
 # 研究兴趣
 
