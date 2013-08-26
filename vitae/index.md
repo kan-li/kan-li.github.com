@@ -3,7 +3,7 @@ layout: page
 title: Resume
 ---
 
-![avatar](/myphoto.jpg/)
+![avatar](https://www.dropbox.com/s/i4avywopwflp0oz/myphoto.jpg)
 
 Please refer to the English Version on [Linkedin](http://www.linkedin.com/pub/kan-li/16/401/a33/).
 
@@ -13,7 +13,7 @@ Please refer to the English Version on [Linkedin](http://www.linkedin.com/pub/ka
 
 Email：Kan.Li@uth.tmc.edu；主页：<http://kan-li.github.com>
 
-中文简历： [PDF](/Kan_CV_Ch.pdf/);  Curriculum Vitae： [PDF](/Kan_CV.pdf/)
+中文简历： [PDF](/Kan_CV_Ch.pdf/);  Curriculum Vitae： [PDF](https://www.dropbox.com/s/bxgt1k2vbpcfj2p/Kan_CV.pdf)
 
 # 研究兴趣
 
@@ -52,12 +52,17 @@ Email：Kan.Li@uth.tmc.edu；主页：<http://kan-li.github.com>
 # 计算机水平
 
 - 语言：首选编程语言 Java, 统计计算语言[R](http://www.r-project.org/), VBA宏语言, 网页语言 HTML、CSS、JavaScript, 结构化查询语言 SQL, 有相关经验 Python、C/C++, <del> 汇编语言（快忘光）</del>
-- 统计软件： 熟悉 [R语言](http://www.r-project.org/), 略通 SAS, <del> 已弃用 Minitab、SPSS </del>
+- 统计软件： 熟悉 [R语言](http://www.r-project.org/), 掌握 SAS, <del> 已弃用 Minitab、SPSS </del>
 - 数学软件： 数值计算软件 MATLAB, 线性规划工具包及语言 [GLPK/GMPL](http://en.wikipedia.org/wiki/GNU_Linear_Programming_Kit), 数学规划优化软件 [CPLEX](http://en.wikipedia.org/wiki/CPLEX)
 - 仿真软件： 基于Agent的仿真软件 [Repast S](http://repast.sourceforge.net/index.html), 离散系统仿真软件 [Arena](http://www.arenasimulation.com/Arena_Home.aspx)
 - 应用程序：数据库管理系统[MySQL](http://www.mysql.com/), 专业排版软件[LaTeX](http://www.latex-project.org/), 文献管理工具 [Zotero](http://www.zotero.org), 微软Office
 - 操作系统：基于Linux内核的 [Ubuntu](http://www.ubuntu.com/)
 - 计算机等级：无任何等级证书，但是装的了电脑，写的了代码，建的了网站，设计的了数据库。
+
+# 认证
+
+- SAS Base Programming Certificate	 May 2013
+- SAS Advanced Programming Certificate  July 2013
 
 # 英语水平
 
