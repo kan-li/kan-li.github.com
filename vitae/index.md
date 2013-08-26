@@ -3,7 +3,7 @@ layout: page
 title: Resume
 ---
 
-![avatar](https://www.dropbox.com/s/i4avywopwflp0oz/myphoto.jpg)
+![avatar](http://i.imgur.com/1PM22bR.jpg)
 
 Please refer to the English Version on [Linkedin](http://www.linkedin.com/pub/kan-li/16/401/a33/).
 
@@ -61,8 +61,8 @@ Email：Kan.Li@uth.tmc.edu；主页：<http://kan-li.github.com>
 
 # 认证
 
-- SAS Base Programming Certificate	 May 2013
-- SAS Advanced Programming Certificate  July 2013
+- SAS Base Programming Certificate,	 May 2013
+- SAS Advanced Programming Certificate,  July 2013
 
 # 英语水平
 
