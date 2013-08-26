@@ -39,3 +39,6 @@ The project considers the problems of delivering vaccines effectively throughout
 ## Vial Wastage Analysis 
 Vaccine wastage is a significant problem especially at the clinic level when multi-dose vaccine vials are used.  Wastage rates vary across vial size, daily demands, administration frequency, planning horizon, order quantity and contamination. Several computational models and simulation models were developed to quantify the affection of those factors to vaccine wastage. 
 
+Update 
+
+
