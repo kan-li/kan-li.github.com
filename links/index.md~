@@ -4,7 +4,7 @@ layout: page
 comments: yes
 ---
 
-# 个人博客
+# Blogs
 
 - [Andrew Crooks](http://gisagents.blogspot.com/): George Mason University，GIS，Simulation，Social Science
 - [Aaron Bramson](http://bramson.net/): University of Michigan，Complexity，Philosophy，Mathematics
@@ -13,9 +13,10 @@ comments: yes
 - [Jeff Schank](http://www.agent-based-models.com/blog/): University of California-Davis，Agent-Based Models
 
 
-# 社团
+# Societies
 
 - [MIDAS](https://www.midas.pitt.edu/): Models of Infectious Disease Agent Study
+- [PHDL](https://www.phdl.pitt.edu/): Modeling and Simulation for Public Health
 - [Centre for Advanced Spatial Analysis](http://www.bartlett.ucl.ac.uk/casa/): Spatial Analysis，Network analysis，GIS
 - [Argonne National Lab](http://www.dis.anl.gov/index.html): Decision and Information Sciences
 - [Repast-interest Archives](http://sourceforge.net/mailarchive/forum.php?forum_name=repast-interest): Agent-Based Simulation
