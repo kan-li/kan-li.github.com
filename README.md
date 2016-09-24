@@ -1,4 +1,4 @@
-kan-li.github.com
+kan-li.github.io
 =================
 
 personal websit
