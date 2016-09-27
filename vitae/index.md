@@ -5,67 +5,99 @@ title: Resume
 
 ![avatar](http://i.imgur.com/1PM22bR.jpg)
 
-Please refer to the English Version on [Linkedin](http://www.linkedin.com/pub/kan-li/16/401/a33/).
+Email: kan.li@uth.tmc.edu
+Tel: (412) 706-3451 
+Web: kan-li.github.io
 
-# 联系方式
-
-地址：1200 Herman Pressler Dr | Houston, TX 77030 
-
-Email：Kan.Li@uth.tmc.edu；主页：<http://kan-li.github.com>
-
-中文简历： [PDF](/Kan_CV_Ch.pdf/);  Curriculum Vitae： [PDF](https://www.dropbox.com/s/bxgt1k2vbpcfj2p/Kan_CV.pdf)
-
-# 研究兴趣
-
-[Complex System](http://en.wikipedia.org/wiki/Complex_system)，[Multi-Agent System](http://en.wikipedia.org/wiki/Multi-agent_system)，[Computational Social Science](http://computationalsocialscience.org/)，[Spatial Epidemiology](http://en.wikipedia.org/wiki/Spatial_epidemiology)
+RAS-803N, Department of Biostatistics				                
+University of Texas Health Science Center at Houston		                
+Houston, Texas, 77030 						                
 
 
-# 教育背景
+#EDUCATION
 
-- 2013.08 ~ 至今    德州大学健康科学中心， 生物统计博士（在读）
-- 2009.08 ~ 2011.05 匹兹堡大学，  工业工程硕士
-- 2005.09 ~ 2009.06 北京理工大学，过程装备与控制学士
+The University of Texas Health Science Center at Houston 			          Houston, TX
+Ph.D. Candidate in Biostatistics    (GPA: 4.0/4.0)		    Expected Graduation: Dec. 2017
+Minor: Bioinformatics 			      
 
-# 工作经历
+University of Pittsburgh					                                  Pittsburgh, PA                                                                            
+M.S. in Industrial Engineering & Operations research   (GPA: 3.9/4.0)                                 May 2011   
 
-- 2011.09 ~ 至今     匹兹堡大学公共卫生学院，  研究员
-- 2010.01 ~ 2011.08  匹兹堡大学工业工程系，    助理研究员
-- 2010.08 ~ 2011.05  匹兹堡大学工程学院，      研究生助教
-
-### 参与项目
-
-- 2011.09 ~ 至今     Social Mixing And Respiratory Transmission in Schools ([SMART](http://www.smart.pitt.edu/))
-- 2010.01 ~ 2011.08  Vaccine Modeling Initiative ([VMI](https://vaccinemodeling.org/))
-
-# 获得奖励
-
-- 2013.08 德州大学优秀博士新生奖学金
-- 2010.01 匹兹堡大学研究生助研/助教助学金 2010.01~2011.08（全额）
-- 2009.06 北京理工大学2009届优秀毕业生
-- 2009.06 北京理工大学2009届优秀本科毕业论文《超临界直流炉给水控制系统的分析与设计》
-- 2007.12 国家教育部2006~2007学年度国家奖学金
-- 2007.05 北京理工大学2006~2007学年度“校级优秀共青团员”
-- 2006.07 北京理工大学2005~2006学年度“校级优秀学生”
-- 2006.01 北京理工大学2005~2009连续六学期“优秀学生奖学金”
+Beijing Institute of Technology 						        Beijing, China                
+B.S. in Electrical Engineering    (GPA: 3.7/4.0)     	    	                                          July 2009
+			                                                               	       
 
 
-# 计算机水平
+#WORK EXPERIENCE
 
-- 语言：首选编程语言 Java, 统计计算语言[R](http://www.r-project.org/), VBA宏语言, 网页语言 HTML、CSS、JavaScript, 结构化查询语言 SQL, 有相关经验 Python、C/C++, <del> 汇编语言（快忘光）</del>
-- 统计软件： 熟悉 [R语言](http://www.r-project.org/), 掌握 SAS, <del> 已弃用 Minitab、SPSS </del>
-- 数学软件： 数值计算软件 MATLAB, 线性规划工具包及语言 [GLPK/GMPL](http://en.wikipedia.org/wiki/GNU_Linear_Programming_Kit), 数学规划优化软件 [CPLEX](http://en.wikipedia.org/wiki/CPLEX)
-- 仿真软件： 基于Agent的仿真软件 [Repast S](http://repast.sourceforge.net/index.html), 离散系统仿真软件 [Arena](http://www.arenasimulation.com/Arena_Home.aspx)
-- 应用程序：数据库管理系统[MySQL](http://www.mysql.com/), 专业排版软件[LaTeX](http://www.latex-project.org/), 文献管理工具 [Zotero](http://www.zotero.org), 微软Office
-- 操作系统：基于Linux内核的 [Ubuntu](http://www.ubuntu.com/)
-- 计算机等级：无任何等级证书，但是装的了电脑，写的了代码，建的了网站，设计的了数据库。
+The University of Texas Health Science Center at Houston		     	           Houston, TX
+Graduate Research Assistant, Department of Biostatistics			                July  2015 – Present
+Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)
+•	Developed methods to incorporate longitudinal functional data in Bayesian joint models framework.
+•	Developed Bayesian longitudinal item response theory model to understand AD progression.
+•	Investigated approaches to handle computing issues for large-scale data and compute-intensive models.
 
-# 认证
+Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data 
+•	Analyzed HD progression using joint model of longitudinal and survival data.
+•	Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
+•	Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/) for clinical use. 
 
-- SAS Base Programming Certificate,	 May 2013
-- SAS Advanced Programming Certificate,  July 2013
+Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data 
+•	Fitted multilevel linear/generalized linear mixed models to examine the effect of consistent exercise and physical therapy to mobility and health-related quality of life in people with PD. 
+•	Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
 
-# 英语水平
 
-口语大致够用，听力基本无碍，阅读略有自信，写作比下有余。
+The University of Texas MD Anderson Cancer Center		     	          Houston, TX
+Research Assistant, Department of Health Service Research                          	           Jan. 2014 – June 2015
+Project: Treatment of Hepatitis C in Correctional Setting 
+•	Conducted survival analysis to estimate transition probability of HCV progression in a Markov model.
+•	Developed large-scale agent-based simulation models for health economic evaluation of intervention strategies in Hepatitis C prevention.
 
+University of Pittsburgh		     	       				    Pittsburgh, PA
+Research Associate, Center for Public Health Practice	                      	         Sep. 2011 - Aug. 2013
+Project: Social Mixing and Respiratory Transmission in Schools
+•	Fitted logistic regression model for classification based on participants’ features and contact patterns.
+•	Conducted simulation study of flu transmission on parameterized social networks.
+
+University of Pittsburgh		     	       				    Pittsburgh, PA
+Graduate Research Assistant, Department of Industrial Engineering        	         Jan. 2010 - Aug. 2011
+Project: Vaccine Modeling Initiative
+•	Applied linear programming and Markov decision process models to optimize the performance of vaccine supply chain in resource allocation and capabilities-based planning.
+•	Developed Excel VBA based spreadsheet tools for decision-making in vaccine administration.
+
+The University of Texas Health Science Center at Houston		     	      Houston, TX
+Teaching Assistant, Department of Biostatistics		                 Fall 2013, Spring 2014, Fall 2016 
+•	Graduate-level courses: Linear Model; Categorical data analysis; Statistical Computing 
+
+
+# TECHNICAL SKILLS
+
+•	Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
+•	Programming language: Java, Python, Shell, SQL, VBA. 
+
+
+# CERTIFICATIONS
+
+•	SAS Advanced Programming Certificate for SAS 9			                             July 2013
+•	SAS Base Programming Certificate for SAS 9                                            May 2013 
+
+# HONORS
+
+R. Hardy and C. Morton Hawkins Endowed Scholarship       The University of Texas Health Science Center  May. 2016
+Doctoral Outstanding New Student Scholarship                      The University of Texas Health Science Center  Aug. 2013
+
+# PUBLICATIONS
+1.	**Li, K**., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)
+2.	**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s & Dementia. (Invited to Resubmit)
+3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.
+
+
+#COURSE WORK
+
+Multiple Regression Analysis (SAS, R) 	Correlate data Analysis (R)	Survival Analysis (SAS, R)
+Multivariate Statistical Analysis  (SAS, R) 	Time Series Analysis (R)	Distribution free methods (R)
+Categorical Data Analysis (SAS, STATA) 	Linear Model (R)	Sampling Techniques (R) 
+Bayesian Data Analysis (R, WinBugs)	Theory of Statistics I, II	Data Mining (R)
+Nonparametric Regression (R) 	Stochastic Process (R)	Design of Experiments
+Statistical Computing (R, WinBugs, LaTex) 	Practical Bioinformatics (R, Python)
 
