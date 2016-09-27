@@ -5,9 +5,9 @@ comments: yes
 ---
 # Biography
 
-I am a first year Ph.D. student in Division of Biostatistics, University of Texas-Health Science Center.
+I am currently a Ph.D. student in [Department of Biostatistics](https://sph.uth.edu/divisions/biostatistics/), University of Texas-Health Science Center. My dissertation is *Functional Joint Model of Longitudinal and Time-to-Event data*, advised by Dr. [Luo](https://daj9cl0xcfutq.cloudfront.net/cv/luo.pdf). My research interests are Bayesian modeling, Joint model of longitudinal and survival analysis, personalized dynamic prediction, functional data, item response theory and clinical trial. The methodology developments are mainly motivated by clinical study of neurodegenerative diseases including Parkinson's, Alzheimer's, and Huntington's disease.
 
-I used to be a research associate at GSPH – Center for Public Health Practice, University of Pittsburgh. I got my M.Sc. degree in Department of Industrial Engineering. My research interest is application of quantitative methods (mathematical modeling, statistics and simulation) in medical sciences and health care services. My previous research work focused on operational and management issues in healthcare delivery, agent based model of disease dynamics, and social network analysis relevant for infectious disease transmission.
+I am a big fun of jigsaw puzzles. 
 
 
 

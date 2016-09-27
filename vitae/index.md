@@ -6,7 +6,9 @@ title: Resume
 ![avatar](http://i.imgur.com/1PM22bR.jpg)
 
 Email: kan.li@uth.tmc.edu
+
 Tel: (412) 706-3451 
+
 Web: kan-li.github.io
 
 RAS-803N, Department of Biostatistics				                
@@ -16,14 +18,19 @@ Houston, Texas, 77030
 
 #EDUCATION
 
-The University of Texas Health Science Center at Houston 			          Houston, TX
+The University of Texas Health Science Center at Houston Houston, TX
+
 Ph.D. Candidate in Biostatistics    (GPA: 4.0/4.0)		    Expected Graduation: Dec. 2017
+
 Minor: Bioinformatics 			      
 
-University of Pittsburgh					                                  Pittsburgh, PA                                                                            
-M.S. in Industrial Engineering & Operations research   (GPA: 3.9/4.0)                                 May 2011   
+University of Pittsburgh					                                  Pittsburgh, PA 
+                                                                           
+M.S. in Industrial Engineering & Operations research   (GPA:3.9/4.0)                                 May 2011 
+  
 
-Beijing Institute of Technology 						        Beijing, China                
+Beijing Institute of Technology 						        Beijing, China        
+        
 B.S. in Electrical Engineering    (GPA: 3.7/4.0)     	    	                                          July 2009
 			                                                               	       
 
@@ -31,59 +38,86 @@ B.S. in Electrical Engineering    (GPA: 3.7/4.0)     	    	                     
 #WORK EXPERIENCE
 
 The University of Texas Health Science Center at Houston		     	           Houston, TX
+
 Graduate Research Assistant, Department of Biostatistics			                July  2015 – Present
+
 Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)
+
 •	Developed methods to incorporate longitudinal functional data in Bayesian joint models framework.
+
 •	Developed Bayesian longitudinal item response theory model to understand AD progression.
+
 •	Investigated approaches to handle computing issues for large-scale data and compute-intensive models.
 
 Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data 
+
 •	Analyzed HD progression using joint model of longitudinal and survival data.
+
 •	Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
+
 •	Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/) for clinical use. 
 
 Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data 
+
 •	Fitted multilevel linear/generalized linear mixed models to examine the effect of consistent exercise and physical therapy to mobility and health-related quality of life in people with PD. 
+
 •	Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
 
 
 The University of Texas MD Anderson Cancer Center		     	          Houston, TX
+
 Research Assistant, Department of Health Service Research                          	           Jan. 2014 – June 2015
-Project: Treatment of Hepatitis C in Correctional Setting 
+
+Project: Treatment of Hepatitis C in Correctional Setting
+ 
 •	Conducted survival analysis to estimate transition probability of HCV progression in a Markov model.
+
 •	Developed large-scale agent-based simulation models for health economic evaluation of intervention strategies in Hepatitis C prevention.
 
 University of Pittsburgh		     	       				    Pittsburgh, PA
+
 Research Associate, Center for Public Health Practice	                      	         Sep. 2011 - Aug. 2013
+
 Project: Social Mixing and Respiratory Transmission in Schools
+
 •	Fitted logistic regression model for classification based on participants’ features and contact patterns.
+
 •	Conducted simulation study of flu transmission on parameterized social networks.
 
 University of Pittsburgh		     	       				    Pittsburgh, PA
+
 Graduate Research Assistant, Department of Industrial Engineering        	         Jan. 2010 - Aug. 2011
+
 Project: Vaccine Modeling Initiative
+
 •	Applied linear programming and Markov decision process models to optimize the performance of vaccine supply chain in resource allocation and capabilities-based planning.
+
 •	Developed Excel VBA based spreadsheet tools for decision-making in vaccine administration.
 
 The University of Texas Health Science Center at Houston		     	      Houston, TX
+
 Teaching Assistant, Department of Biostatistics		                 Fall 2013, Spring 2014, Fall 2016 
+
 •	Graduate-level courses: Linear Model; Categorical data analysis; Statistical Computing 
 
 
 # TECHNICAL SKILLS
 
 •	Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
+
 •	Programming language: Java, Python, Shell, SQL, VBA. 
 
 
 # CERTIFICATIONS
 
 •	SAS Advanced Programming Certificate for SAS 9			                             July 2013
+
 •	SAS Base Programming Certificate for SAS 9                                            May 2013 
 
 # HONORS
 
 R. Hardy and C. Morton Hawkins Endowed Scholarship       The University of Texas Health Science Center  May. 2016
+
 Doctoral Outstanding New Student Scholarship                      The University of Texas Health Science Center  Aug. 2013
 
 # PUBLICATIONS
@@ -95,9 +129,14 @@ Doctoral Outstanding New Student Scholarship                      The University
 #COURSE WORK
 
 Multiple Regression Analysis (SAS, R) 	Correlate data Analysis (R)	Survival Analysis (SAS, R)
+
 Multivariate Statistical Analysis  (SAS, R) 	Time Series Analysis (R)	Distribution free methods (R)
+
 Categorical Data Analysis (SAS, STATA) 	Linear Model (R)	Sampling Techniques (R) 
+
 Bayesian Data Analysis (R, WinBugs)	Theory of Statistics I, II	Data Mining (R)
+
 Nonparametric Regression (R) 	Stochastic Process (R)	Design of Experiments
+
 Statistical Computing (R, WinBugs, LaTex) 	Practical Bioinformatics (R, Python)
 
