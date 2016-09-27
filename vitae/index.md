@@ -5,11 +5,11 @@ title: Resume
 
 ![avatar](http://i.imgur.com/1PM22bR.jpg)
 
-Email: kan.li@uth.tmc.edu
+Email: kan.li@uth.tmc.edu		         
 
-Tel: (412) 706-3451 
+Tel: (412) 706-3451		          
 
-Web: kan-li.github.io
+Web: kan-li.github.io 		         
 
 RAS-803N, Department of Biostatistics				                
 University of Texas Health Science Center at Houston		                
@@ -18,7 +18,7 @@ Houston, Texas, 77030
 
 #EDUCATION
 
-The University of Texas Health Science Center at Houston Houston, TX
+The University of Texas Health Science Center at Houston Houston, TX		         
 
 Ph.D. Candidate in Biostatistics    (GPA: 4.0/4.0)		    Expected Graduation: Dec. 2017
 
@@ -35,7 +35,7 @@ B.S. in Electrical Engineering    (GPA: 3.7/4.0)     	    	                     
 			                                                               	       
 
 
-#WORK EXPERIENCE
+# WORK EXPERIENCE
 
 The University of Texas Health Science Center at Houston		     	           Houston, TX
 
@@ -126,7 +126,7 @@ Doctoral Outstanding New Student Scholarship                      The University
 3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.
 
 
-#COURSE WORK
+# COURSE WORK
 
 Multiple Regression Analysis (SAS, R) 	Correlate data Analysis (R)	Survival Analysis (SAS, R)
 
