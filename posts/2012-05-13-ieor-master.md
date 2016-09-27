@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 细说IEOR
+title: IEOR 101
 categories: [Discover]
 tags: [IEOR, Master, Job, PhD, Research]
 ---
