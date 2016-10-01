@@ -6,6 +6,7 @@ title: Resume
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
 [Employment](#Employment)
+
 <span id="Technical">
 ***
 ##Technical Strengths
@@ -21,6 +22,7 @@ title: Resume
 ## Education
 ---
 </span>
+
 <img align="right" src="http://li-kan.com/image/uth.jpg">
 #### Ph.D. Candidate in Biostatistics, The University of Texas Health Science Center at Houston	
 _Expected Dec 2017_
