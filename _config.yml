@@ -1,6 +1,5 @@
-markdown: rdiscount
+markdown: kramdown
 permalink: /:year/:month/:title/
-url: http://www.yiwenshi.com
-author: Yiwen Shi
-pygments: true
+url: http://kan-li.github.com
+author: Kan_Li
 
