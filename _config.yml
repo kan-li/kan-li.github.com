@@ -1,5 +1,5 @@
-markdown: kramdown
+markdown: rdiscount
 permalink: /:year/:month/:title/
-url: http://kan-li.github.com
-author: Kan_Li
-
+url: http://li-kan.com
+author: Kan Li
+pygments: true
