@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="/media/css/style.css">
     <link rel="stylesheet" href="/media/css/highlight.css">
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+          $(window).scroll(function(){
+              if ($(this).scrollTop() > 50) {
+                  $('#backToTop').fadeIn('slow');
+              } else {
+                  $('#backToTop').fadeOut('slow');
+              }
+          });
+          $('#backToTop').click(function(){
+              $("html, body").scrollTop(0);
+              return false;
+          });
+      });
+    </script>
   </head>
   <body>
     <div id="container">
@@ -17,16 +32,15 @@
         <h1>{{ page.title }}</h1>
         </header>
         <nav>
-	<span><a title="about" class="" href="{{ site.url }}/about/">about</a></span>	
-   	<span><a title="post" class="" href="{{ site.url }}/posts/">post</a></span> 	
-        <span><a title="vitae" class="" href="{{ site.url }}/vitae/">vitae</a></span>
-   	<!--<span><a title="research" class="" href="{{ site.url }}/research/">research</a></span> -->
-        <span><a title="tags" class="" href="{{ site.url }}/tags/">tags</a></span>
-        <!--<span><a title="links" class="" href="{{ site.url }}/links/">links</a></span> -->
-        <span><a title="subscribe by RSS" class="" href="{{ site.url }}/feed/">subscribe</a></span>
+        <span><a title="home" class="" href="{{ site.url }}/">home</a></span>	
+        <span><a title="resume" class="" href="{{ site.url }}/resume/">resume</a></span>
+        <span><a title="project" class="" href="{{ site.url }}/project/">project</a></span>
+        <span><a title="activity" class="" href="{{ site.url }}/activity/">activity</a></span>
+        <span><a title="Contact" class="" href="{{ site.url }}/contact/">Contact</a></span>
         </nav>
         <article class="content">
         {{ content }}
+          <a href="#" ID="backToTop"></a>
         </article>
       </div>
     </div>
