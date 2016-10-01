@@ -5,11 +5,11 @@ title: Resume
 
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
-[Employment](#Employment)
+[Employment](#Employment)<br>
 
 <span id="Technical">
 ***
-##Technical Strengths
+## Technical Strengths
 ---
 </span>
 
