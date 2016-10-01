@@ -3,7 +3,43 @@ layout: page
 title: Resume
 ---
 
-![avatar](http://i.imgur.com/1PM22bR.jpg)
+[Technical Strengths](#Technical)<br>
+[Education](#Education)<br>
+[Employment](#Employment)
+<span id="Technical">
+***
+##Technical Strengths
+---
+</span>
+
+- Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
+- Programming Languages: Java, Python, Shell, SQL, VBA. 
+
+
+<span id="Education">
+***
+## Education
+---
+</span>
+<img align="right" src="http://li-kan.com/image/uth.jpg">
+#### Ph.D. Candidate in Biostatistics, The University of Texas Health Science Center at Houston	
+_Expected Dec 2017_
+
+- GPA: 4.0/4.0
+- Minor: Bioinformatics
+
+<img align="right" src="http://li-kan.com/image/upitts.jpg">
+#### M.S. in Industrial Engineering & Operations Research, University of Pittsburgh
+_May. 2011_
+
+- GPA: 3.9/4.0
+
+<img align="right" src="http://li-kan.com/image/bit.jpg">
+#### B.S. in Electrical Engineering, Beijing Institute of Technology
+_Jul. 2009_
+
+- GPA: 3.7/4.0
+
 
 Email: kan.li@uth.tmc.edu		         
 
@@ -14,24 +50,6 @@ Web: kan-li.github.io
 RAS-803N, Department of Biostatistics				                
 University of Texas Health Science Center at Houston		                
 Houston, Texas, 77030 						                
-
-
-#EDUCATION
-
-The University of Texas Health Science Center at Houston Houston, TX		         
-
-Ph.D. Candidate in Biostatistics    (GPA: 4.0/4.0)		    Expected Graduation: Dec. 2017
-
-Minor: Bioinformatics 			      
-
-University of Pittsburgh					                                  Pittsburgh, PA 
-                                                                           
-M.S. in Industrial Engineering & Operations research   (GPA:3.9/4.0)                                 May 2011 
-  
-
-Beijing Institute of Technology 						        Beijing, China        
-        
-B.S. in Electrical Engineering    (GPA: 3.7/4.0)     	    	                                          July 2009
 			                                                               	       
 
 
