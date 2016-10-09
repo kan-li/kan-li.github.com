@@ -129,15 +129,11 @@ _May 2013_
 ---
 </span>
 
-R. Hardy and C. Morton Hawkins Endowed Scholarship
-
-The University of Texas Health Science Center 
+- R.Hardy and C. Morton Hawkins Endowed Scholarship, The University of Texas Health Science Center 
 
 _May. 2016_
 
-Doctoral Outstanding New Student Scholarship
-
-The University of Texas Health Science Center
+- Doctoral Outstanding New Student Scholarship, The University of Texas Health Science Center
 
 _Aug. 2013_
 
