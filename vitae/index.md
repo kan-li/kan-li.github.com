@@ -3,6 +3,16 @@ layout: page
 title: Resume
 ---
 
+***
+## Summary
+---
+
+- Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Functional data analysis; Item response theory; Clinical trial. 
+- Proficient in R, SAS, WinBugs, and implementing parallel computing on HPC clusters.
+- Willing to learn and accept constructive criticism.
+- Outstanding teamwork building ability and strong interpersonal skills.                                                            
+
+---
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
 [Employment](#Employment)<br>
