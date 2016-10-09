@@ -5,7 +5,11 @@ title: Resume
 
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
-[Employment](#Employment)
+[Employment](#Employment)<br>
+[Certifications](#Certifications)<br>
+[Honers](#Honers)<br>
+[Publications](#Publications)<br>
+[CourseWork](#CourseWork)<br>
 <span id="Technical">
 ***
 ## Technical Strengths
@@ -66,42 +70,105 @@ _July 2015 – Present_
 - Fitted multilevel linear/generalized linear mixed models to examine the effect of consistent exercise and physical therapy to mobility and health-related quality of life in people with PD. 
 - Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
 
+<br>
 
-The University of Texas MD Anderson Cancer Center		     	          Houston, TX
+#### Research Assistant, Department of Health Service, The University of Texas MD Anderson Cancer Center
+_Jan. 2014 – June 2015_
 
-Research Assistant, Department of Health Service Research                          	           Jan. 2014 – June 2015
-
-Project: Treatment of Hepatitis C in Correctional Setting
+**Project: Treatment of Hepatitis C in Correctional Setting**
  
-•	Conducted survival analysis to estimate transition probability of HCV progression in a Markov model.
+- Conducted survival analysis to estimate transition probability of HCV progression in a Markov model.
+- Developed large-scale agent-based simulation models for health economic evaluation of intervention strategies in Hepatitis C prevention.
 
-•	Developed large-scale agent-based simulation models for health economic evaluation of intervention strategies in Hepatitis C prevention.
+<br>
 
-University of Pittsburgh		     	       				    Pittsburgh, PA
+#### Teaching Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
+_Fall 2013, Spring 2014, Fall 2016_
 
-Research Associate, Center for Public Health Practice	                      	         Sep. 2011 - Aug. 2013
+- Graduate-level courses: Linear Model; Categorical data analysis; Statistical Computing 
 
-Project: Social Mixing and Respiratory Transmission in Schools
+<br>
 
-•	Fitted logistic regression model for classification based on participants’ features and contact patterns.
+#### Research Associate, Center for Public Health Practice, University of Pittsburgh
+_Sep. 2011 - Aug. 2013_
 
-•	Conducted simulation study of flu transmission on parameterized social networks.
+**Project: Social Mixing and Respiratory Transmission in Schools**
 
-University of Pittsburgh		     	       				    Pittsburgh, PA
+- Fitted logistic regression model for classification based on participants’ features and contact patterns.
+- Conducted simulation study of flu transmission on parameterized social networks.
 
-Graduate Research Assistant, Department of Industrial Engineering        	         Jan. 2010 - Aug. 2011
+<br>
 
-Project: Vaccine Modeling Initiative
+#### Graduate Research Assistant, Department of Industrial Engineering, University of Pittsburgh		     	       			
+_Jan. 2010 - Aug. 2011_
 
-•	Applied linear programming and Markov decision process models to optimize the performance of vaccine supply chain in resource allocation and capabilities-based planning.
+**Project: Vaccine Modeling Initiative**
 
-•	Developed Excel VBA based spreadsheet tools for decision-making in vaccine administration.
+- Applied linear programming and Markov decision process models to optimize the performance of vaccine supply chain in resource allocation and capabilities-based planning.
+- Developed Excel VBA based spreadsheet tools for decision-making in vaccine administration.
 
-The University of Texas Health Science Center at Houston		     	      Houston, TX
 
-Teaching Assistant, Department of Biostatistics		                 Fall 2013, Spring 2014, Fall 2016 
+<span id="Certifications">
+***
+## Certifications
+---
+</span>
 
-•	Graduate-level courses: Linear Model; Categorical data analysis; Statistical Computing 
+- SAS Advanced Programming Certificate for SAS 9
+_July 2013_
+
+- SAS Base Programming Certificate for SAS 9
+_May 2013_
+
+
+<span id="Honers">
+***
+## Honers
+---
+</span>
+
+R. Hardy and C. Morton Hawkins Endowed Scholarship
+The University of Texas Health Science Center 
+_May. 2016_
+
+Doctoral Outstanding New Student Scholarship
+The University of Texas Health Science Center
+_Aug. 2013_
+
+
+<span id="Publications">
+***
+## Publications
+---
+</span>
+
+1.	**Li, K**., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)
+2.	**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s & Dementia. (Invited to Resubmit)
+3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.
+
+
+<span id="CourseWork">
+***
+## Course Work
+---
+</span>
+
+Multiple Regression Analysis (SAS, R)
+Correlate data Analysis (R)
+Survival Analysis (SAS, R)
+Multivariate Statistical Analysis  (SAS, R)
+Time Series Analysis (R)
+Distribution free methods (R)
+Categorical Data Analysis (SAS, STATA) 	
+Linear Model (R)
+Sampling Techniques (R) 
+Bayesian Data Analysis (R, WinBugs)	
+Theory of Statistics I, II	Data Mining (R)
+Nonparametric Regression (R)
+Stochastic Process (R)	
+Design of Experiments Statistical Computing (R, WinBugs, LaTex)
+Practical Bioinformatics (R, Python)
+
 
 
 
@@ -113,44 +180,5 @@ Web: kan-li.github.io
 
 RAS-803N, Department of Biostatistics				                
 University of Texas Health Science Center at Houston		                
-Houston, Texas, 77030 						                
-			                                                               	       
-
-
-# WORK EXPERIENCE
-
-
-
-
-# CERTIFICATIONS
-
-•	SAS Advanced Programming Certificate for SAS 9			                             July 2013
-
-•	SAS Base Programming Certificate for SAS 9                                            May 2013 
-
-# HONORS
-
-R. Hardy and C. Morton Hawkins Endowed Scholarship       The University of Texas Health Science Center  May. 2016
-
-Doctoral Outstanding New Student Scholarship                      The University of Texas Health Science Center  Aug. 2013
-
-# PUBLICATIONS
-1.	**Li, K**., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)
-2.	**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s & Dementia. (Invited to Resubmit)
-3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.
-
-
-# COURSE WORK
-
-Multiple Regression Analysis (SAS, R) 	Correlate data Analysis (R)	Survival Analysis (SAS, R)
-
-Multivariate Statistical Analysis  (SAS, R) 	Time Series Analysis (R)	Distribution free methods (R)
-
-Categorical Data Analysis (SAS, STATA) 	Linear Model (R)	Sampling Techniques (R) 
-
-Bayesian Data Analysis (R, WinBugs)	Theory of Statistics I, II	Data Mining (R)
-
-Nonparametric Regression (R) 	Stochastic Process (R)	Design of Experiments
-
-Statistical Computing (R, WinBugs, LaTex) 	Practical Bioinformatics (R, Python)
+Houston, Texas, 77030 	
 
