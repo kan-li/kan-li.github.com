@@ -115,9 +115,11 @@ _Jan. 2010 - Aug. 2011_
 </span>
 
 - SAS Advanced Programming Certificate for SAS 9
+
 _July 2013_
 
 - SAS Base Programming Certificate for SAS 9
+
 _May 2013_
 
 
@@ -128,11 +130,15 @@ _May 2013_
 </span>
 
 R. Hardy and C. Morton Hawkins Endowed Scholarship
+
 The University of Texas Health Science Center 
+
 _May. 2016_
 
 Doctoral Outstanding New Student Scholarship
+
 The University of Texas Health Science Center
+
 _Aug. 2013_
 
 
@@ -153,21 +159,21 @@ _Aug. 2013_
 ---
 </span>
 
-Multiple Regression Analysis (SAS, R)
-Correlate data Analysis (R)
-Survival Analysis (SAS, R)
-Multivariate Statistical Analysis  (SAS, R)
-Time Series Analysis (R)
-Distribution free methods (R)
-Categorical Data Analysis (SAS, STATA) 	
-Linear Model (R)
-Sampling Techniques (R) 
-Bayesian Data Analysis (R, WinBugs)	
-Theory of Statistics I, II	Data Mining (R)
-Nonparametric Regression (R)
-Stochastic Process (R)	
-Design of Experiments Statistical Computing (R, WinBugs, LaTex)
-Practical Bioinformatics (R, Python)
+- Multiple Regression Analysis (SAS, R)
+- Correlate data Analysis (R)
+- Survival Analysis (SAS, R)
+- Multivariate Statistical Analysis  (SAS, R)
+- Time Series Analysis (R)
+- Distribution free methods (R)
+- Categorical Data Analysis (SAS, STATA) 	
+- Linear Model (R)
+- Sampling Techniques (R) 
+- Bayesian Data Analysis (R, WinBugs)	
+- Theory of Statistics I, II	Data Mining (R)
+- Nonparametric Regression (R)
+- Stochastic Process (R)	
+- Design of Experiments Statistical Computing (R, WinBugs, LaTex)
+- Practical Bioinformatics (R, Python)
 
 
 
@@ -179,6 +185,6 @@ Tel: (412) 706-3451
 Web: kan-li.github.io 		         
 
 RAS-803N, Department of Biostatistics				                
-University of Texas Health Science Center at Houston		                
+University of Texas Health Science Center at Houston
 Houston, Texas, 77030 	
 
