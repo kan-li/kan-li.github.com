@@ -6,7 +6,6 @@ title: Resume
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
 [Employment](#Employment)
-
 <span id="Technical">
 ***
 ## Technical Strengths
@@ -47,22 +46,22 @@ _Jul. 2009_
 ---
 </span>
 
-Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
+#### Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
 _July 2015 – Present_
 
-Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)
+**Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)**
 
 - Developed methods to incorporate longitudinal functional data in Bayesian joint models framework.
 - Developed Bayesian longitudinal item response theory model to understand AD progression.
 - Investigated approaches to handle computing issues for large-scale data and compute-intensive models.
 
-Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data 
+**Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data**
 
 - Analyzed HD progression using joint model of longitudinal and survival data.
 - Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
 - Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/) for clinical use. 
 
-Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data 
+**Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data** 
 
 - Fitted multilevel linear/generalized linear mixed models to examine the effect of consistent exercise and physical therapy to mobility and health-related quality of life in people with PD. 
 - Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
