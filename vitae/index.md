@@ -2,8 +2,6 @@
 layout: page
 title: Resume
 ---
-
-***
 ## Summary
 ---
 
@@ -185,17 +183,3 @@ _Aug. 2013_
 - Stochastic Process (R)	
 - Design of Experiments Statistical Computing (R, WinBugs, LaTex)
 - Practical Bioinformatics (R, Python)
-
-
-
-
-Email: kan.li@uth.tmc.edu		         
-
-Tel: (412) 706-3451		          
-
-Web: kan-li.github.io 		         
-
-RAS-803N, Department of Biostatistics				                
-University of Texas Health Science Center at Houston
-Houston, Texas, 77030 	
-
