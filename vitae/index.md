@@ -50,6 +50,7 @@ _Jul. 2009_
 ---
 </span>
 
+<img align="right" src="http://li-kan.com/image/uth.jpg">
 #### Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
 _July 2015 – Present_
 
@@ -72,6 +73,7 @@ _July 2015 – Present_
 
 <br>
 
+<img align="right" src="http://li-kan.com/image/mda.png">
 #### Research Assistant, Department of Health Service, The University of Texas MD Anderson Cancer Center
 _Jan. 2014 – June 2015_
 
@@ -82,6 +84,7 @@ _Jan. 2014 – June 2015_
 
 <br>
 
+<img align="right" src="http://li-kan.com/image/uth.jpg">
 #### Teaching Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
 _Fall 2013, Spring 2014, Fall 2016_
 
@@ -89,6 +92,7 @@ _Fall 2013, Spring 2014, Fall 2016_
 
 <br>
 
+<img align="right" src="http://li-kan.com/image/upitts.jpg">
 #### Research Associate, Center for Public Health Practice, University of Pittsburgh
 _Sep. 2011 - Aug. 2013_
 
@@ -99,6 +103,7 @@ _Sep. 2011 - Aug. 2013_
 
 <br>
 
+<img align="right" src="http://li-kan.com/image/upitts.jpg">
 #### Graduate Research Assistant, Department of Industrial Engineering, University of Pittsburgh		     	       			
 _Jan. 2010 - Aug. 2011_
 
