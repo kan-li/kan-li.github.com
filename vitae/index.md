@@ -5,7 +5,7 @@ title: Resume
 
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
-[Employment](#Employment)<br>
+[Employment](#Employment)
 
 <span id="Technical">
 ***
@@ -41,46 +41,31 @@ _Jul. 2009_
 
 - GPA: 3.7/4.0
 
+<span id="Employment">
+***
+## Employment
+---
+</span>
 
-Email: kan.li@uth.tmc.edu		         
-
-Tel: (412) 706-3451		          
-
-Web: kan-li.github.io 		         
-
-RAS-803N, Department of Biostatistics				                
-University of Texas Health Science Center at Houston		                
-Houston, Texas, 77030 						                
-			                                                               	       
-
-
-# WORK EXPERIENCE
-
-The University of Texas Health Science Center at Houston		     	           Houston, TX
-
-Graduate Research Assistant, Department of Biostatistics			                July  2015 – Present
+Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
+_July 2015 – Present_
 
 Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)
 
-•	Developed methods to incorporate longitudinal functional data in Bayesian joint models framework.
-
-•	Developed Bayesian longitudinal item response theory model to understand AD progression.
-
-•	Investigated approaches to handle computing issues for large-scale data and compute-intensive models.
+- Developed methods to incorporate longitudinal functional data in Bayesian joint models framework.
+- Developed Bayesian longitudinal item response theory model to understand AD progression.
+- Investigated approaches to handle computing issues for large-scale data and compute-intensive models.
 
 Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data 
 
-•	Analyzed HD progression using joint model of longitudinal and survival data.
-
-•	Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
-
-•	Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/) for clinical use. 
+- Analyzed HD progression using joint model of longitudinal and survival data.
+- Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
+- Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/) for clinical use. 
 
 Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data 
 
-•	Fitted multilevel linear/generalized linear mixed models to examine the effect of consistent exercise and physical therapy to mobility and health-related quality of life in people with PD. 
-
-•	Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
+- Fitted multilevel linear/generalized linear mixed models to examine the effect of consistent exercise and physical therapy to mobility and health-related quality of life in people with PD. 
+- Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
 
 
 The University of Texas MD Anderson Cancer Center		     	          Houston, TX
@@ -120,11 +105,22 @@ Teaching Assistant, Department of Biostatistics		                 Fall 2013, Spr
 •	Graduate-level courses: Linear Model; Categorical data analysis; Statistical Computing 
 
 
-# TECHNICAL SKILLS
 
-•	Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
+Email: kan.li@uth.tmc.edu		         
 
-•	Programming language: Java, Python, Shell, SQL, VBA. 
+Tel: (412) 706-3451		          
+
+Web: kan-li.github.io 		         
+
+RAS-803N, Department of Biostatistics				                
+University of Texas Health Science Center at Houston		                
+Houston, Texas, 77030 						                
+			                                                               	       
+
+
+# WORK EXPERIENCE
+
+
 
 
 # CERTIFICATIONS
