@@ -4,8 +4,8 @@ title: Resume
 ---
 <br>
 ## Summary
-- Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Functional data analysis; Item response theory; Clinical trial. 
-- Proficient in R, SAS, WinBugs, and implementing parallel computing on HPC clusters.
+- Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Multivariate data analysis; Functional data analysis; Item response theory; Clinical trial. 
+- Proficient in R, SAS, Stan, WinBugs, and implementing parallel computing on HPC clusters.
 - Willing to learn and accept constructive criticism.
 - Outstanding teamwork building ability and strong interpersonal skills.                                                            
 
@@ -170,15 +170,17 @@ _Aug. 2013_
 - Multiple Regression Analysis (SAS, R)
 - Correlate data Analysis (R)
 - Survival Analysis (SAS, R)
+- Bayesian Data Analysis (R, WinBugs)	
 - Multivariate Statistical Analysis  (SAS, R)
-- Time Series Analysis (R)
+- Categorical Data Analysis (SAS, STATA)
+- Statistical Computing (R, WinBugs, LaTex)
+- Data Mining (R)
+- Nonparametric Regression (R)
 - Distribution free methods (R)
-- Categorical Data Analysis (SAS, STATA) 	
 - Linear Model (R)
 - Sampling Techniques (R) 
-- Bayesian Data Analysis (R, WinBugs)	
-- Theory of Statistics I, II	Data Mining (R)
-- Nonparametric Regression (R)
+- Theory of Statistics I, II	
+- Time Series Analysis (R)
 - Stochastic Process (R)	
-- Design of Experiments Statistical Computing (R, WinBugs, LaTex)
+- Design of Experiments 
 - Practical Bioinformatics (R, Python)
