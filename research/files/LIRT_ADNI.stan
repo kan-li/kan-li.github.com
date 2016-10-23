@@ -1,0 +1,179 @@
+////////////////////////////////////////////////////////
+// June 2 2016
+// Kan Li
+//
+// This file contains code for bayesian longitudinal item  
+// response theory model for ADNI study. In this code we 
+// assume a unidimensional latent variable to 
+// represent disease status.
+///////////////////////////////////////////////////////
+
+data {
+  int<lower=0> N;
+  int<lower=0> obs;
+  int subject[obs]; // subject ID
+  int<lower=0> K_ordi;  // number of ordinal outcomes
+  int<lower=0> K_ordi_other;
+  int<lower=0> n_ordi_Q1;  // number of possible scores of Q1
+  int<lower=0> n_ordi_Q7;
+  int<lower=0> n_ordi_Q8; 
+  int<lower=0> n_ordi_other; 
+  int<lower=0> Y_ordi_Q1[obs];  // outcome Q1
+  int<lower=0> Y_ordi_Q7[obs];
+  int<lower=0> Y_ordi_Q8[obs];
+  int<lower=0> Y_ordi_other[obs, K_ordi_other];
+  vector[2] zero;
+  real<lower=0> time[obs];   
+  real<lower=0> age[obs];
+  int<lower=0> APOE4[obs];
+}
+parameters {
+  vector[4] beta;
+  vector[2] U[N];
+  real<lower=0> var1;
+  real<lower=0> var2;
+  real<lower=-1, upper=1> rho;
+  real e[obs];
+  real<lower=0> var_e;
+  
+  real a_ordi_Q7_temp;
+  real a_ordi_Q8_temp;
+  vector[K_ordi_other] a_ordi_other_temp;
+  real<lower=0> b_ordi_Q7_temp;
+  real<lower=0> b_ordi_Q8_temp;
+  vector<lower=0>[K_ordi_other] b_ordi_other_temp;
+  
+  vector<lower=0>[n_ordi_Q1-2] delta_Q1;
+  vector<lower=0>[n_ordi_Q7-2] delta_Q7;
+  vector<lower=0>[n_ordi_Q8-2] delta_Q8;
+  vector<lower=0>[n_ordi_other-2] delta_other[K_ordi_other];
+}
+transformed parameters {
+  real<lower=0> sig1;
+  real<lower=0> sig2;
+  cov_matrix[2] Sigma_U;
+  real<lower=0> sd_e;
+  
+  vector[n_ordi_Q1-1] a_ordi_Q1;
+  vector[n_ordi_Q7-1] a_ordi_Q7;
+  vector[n_ordi_Q8-1] a_ordi_Q8;
+  vector[n_ordi_other-1] a_ordi_other[K_ordi_other];
+  
+  real<lower=0> b_ordi_Q1;
+  real<lower=0> b_ordi_Q7;
+  real<lower=0> b_ordi_Q8;
+  vector<lower=0>[K_ordi_other] b_ordi_other;
+  real theta[obs];
+  
+  vector<lower=0, upper=1>[n_ordi_Q1] psi_Q1[obs];
+  vector<lower=0, upper=1>[n_ordi_Q7] psi_Q7[obs];
+  vector<lower=0, upper=1>[n_ordi_Q8] psi_Q8[obs];
+  real<lower=0, upper=1> psi_other[obs, K_ordi_other, n_ordi_other];
+  
+  vector<lower=0, upper=1>[n_ordi_Q1] prob_Q1[obs];
+  vector<lower=0, upper=1>[n_ordi_Q7] prob_Q7[obs];
+  vector<lower=0, upper=1>[n_ordi_Q8] prob_Q8[obs];
+  vector<lower=0, upper=1>[n_ordi_other] prob_other[obs, K_ordi_other];
+  
+  a_ordi_Q1[1] <- 0; 
+  for (l in 2:(n_ordi_Q1-1)) a_ordi_Q1[l] <- a_ordi_Q1[l-1] + delta_Q1[l-1];
+  b_ordi_Q1 <- 1;
+  
+  a_ordi_Q7[1] <- a_ordi_Q7_temp; 
+  for (l in 2:(n_ordi_Q7-1)) a_ordi_Q7[l] <- a_ordi_Q7[l-1] + delta_Q7[l-1];
+  b_ordi_Q7 <- b_ordi_Q7_temp;
+  
+  a_ordi_Q8[1] <- a_ordi_Q8_temp; 
+  for (l in 2:(n_ordi_Q8-1)) a_ordi_Q8[l] <- a_ordi_Q8[l-1] + delta_Q8[l-1];
+  b_ordi_Q8 <- b_ordi_Q8_temp;
+  
+  for (k in 1:K_ordi_other) {
+    a_ordi_other[k, 1] <- a_ordi_other_temp[k];
+    for (l in 2:(n_ordi_other-1)) a_ordi_other[k, l] <- a_ordi_other[k, l-1] + delta_other[k, l-1];
+	b_ordi_other[k] <- b_ordi_other_temp[k];
+  }
+
+  
+  for (i in 1:obs)
+    theta[i] <- beta[1] + beta[2]*time[i] + beta[3]*age[i] + beta[4]*APOE4[i] + U[subject[i], 1] +  U[subject[i], 2]*time[i] + e[i];
+  
+  for (i in 1:obs) {
+	
+	for (l in 1:(n_ordi_Q1-1)) {
+      psi_Q1[i, l] <- inv_logit(a_ordi_Q1[l] - b_ordi_Q1*theta[i]);
+    }
+    psi_Q1[i, n_ordi_Q1] <- 1;
+    prob_Q1[i, 1] <- psi_Q1[i, 1];
+    for (l in 2:n_ordi_Q1) {prob_Q1[i, l] <- psi_Q1[i, l] - psi_Q1[i, l-1];}
+	
+	for (l in 1:(n_ordi_Q7-1)) {
+      psi_Q7[i, l] <- inv_logit(a_ordi_Q7[l] - b_ordi_Q7*theta[i]);
+    }
+    psi_Q7[i, n_ordi_Q7] <- 1;
+    prob_Q7[i, 1] <- psi_Q7[i, 1];
+    for (l in 2:n_ordi_Q7) {prob_Q7[i, l] <- psi_Q7[i, l] - psi_Q7[i, l-1];}
+	
+	for (l in 1:(n_ordi_Q8-1)) {
+      psi_Q8[i, l] <- inv_logit(a_ordi_Q8[l] - b_ordi_Q8*theta[i]);
+    }
+    psi_Q8[i, n_ordi_Q8] <- 1;
+    prob_Q8[i, 1] <- psi_Q8[i, 1];
+    for (l in 2:n_ordi_Q8) {prob_Q8[i, l] <- psi_Q8[i, l] - psi_Q8[i, l-1];}
+  
+    for (k in 1:K_ordi_other) {
+      for (l in 1:(n_ordi_other-1)) {
+        psi_other[i, k, l] <- inv_logit(a_ordi_other[k, l] - b_ordi_other[k]*theta[i]);
+      }
+      psi_other[i, k, n_ordi_other] <- 1;
+      prob_other[i, k, 1] <- psi_other[i, k, 1];
+      for (l in 2:n_ordi_other) {prob_other[i, k, l] <- psi_other[i, k, l] - psi_other[i, k, l-1];}
+    }
+  }
+
+  sd_e <- sqrt(var_e);
+  sig1 <- sqrt(var1);
+  sig2 <- sqrt(var2);
+  Sigma_U[1,1] <- sig1*sig1;
+  Sigma_U[1,2] <- rho*sig1*sig2;
+  Sigma_U[2,1] <- Sigma_U[1,2];
+  Sigma_U[2,2] <- sig2*sig2;
+}
+model {
+  real h[N];
+  real S[N];
+  real LL[N];
+  
+  // construct random effects
+  U ~ multi_normal(zero, Sigma_U);
+  e ~ normal(0, sd_e);
+  
+  for (i in 1:obs) {
+	Y_ordi_Q1[i] ~ categorical(prob_Q1[i]);
+	Y_ordi_Q7[i] ~ categorical(prob_Q7[i]);
+	Y_ordi_Q8[i] ~ categorical(prob_Q8[i]);
+    for (k in 1:K_ordi_other) {
+      Y_ordi_other[i, k] ~ categorical(prob_other[i, k]);
+    }
+  }
+  
+  // construct the priors
+  beta ~ normal(0, 10);
+  var1 ~ inv_gamma(0.01, 0.01);
+  var2 ~ inv_gamma(0.01, 0.01);
+  rho ~ uniform(-1, 1);
+  var_e ~ inv_gamma(0.01, 0.01);
+  
+  for (i in 1:(n_ordi_Q1-2)) delta_Q1[i] ~ normal(0, 10) T[0,] ;
+  for (i in 1:(n_ordi_Q7-2)) delta_Q7[i] ~ normal(0, 10) T[0,] ;
+  for (i in 1:(n_ordi_Q8-2)) delta_Q8[i] ~ normal(0, 10) T[0,] ;
+  a_ordi_Q7_temp ~ normal(0, 10);
+  b_ordi_Q7_temp ~ uniform(0, 10);
+  a_ordi_Q8_temp ~ normal(0, 10);
+  b_ordi_Q8_temp ~ uniform(0, 10);
+   
+  for (k in 1:K_ordi_other) {
+    b_ordi_other_temp ~ uniform(0, 10);
+    a_ordi_other_temp ~ normal(0, 10);
+    for (i in 1:(n_ordi_other-2)) delta_other[k, i] ~ normal(0, 10) T[0,] ;
+  }
+}

@@ -43,12 +43,174 @@
         </nav>
         <article class="content">
         <section class="about">
+<p><a href="#FDA">Functional Data Analysis</a><br>
+<a href="#DP">Dynamic Prediction</a><br>
+<a href="#MLT">Multivariate Longitudinal Outcomes</a><br>
+<a href="#ABM">Agent Based Modeling</a><br>
+<a href="#DM">Data Mining</a><br></p>
+
+<p>Other interesting works: <br>
+Beta rectangular regression; Parallel MCMC; Rcpp application</p>
+
+<p><span id="FDA"></p>
+
+<hr />
+
+<h2>Functional Data Analysis</h2>
+
+<hr />
+
+<p></span></p>
+
+<p><span id="FJM"></p>
+
+<h3>Functional Joint Models for Longitudinal and Time-to-Event Data: An Application to Alzheimer's Disease <a href="files/2016JSM.pdf" target="_blank">[slides]</a> <br></h3>
+
+<p>Studies for Alzheimer's disease (AD) often collect repeated measurements of clinical variables, event history, and functional data, to better understand the disease. An accurate prediction of the time to dementia based on the information is particularly helpful for physicians to monitor patients' disease progression and make informative medical decisions. I proposed a functional joint model (<strong>FJM</strong>) to account for functional predictors (high dimensional magnetic resonance imaging) in both longitudinal and survival submodels in the joint modeling framework. The FJM provides the accurate dynamic prediction of target patients' future outcome trajectories and risk of AD conversion, based on both scalar and functional measures.  The proposed model is evaluated by a simulation study and is applied to the Alzheimer's Disease Neuroimaging Initiative (ADNI) study, a motivating clinical study testing whether serial brain imaging, clinical and neuropsychological assessments can be combined to measure the progression of Alzheimer's disease.</p>
+
+<p>Hippocampus surface morphology data
+<img src="files/Hippo_HRD.png" id="mainImg0" class="mainImgStyle">
+</span>
+<br></p>
+
+<p><span id="DP"></p>
+
+<hr />
+
+<h2>Dynamic Prediction</h2>
+
+<hr />
+
+<p></span></p>
+
+<p><span id="PREDICT_HD"></p>
+
+<h3>Dynamic prediction of motor diagnosis in Huntington’s disease using a joint modeling approach <a href="https://kanli.shinyapps.io/HD_prediction/" target="_blank">[Web App]</a> <br></h3>
+
+<p>Prediction of the diagnosis of Huntington’s disease (HD) can be improved by incorporating other phenotypic and biological clinical measures in addition to cytosine-adenine-guanine (CAG) repeat length and age. I constructed a mixed-effect model to describe the change of markers while jointly modeling the mixed-effects model with time-to-event data (HD diagnoses). The model was then used to build subject-specific prediction risk models. The time-dependent receiver operating characteristic (ROC) method were employed to assess the discriminating capability of the measures to identify high or low risk patients. The strongest predictor was used to illustrate the dynamic prediction of the event free probability and future health outcome for three hypothetical patients. The web-based calculator I developed could be an easily accessible tool for physicians to make prognostic predictions for premandifest patients and facilitate the medical decision-making process.</p>
+
+<p>The dynamic prediction of future health outcome (left) and survival probability (right) for patients with low, medium and high risk of HD disease.
+<img src="files/PREDIC_HD_fig2.png" id="mainImg1" class="mainImgStyle"></p>
+
+<div id="div1" onclick="changeImg(event,'mainImg1')" class="imgStyle">
+    <ul class="imgStyle"> 
+        <li class="imgStyle"><img src="files/PREDIC_HD_fig2.png"/></li>
+        <li class="imgStyle"><img src="files/PREDIC_HD_fig3.png"/></li>
+    </ul>
+</div>
+
+
+<p></span>
+<br></p>
+
+<p><span id="MLT"></p>
+
+<hr />
+
+<h2>Multivariate Longitudinal Outcomes</h2>
+
+<hr />
+
+<p></span></p>
+
+<p><span id="IRT"></p>
+
+<h3>Bayesian longitudinal item response theory model to estimate disease progression and treatment effects for Alzheimer'd diseae</h3>
+
+<p>The item response theory (IRT) model is used to analysis multi-level questionnaire data. Traditionally, total score are used as a summary for these multi-item questionnaires. However, people with same total score may have quite different scores for each specific question. In clinical studies, especially for neurodegenerative disease, multivariate health outcomes are collected longitudinally to measure the development of a subject’s health status and treatment effects over time. IRT model provide a structure to describe the relationship between the observed multivariate outcomes and one or more continuous latent variables that represent disease status. I constructed a longitudinal item response model and applied it to Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset to estimate disease progression and intervention effects. (Stan <a href="files/LIRT_ADNI.stan" target="_blank">code</a> of the unidimensional longitudinal IRT model for ADNI application)</p>
+
+<p>Latent cognitive dysfunction of MCI patients over time
+<img src="files/Traject_MCI.png" id="mainImg2" class="mainImgStyle">
+</span>
+<br></p>
+
+<p><span id="ABM"></p>
+
+<hr />
+
+<h2>Agent Based Modeling</h2>
+
+<hr />
+
+<p></span></p>
+
+<p><span id="HepC"></p>
+
+<h3>Treatment of Hepatitis C in Correctional Setting <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a><br></h3>
+
+<p>The prevalence of hepatitis C virus (HCV) in United States prisoners is high; however, HCV testing and treatment is rare. Infected inmates released back into society contribute to the spread of HCV in the general population. Routine hepatitis screening of inmates followed by treatment with new therapies offers hope to reduce ongoing HCV transmission. we developed the TapHCV (treatment as prevention of hepatitis C virus) model, an agent-based microsimulation model that predict the long-term benefits and costs of different HCV screening and treatment scenarios in US prisons. The model includes HCV disease transmission, the natural history of HCV based on parameterized Markov model, HCV screening in inmates, treatment of HCV infection with DAAs, and movement of people in and out of prisons. We simulated the disease and its progression both in prisons and in the general population to understand the complex dynamics between prison-related interventions and disease burden in society as a whole (Figure). The model was developed in the Java programming language.</p>
+
+<p><img src="files/HCV.png" id="mainImg3" class="mainImgStyle">
+</span>
+<br></p>
+
+<p><span id="SMART"></p>
+
+<h3>Social Mixing And Respiratory Transmission in Schools <a href="https://http://smart.pitt.edu/" target="_blank">(SMART)</a><br></h3>
+
+<p>A CDC founded project that attempts to quantify the contact pattern of school age children and study respiratory transmission in school settings. I developed an agent-based simulation models of infectious disease transmission and evaluated intervention strategies via simulation and statistical analysis <a href="http://www.smart.pitt.edu/archive/simudemo/bhhs.swf.html" target="_blank">(animation)</a>.<br>
+I also parsed large data set to reconstruct social contact networks, conducted network analysis and parameterized simulation models. The figure blow display the heat map of contact duration matrix between students in a high school. The contact pattern predicted from  simulation model (left panel) is similar to the contact pattern constructed from real contact data (right panal).</p>
+
+<p><img src="files/SMART.png" id="mainImg4" class="mainImgStyle">
+</span>
+<br></p>
+
+<p><span id="DP"></p>
+
+<hr />
+
+<h2>Data Mining</h2>
+
+<hr />
+
+<p></span></p>
+
+<p><span id="sparseSVM"></p>
+
+<h3>Classification of Alzheimer’s Disease patient base on gene expression data <a href="https://" target="_blank">[Post]</a><br></h3>
+
+<p>The work aims to classify patient with Alzheimer’s Disease (AD) using 500 gene expression. Two methods were adopted to carry out classification: <strong>sparse logistic regression</strong> and <strong>sparse support vector machine</strong>. We assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
+</span>
+<br></p>
+
+<p><span id="PubMed"></p>
+
+<h3>Querying PubMed with python <a href="https://" target="_blank">[Code]</a><br></h3>
+
+<p>The objective of this project is searching PubMed data for a topic of interest and parse the retrieved information automatically.  The project is written in Python and served as a beta version of paper recommendation engine and literature review tool. This tool can fetch the searching results via PbuMed public API Entrez Database, summarize the results based on words frequency, conduct association rule mining on keywords sets using Apriori algorithm, make recommendation and provide results visualization.</p>
+
+<p>Word cloud generated from the searching results of Alzheimer’s Disease
+<img src="files/wordcloud_AD.png" id="mainImg5" class="mainImgStyle">
+</span>
+<br></p>
+
+<p><span id="EMcluster"></p>
+
+<h3>Clustering using <strong>EM algorithm</strong> in Multivariate Gaussian Mixture Models</h3>
+
+<p>The purpose of this project is to implement expectation maximization (EM) algorithms to determine the structure of clustered data, with or without prior knowledge of the number of clusters. In practice, each cluster can be mathematically represented by a parametric distribution. The entire data set is therefore modeled by a mixture of these distributions.
+For clustering, we need to address the issue of determining the number of clusters within the data as well.  Figueiredo and Jain proposed a robust EM to deal simultaneously with the number of clusters and also the estimate of parameters for mixture models by using the particular form of a minimum message length (MML) criterion. I improved Figueiredo-Jain Algorithm to ensures the algorithm converge faster and be more rousted. The proposed model is evaluated by simulation studies and is applied to the real data retrieved from the UCI Machine Learning Repository.</p>
+
+<p>Visualize the iteration of fitting a Gaussian mixture using the proposed method in unsupervised study (with overlapping).
+<img src="files/EMcluster.png" id="mainImg5" class="mainImgStyle">
+</span>
+<br></p>
+
+<script type="text/javascript">
+    function changeImg(event, mainimg)
+    {
+        event = event || window.event;
+        var targetElement = event.target || event.srcElement;
+        document.getElementById(mainimg).src = targetElement.getAttribute("src");
+    }
+</script>
 
 
 </section>
 
 
 
+        <a href="#" ID="backToTop"></a>
         </article>
       </div>
     </div>

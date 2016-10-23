@@ -2,12 +2,13 @@
 layout: page
 title: Resume
 ---
-Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a>
-
+<!--- Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a> -->
 <br>
+
 ## Summary
 - Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Multivariate data analysis; Functional data analysis; Item response theory; Clinical trial. 
 - Proficient in R, SAS, Stan, WinBugs, and implementing parallel computing on HPC clusters.
+- Rich experience in modeling and solving complex system problems using Agent-based modeling, Linear programming, Dynamic Programming, Markov Decision Process.
 - Willing to learn and accept constructive criticism.
 - Outstanding teamwork building ability and strong interpersonal skills.                                                            
 
@@ -18,7 +19,7 @@ Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]
 [Certifications](#Certifications)<br>
 [Honers](#Honers)<br>
 [Publications](#Publications)<br>
-[CourseWork](#CourseWork)<br>
+[Course Work](#CourseWork)<br>
 <span id="Technical">
 ***
 ## Technical Strengths
@@ -27,7 +28,7 @@ Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]
 
 - Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
 - Programming Languages: Java, Python, Shell, Julia, SQL, VBA. 
-- Operation System: Linux
+- Platforms: Linux, Windows
 
 
 <span id="Education">
@@ -66,14 +67,14 @@ _July 2015 – Present_
 
 **Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)**
 
-- Developed methods to incorporate longitudinal functional data in Bayesian joint models framework.
-- Developed Bayesian longitudinal item response theory model to understand AD progression.
+- Developed methods to incorporate longitudinal functional data in Bayesian joint models framework. <a href="{{ site.url }}/research/#FJM" target="_blank">[abstract]</a>
+- Developed Bayesian longitudinal item response theory model to estimate AD progression. <a href="{{ site.url }}/research/#IRT" target="_blank">[abstract]</a>
 - Investigated approaches to handle computing issues for large-scale data and compute-intensive models.
 
-**Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data**
+**Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data** 
 
-- Analyzed HD progression using joint model of longitudinal and survival data.
-- Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
+- Analyzed HD progression using joint model of longitudinal and survival data. <a href="{{ site.url }}/research/#PREDICT_HD target="_blank">[abstract]</a>
+- Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis. 
 - Developed Web-based App of <a href="https://kanli.shinyapps.io/HD_prediction/" target="_blank">HD prediction tool</a> for clinical use. 
 
 **Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data** 
@@ -90,7 +91,7 @@ _Jan. 2014 – June 2015_
 **Project: Treatment of Hepatitis C in Correctional Setting**
  
 - Conducted survival analysis to estimate transition probability of HCV progression in a Markov model.
-- Developed large-scale agent-based simulation models for health economic evaluation of intervention strategies in Hepatitis C prevention.
+- Developed large-scale agent-based simulation models for health economic evaluation of intervention strategies in Hepatitis C prevention. <a href="{{ site.url }}/research/#HepC" target="_blank">[abstract]</a>
 
 <br>
 
@@ -108,8 +109,9 @@ _Sep. 2011 - Aug. 2013_
 
 **Project: Social Mixing and Respiratory Transmission in Schools**
 
+- Served in multiple roles and cooperated with other researchers to achieve the project objectives of each phase, including data collection, data management, analyzing, and publication preparation.
 - Fitted logistic regression model for classification based on participants’ features and contact patterns.
-- Conducted simulation study of flu transmission on parameterized social networks.
+- Conducted simulation study of flu transmission on parameterized social networks. <a href="{{ site.url }}/research/#SMART" target="_blank">[abstract]</a>
 
 <br>
 
