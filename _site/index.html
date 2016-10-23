@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="/media/css/style.css">
     <link rel="stylesheet" href="/media/css/highlight.css">
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+          $(window).scroll(function(){
+              if ($(this).scrollTop() > 50) {
+                  $('#backToTop').fadeIn('slow');
+              } else {
+                  $('#backToTop').fadeOut('slow');
+              }
+          });
+          $('#backToTop').click(function(){
+              $("html, body").scrollTop(0);
+              return false;
+          });
+      });
+    </script>
   </head>
   <body>
     <div id="container">
@@ -30,7 +45,7 @@
         <section class="about">
 <h1>Biography</h1>
 
-<p>I am currently a Ph.D. student in <a href="https://sph.uth.edu/divisions/biostatistics/">Department of Biostatistics</a>{:target="<em>blank"}, University of Texas-Health Science Center. My dissertation is <em>Functional Joint Model of Longitudinal and Time-to-Event data</em>, advised by <a href="https://daj9cl0xcfutq.cloudfront.net/cv/luo.pdf">Dr. Luo</a>{:target="</em>blank"}. My research interests are Bayesian modeling, Joint model of longitudinal and survival analysis, personalized dynamic prediction, multivariate analysis, functional data, item response theory and clinical trial. The methodology developments are mainly motivated by clinical study of neurodegenerative diseases including Parkinson's, Alzheimer's, and Huntington's disease.</p>
+<p>I am currently a Ph.D. student in <a href="https://sph.uth.edu/divisions/biostatistics/" target="_blank">Department of Biostatistics</a>, University of Texas-Health Science Center. My dissertation is <em>Functional Joint Model of Longitudinal and Time-to-Event data</em>, advised by <a href="https://daj9cl0xcfutq.cloudfront.net/cv/luo.pdf" target="_blank">Dr. Sheng Luo</a>. My research interests are Bayesian modeling, Joint model of longitudinal and survival analysis, personalized dynamic prediction, multivariate analysis, functional data, item response theory and clinical trial. The methodology developments are mainly motivated by clinical study of neurodegenerative diseases including Parkinson's, Alzheimer's, and Huntington's disease.</p>
 
 <p>I am a big fun of jigsaw puzzles.</p>
 

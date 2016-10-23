@@ -2,7 +2,7 @@
 layout: page
 title: Resume
 ---
-Resume: [PDF]({{ site.url }}/files/Kan_Resume_2016.pdf){:target="_blank"}
+Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a>
 
 <br>
 ## Summary
@@ -25,8 +25,9 @@ Resume: [PDF]({{ site.url }}/files/Kan_Resume_2016.pdf){:target="_blank"}
 ---
 </span>
 
-- Statistical Packages: R, SAS, Stan, WinBugs, Julia, Rcpp, Shiny.
-- Programming Languages: Java, Python, Shell, SQL, VBA. 
+- Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
+- Programming Languages: Java, Python, Shell, Julia, SQL, VBA. 
+- Operation System: Linux
 
 
 <span id="Education">
@@ -73,7 +74,7 @@ _July 2015 – Present_
 
 - Analyzed HD progression using joint model of longitudinal and survival data.
 - Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
-- Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/){:target="_blank"} for clinical use. 
+- Developed Web-based App of <a href="https://kanli.shinyapps.io/HD_prediction/" target="_blank">HD prediction tool</a> for clinical use. 
 
 **Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data** 
 
@@ -151,6 +152,14 @@ _May. 2016_
 
 _Aug. 2013_
 
+- Outstanding Graduating Student (Top 5%), Beijing Institute of Technology
+
+_Jun. 2009_
+
+- National Scholarship (Top 1%), Chinese Ministries of Education
+
+_Dec. 2007_
+
 
 <span id="Publications">
 ***
@@ -160,7 +169,7 @@ _Aug. 2013_
 
 1.	**Li, K**., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)
 2.	**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s & Dementia. (Invited to Resubmit)
-3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.[Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/){:target="_blank"}
+3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a>
 
 
 <span id="CourseWork">

@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="/media/css/style.css">
     <link rel="stylesheet" href="/media/css/highlight.css">
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+          $(window).scroll(function(){
+              if ($(this).scrollTop() > 50) {
+                  $('#backToTop').fadeIn('slow');
+              } else {
+                  $('#backToTop').fadeOut('slow');
+              }
+          });
+          $('#backToTop').click(function(){
+              $("html, body").scrollTop(0);
+              return false;
+          });
+      });
+    </script>
   </head>
   <body>
     <div id="container">
@@ -28,7 +43,7 @@
         </nav>
         <article class="content">
         <section class="about">
-<p>Resume: <a href="http://li-kan.com/files/Kan_Resume_2016.pdf">PDF</a>{:target="_blank"}</p>
+<p>Resume: <a href="http://li-kan.com/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a></p>
 
 <p><br></p>
 
@@ -62,8 +77,9 @@
 <p></span></p>
 
 <ul>
-<li>Statistical Packages: R, SAS, Stan, WinBugs, Julia, Rcpp, Shiny.</li>
-<li>Programming Languages: Java, Python, Shell, SQL, VBA.</li>
+<li>Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.</li>
+<li>Programming Languages: Java, Python, Shell, Julia, SQL, VBA.</li>
+<li>Operation System: Linux</li>
 </ul>
 
 
@@ -140,7 +156,7 @@
 <ul>
 <li>Analyzed HD progression using joint model of longitudinal and survival data.</li>
 <li>Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.</li>
-<li>Developed Web-based App of <a href="https://kanli.shinyapps.io/HD_prediction/">HD prediction tool</a>{:target="_blank"} for clinical use.</li>
+<li>Developed Web-based App of <a href="https://kanli.shinyapps.io/HD_prediction/" target="_blank">HD prediction tool</a> for clinical use.</li>
 </ul>
 
 
@@ -261,6 +277,20 @@
 
 <p><em>Aug. 2013</em></p>
 
+<ul>
+<li>Outstanding Graduating Student (Top 5%), Beijing Institute of Technology</li>
+</ul>
+
+
+<p><em>Jun. 2009</em></p>
+
+<ul>
+<li>National Scholarship (Top 1%), Chinese Ministries of Education</li>
+</ul>
+
+
+<p><em>Dec. 2007</em></p>
+
 <p><span id="Publications"></p>
 
 <hr />
@@ -274,7 +304,7 @@
 <ol>
 <li><strong>Li, K</strong>., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)</li>
 <li><strong>Li, K</strong>., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s &amp; Dementia. (Invited to Resubmit)</li>
-<li>He, T., <strong>Li, K</strong>., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/">Paper</a>{:target="_blank"}</li>
+<li>He, T., <strong>Li, K</strong>., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a></li>
 </ol>
 
 
