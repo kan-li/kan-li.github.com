@@ -2,6 +2,8 @@
 layout: page
 title: Resume
 ---
+Resume: [PDF]({{ site.url }}/files/Kan_Resume_2016.pdf){:target="_blank"}
+
 <br>
 ## Summary
 - Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Multivariate data analysis; Functional data analysis; Item response theory; Clinical trial. 
@@ -23,7 +25,7 @@ title: Resume
 ---
 </span>
 
-- Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
+- Statistical Packages: R, SAS, Stan, WinBugs, Julia, Rcpp, Shiny.
 - Programming Languages: Java, Python, Shell, SQL, VBA. 
 
 
@@ -32,20 +34,20 @@ title: Resume
 ## Education
 ---
 </span>
-<img align="right" src="http://li-kan.com/image/uth.jpg">
+<img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Ph.D. Candidate in Biostatistics, The University of Texas Health Science Center at Houston	
 _Expected Dec 2017_
 
 - GPA: 4.0/4.0
 - Minor: Bioinformatics
 
-<img align="right" src="http://li-kan.com/image/upitts.jpg">
+<img align="right" src="{{ site.url }}/image/upitts.jpg">
 #### M.S. in Industrial Engineering & Operations Research, University of Pittsburgh
 _May. 2011_
 
 - GPA: 3.9/4.0
 
-<img align="right" src="http://li-kan.com/image/bit.jpg">
+<img align="right" src="{{ site.url }}/image/bit.jpg">
 #### B.S. in Electrical Engineering, Beijing Institute of Technology
 _Jul. 2009_
 
@@ -57,7 +59,7 @@ _Jul. 2009_
 ---
 </span>
 
-<img align="right" src="http://li-kan.com/image/uth.jpg">
+<img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
 _July 2015 – Present_
 
@@ -71,7 +73,7 @@ _July 2015 – Present_
 
 - Analyzed HD progression using joint model of longitudinal and survival data.
 - Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis.
-- Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/) for clinical use. 
+- Developed Web-based App of [HD prediction tool](https://kanli.shinyapps.io/HD_prediction/){:target="_blank"} for clinical use. 
 
 **Project: Longitudinal analyses of National Parkinson Foundation Quality Improvement Initiative data** 
 
@@ -80,7 +82,7 @@ _July 2015 – Present_
 
 <br>
 
-<img align="right" src="http://li-kan.com/image/mda.png">
+<img align="right" src="{{ site.url }}/image/mda.png">
 #### Research Assistant, Department of Health Service, The University of Texas MD Anderson Cancer Center
 _Jan. 2014 – June 2015_
 
@@ -91,7 +93,7 @@ _Jan. 2014 – June 2015_
 
 <br>
 
-<img align="right" src="http://li-kan.com/image/uth.jpg">
+<img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Teaching Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
 _Fall 2013, Spring 2014, Fall 2016_
 
@@ -99,7 +101,7 @@ _Fall 2013, Spring 2014, Fall 2016_
 
 <br>
 
-<img align="right" src="http://li-kan.com/image/upitts.jpg">
+<img align="right" src="{{ site.url }}/image/upitts.jpg">
 #### Research Associate, Center for Public Health Practice, University of Pittsburgh
 _Sep. 2011 - Aug. 2013_
 
@@ -110,7 +112,7 @@ _Sep. 2011 - Aug. 2013_
 
 <br>
 
-<img align="right" src="http://li-kan.com/image/upitts.jpg">
+<img align="right" src="{{ site.url }}/image/upitts.jpg">
 #### Graduate Research Assistant, Department of Industrial Engineering, University of Pittsburgh		     	       			
 _Jan. 2010 - Aug. 2011_
 
@@ -158,7 +160,7 @@ _Aug. 2013_
 
 1.	**Li, K**., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)
 2.	**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s & Dementia. (Invited to Resubmit)
-3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.
+3.	He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine.[Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/){:target="_blank"}
 
 
 <span id="CourseWork">
@@ -171,7 +173,7 @@ _Aug. 2013_
 - Correlate data Analysis (R)
 - Survival Analysis (SAS, R)
 - Bayesian Data Analysis (R, WinBugs)	
-- Multivariate Statistical Analysis  (SAS, R)
+- Multivariate Statistical Analysis (SAS, R)
 - Categorical Data Analysis (SAS, STATA)
 - Statistical Computing (R, WinBugs, LaTex)
 - Data Mining (R)

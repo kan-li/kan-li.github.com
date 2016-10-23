@@ -49,3 +49,45 @@ pre,code{font-family:Menlo,"Andale Mono",Consolas,"Courier New",Monaco,monospace
 code{background-color:#F7F7F7;}
 embed,object,iframe{display:block;margin:4px auto;}
 .gist{font-size: 12px;line-height:1.6;}
+
+.mainImgStyle{
+	border: gray 1px solid;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.imgStyle
+{
+	height: 100px;
+	width: 100px;
+	padding: 2px;
+	display:inline; vertical-align:middle;
+}
+
+
+.imgStyle img {
+	height: 100px;
+	width: 100px;
+    display:inline;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.imgStyle img:hover {
+	cursor: hand;
+	border: 2px solid rgba(255, 255, 255, .5);
+}
+
+a#backToTop {
+    width:110px;
+    height:110px;
+    opacity:0.5;
+    position:fixed;
+    bottom:5px;
+    left:75%;
+    display:none;
+    text-indent:-10000px;
+    outline:none !important;
+    background-image: url('BackToTop.png');
+    background-repeat: no-repeat;
+}
