@@ -3,7 +3,6 @@ layout: page
 title: Resume
 ---
 <!--- Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a> -->
-<br>
 
 ## Summary
 - Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Multivariate data analysis; Functional data analysis; Item response theory; Clinical trial. 
@@ -73,7 +72,7 @@ _July 2015 – Present_
 
 **Project: Personalized Dynamic Prediction of Huntington’s disease (HD) using PREDICT-HD data** 
 
-- Analyzed HD progression using joint model of longitudinal and survival data. <a href="{{ site.url }}/research/#PREDICT_HD target="_blank">[abstract]</a>
+- Analyzed HD progression using joint model of longitudinal and survival data. <a href="{{ site.url }}/research/#PREDICT_HD" target="_blank">[abstract]</a>
 - Conducted dynamic prediction of future health outcome and risk of HD progression for early diagnosis. 
 - Developed Web-based App of <a href="https://kanli.shinyapps.io/HD_prediction/" target="_blank">HD prediction tool</a> for clinical use. 
 

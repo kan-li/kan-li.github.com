@@ -10,7 +10,9 @@ title: Research
 [Data Mining](#DM)<br>
 
 Other interesting works: <br>
-Beta rectangular regression; Parallel MCMC; Rcpp application
+<a href="https://" target="_blank">[Beta rectangular regression]</a><br>
+<a href="https://" target="_blank">[Parallel MCMC]</a><br>
+<a href="https://" target="_blank">[Using Rcpp]</a><br>
 
 <span id="FDA">
 ***
@@ -89,7 +91,7 @@ I also parsed large data set to reconstruct social contact networks, conducted n
 </span>
 <br>
 
-<span id="DP">
+<span id="DM">
 ***
 ##Data Mining
 ---
@@ -102,7 +104,7 @@ The work aims to classify patient with Alzheimer’s Disease (AD) using 500 gene
 <br>
 
 <span id="PubMed">
-###Querying PubMed with python <a href="https://" target="_blank">[Code]</a><br>
+###Querying PubMed with python <a href="https://github.com/kan-li/SearchPubMed.git" target="_blank">[Git]</a><br>
 The objective of this project is searching PubMed data for a topic of interest and parse the retrieved information automatically.  The project is written in Python and served as a beta version of paper recommendation engine and literature review tool. This tool can fetch the searching results via PbuMed public API Entrez Database, summarize the results based on words frequency, conduct association rule mining on keywords sets using Apriori algorithm, make recommendation and provide results visualization. 
 
 Word cloud generated from the searching results of Alzheimer’s Disease
@@ -116,7 +118,7 @@ Word cloud generated from the searching results of Alzheimer’s Disease
 The purpose of this project is to implement expectation maximization (EM) algorithms to determine the structure of clustered data, with or without prior knowledge of the number of clusters. In practice, each cluster can be mathematically represented by a parametric distribution. The entire data set is therefore modeled by a mixture of these distributions.
 For clustering, we need to address the issue of determining the number of clusters within the data as well.  Figueiredo and Jain proposed a robust EM to deal simultaneously with the number of clusters and also the estimate of parameters for mixture models by using the particular form of a minimum message length (MML) criterion. I improved Figueiredo-Jain Algorithm to ensures the algorithm converge faster and be more rousted. The proposed model is evaluated by simulation studies and is applied to the real data retrieved from the UCI Machine Learning Repository. 
 
-Visualize the iteration of fitting a Gaussian mixture using the proposed method in unsupervised study (with overlapping). 
+Visualizeation of the iteration of fitting a Gaussian mixture using the proposed method in unsupervised study (with overlapping). 
 <img src="files/EMcluster.png" id="mainImg5" class="mainImgStyle">
 </span>
 <br>
