@@ -10,9 +10,9 @@ title: Research
 [Data Mining](#DM)<br>
 
 Other interesting works: <br>
-<a href="https://" target="_blank">[Beta rectangular regression]</a><br>
-<a href="https://" target="_blank">[Parallel MCMC]</a><br>
-<a href="https://" target="_blank">[Using Rcpp]</a><br>
+<a href="https://" target="_blank">Beta rectangular regression</a><br>
+<a href="https://" target="_blank">Parallel MCMC</a><br>
+<a href="https://" target="_blank">Using Rcpp</a><br>
 
 <span id="FDA">
 ***
