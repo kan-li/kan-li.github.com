@@ -1,0 +1,139 @@
+model{
+ C <- 10000
+ #Betaalpha <- 0
+ for(k in 1:nStudies) {
+   
+    ## Study-level random effects:
+    muEta[k] ~ dnorm(nuEta, tauMuEta) 
+    muAlpha[k] ~ dnorm(nuAlpha, tauMuAlpha)
+    tau[k] ~ dgamma(kappaEpsilon, kappaPhisqEpsilon)
+    tauEta[k] ~ dgamma(kappaEta, kappaPhisqEta)
+    tauAlpha[k] ~ dgamma(kappaAlpha, kappaPhisqAlpha)
+    ## 
+  }
+
+  for(j in 1:nUnits) {   
+    
+    ## Between-unit variation, conditional on study : 
+    muEtaAdj[j] <- muEta[ studyUnit[j] ] + lambdaEta * (bmmse[j] - meanBMMSE)
+    tauEtaAdj[j] <- tauEta[ studyUnit[j] ] * nPatUnit[j]		
+    eta[j] ~ dnorm(muEtaAdj[j], tauEtaAdj[j])
+    
+    muAlphaAdj[j] <- muAlpha[ studyUnit[j] ] + lambdaAlpha * (bmmse[j] - meanBMMSE)
+    tauAlphaAdj[j] <- tauAlpha[ studyUnit[j] ] * nPatUnit[j]
+    alpha[j] ~ dnorm(muAlphaAdj[j], tauAlphaAdj[j])
+
+  }
+
+  for(i in 1:nObsNat) {    
+
+    #logitTheta[i] <- eta[ unit[i] ] + alpha[ unit[i] ] * time[i]  
+    #theta[i] <- 1 / (1 + exp(- logitTheta[i]) )
+    
+	logitGamma[i] <- eta[ unit[i] ] + alpha[ unit[i] ] * time[i] 
+    Gammaf[i] <- 1 / (1 + exp(- logitGamma[i]) )
+	tmp[i] <- Betaalpha*(1-2*abs(Gammaf[i]-0.5))
+	#tmp[i] <- 0
+	theta[i] <- (Gammaf[i]-0.5*tmp[i])/(1-tmp[i])	
+	
+    ## Wihin-unit variation (conditional on unit and study) 
+    aAdas[i] <-  (theta[i] + 0.001) * tau[ study[i] ]
+    bAdas[i] <- (1 + 0.001 - theta[i]) * tau[ study[i] ]    
+    #normAdas[i] ~ dbeta(aAdas[i], bAdas[i])
+   
+    zeros[i]<- 0
+	L[i]<- 1/(tmp[i] + (1-tmp[i])*exp(loggam(aAdas[i]+bAdas[i])-loggam(aAdas[i])-loggam(bAdas[i]) +  (aAdas[i]-1)*log(normAdas[i]) + (bAdas[i]-1) * log(1-normAdas[i])))
+	LL[i]<- log(L[i])+C
+	zeros[i] ~ dpois(LL[i])
+  }
+
+  for(i in (nObsNat + 1):(nObsNat + nObsDrug)) {
+     
+    ePlacebo[i] <- beta * ( exp( -kel * time[i] ) - exp( -keq * time[i] ) )
+    
+    iDrug[i] <- max(1, drug[i])   # prevents syntax error when treatment = placebo
+    eDrug[i] <- (1 - equals(drug[i], 0)) *
+      pow(dose[i] / doseRef[ iDrug[i] ], gamma[ iDrug[i] ]) *
+        eDelta[ iDrug[i] ] * time[i] / (et50[ iDrug[i] ] + time[i])
+
+    #logitTheta[i] <- eta[ unit[i] ] + alpha[ unit[i] ] * time[i] + ePlacebo[i] + eDrug[i]
+    #theta[i] <- 1 / (1 + exp(- logitTheta[i]) )
+	
+	##----------------------------------
+	logitGamma[i] <- eta[ unit[i] ] + alpha[ unit[i] ] * time[i] + ePlacebo[i] + eDrug[i]
+    #logitGamma[i] <- eta[ unit[i] ] + alpha[ unit[i] ] * time[i] 
+	Gammaf[i] <- 1 / (1 + exp(- logitGamma[i]) )
+	tmp[i] <-Betaalpha*(1-2*abs(Gammaf[i]-0.5))
+	#tmp[i] <- 0
+	theta[i] <- (Gammaf[i]-0.5*tmp[i])/(1-tmp[i])	
+	##----------------------------------------
+    
+    ## Wihin-unit variation (conditional on unit and study) 
+    tauAdj[i] <- tau[ study[i] ] * nPat[i] + nPat[i]  - 1
+    aAdas[i] <-  (theta[i] + 0.001) * tauAdj[i] 
+    bAdas[i] <- (1 + 0.001 - theta[i]) * tauAdj[i]    
+    #normAdas[i] ~ dbeta(aAdas[i], bAdas[i])
+	
+	##----------------------------------------
+	## C<-10000
+	
+	#
+	zeros[i]<- 0
+	L[i]<- 1/(tmp[i] + (1-tmp[i])*exp(loggam(aAdas[i]+bAdas[i])-loggam(aAdas[i])-loggam(bAdas[i]) +  (aAdas[i]-1)*log(normAdas[i]) + (bAdas[i]-1) * log(1-normAdas[i])))
+	LL[i]<- log(L[i])+C
+	zeros[i] ~ dpois(LL[i])
+	##----------------------------------------
+    
+  }
+  
+### prior distribution
+  Betaalpha ~ dunif(0,1)
+  nuEta ~ dunif(-2.5, 0) # between 5 and 35 pts
+  nuAlpha ~ dunif(0, 0.05) # between 0 and 45.5 pts / year
+
+  lambdaEta ~ dnorm(-0.1, 1) # N(-1.75, 17.5) on original scale
+  lambdaAlpha ~ dnorm(0, 10000) # N(0, 9.1) on original scale
+
+  aucPlacebo ~ dunif(0, 10)
+  kel ~ dunif(0.0001, 0.25) # approx half life for elimination between 0.5 weeks and 52 weeks !! TRY LOWER LOWER
+  keqMinusKel ~ dunif(0, 4) # approx half life to max at least one day, otherwise just keq > kel
+  keq <- kel + keqMinusKel
+  beta <- - aucPlacebo / (1/kel - 1/keq)
+
+  for(i in 1:nDrugs) {
+    ## truncated Emax reparameterization to reduce autocorrelation
+    eStar[i] ~ dunif(-0.3, 0.3) # effect at tStar (= 12) weeks, between 0 and 5.25 pts
+    ## b[i] ~ dt(0, 0.15, 3)I(0, ) # P(et50 > 12) = 0.5 ;  values 0--100 (roughly) well-supported
+    et50[i] ~ dunif(0, 100)
+    b[i] <- tStar / et50[i]
+    eDelta[i] <- -(1 + b[i]) * eStar[i] / b[i]
+    ## et50[i] <- tStar / b[i]
+    gamma[i] ~ dunif(0.01, 3) # qualitatively reasonable shapes for dose response
+  }  
+
+  ## Parameters dictating distribution of residual precisions
+  phiEpsilon ~ dunif(0, 2)
+  kappaEpsilon ~ dunif(1, 100) # a > 1 ==> mode > 0 ==> better behaved numerically	
+  kappaPhisqEpsilon <- kappaEpsilon * (phiEpsilon * phiEpsilon)
+
+  ## Parameters dictating distribution of inter-individual variance components: 
+  phiEta ~ dunif(0, 2)
+  kappaEta ~ dunif(1, 100)
+  kappaPhisqEta <- kappaEta * (phiEta * phiEta)
+
+  phiAlpha ~ dunif(0, 0.03)	 	       
+  kappaAlpha ~ dunif(1, 100) 
+  kappaPhisqAlpha <- kappaAlpha * (phiAlpha * phiAlpha)
+  
+  ## Inter-study variance components
+  psiEta ~ dunif(0, 1)
+  tauMuEta <- 1 / (psiEta * psiEta)
+
+  psiAlpha ~ dunif(0, 0.01) 
+  tauMuAlpha <- 1 / (psiAlpha * psiAlpha)
+
+}
+
+
+
+
