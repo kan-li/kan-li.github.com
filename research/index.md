@@ -98,8 +98,8 @@ I also parsed large data set to reconstruct social contact networks, conducted n
 </span>
 
 <span id="sparseSVM">
-###Sparse Classification for High Dimensional Data <a href="{{site.url }}/2016/08/Sparse-classification/" target="_blank">[Post]</a><br>
-The work aims to classify patient with Alzheimer’s Disease (AD) using gene expression data. Two methods were adopted to carry out classification: **sparse logistic regression** and **sparse support vector machine**. We assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
+###Sparse Classification Methods for High Dimensional Data <a href="{{site.url }}/2016/08/Sparse-classification/" target="_blank">[Post]</a><br>
+The work aims to classify patient with Alzheimer’s Disease (AD) using gene expression data. Two methods were adopted to carry out classification: **sparse logistic regression** and **sparse proximal support vector machine**. We assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
 </span>
 <br>
 

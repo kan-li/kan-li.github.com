@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PART: Parallelizing MCMC with Random Partition Trees
+title: PART - Parallelizing MCMC with Random Partition Trees
 categories: [Project]
 tags: [EP-MCMC, MLIRT]
 ---
@@ -31,7 +31,7 @@ The posteriors are plot in figures. The grey lines are the density of 100 copies
 </span>
 <br>
 
-In conclusion, the PART method could dramatically decreases the computation time and provides relative good estimations (after aggregate sub-chains) in a moderate complex model. 
+In conclusion, the PART method could dramatically decreases the computation time for Bayesian inference of large data set and provides relative good estimations (after aggregating sub-chains) in a moderate complex model. 
 
 
 

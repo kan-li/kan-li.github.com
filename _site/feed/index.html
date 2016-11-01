@@ -7,8 +7,76 @@
     <title>Kan Li</title>
     <link href="http://li-kan.com/feed/" rel="self" />
     <link href="https://kan-li.github.io/" />
-    <lastBuildDate>2016-10-26T00:47:15-05:00</lastBuildDate>
+    <lastBuildDate>2016-11-01T00:08:01-05:00</lastBuildDate>
     <webMaster>kan.li@uth.tmc.edu</webMaster>
+    
+    <item>
+      <title>PART - Parallelizing MCMC with Random Partition Trees</title>
+      <link href="http://li-kan.com/2016/10/Parallelizing-MCMC/"/>
+      <pubDate>2016-10-06T00:00:00-05:00</pubDate>
+      <author>Kan Li</author>
+      <guid>http://li-kan.com/2016/10/Parallelizing-MCMC </guid>
+      <content:encoded><![CDATA[<p><strong>Background</strong>:
+In particular, conventional MCMC algorithms are computationally very expensive for large data sets. A promising approach to solve this problem is embarrassingly parallel MCMC (EP-MCMC), which first partitions the data into multiple subsets and runs independent sampling algorithms on each subset. The subset posterior draws are then aggregated via some combining rules to obtain the final approximation. This work is testing the method of parallelizing MCMC with Random Partition Trees (PART) proposed by Xiangyu Wang and David Dunson ( <a href="https://arxiv.org/abs/1506.03164" target="_blank">[paper] </a>, <a href="https://github.com/richardkwo/random-tree-parallel-MCMC" target="_blank">[code] </a>) in a simulation setting of a multi-level item response theory (MLIRT) model .</p>
+
+<p><strong>Methods</strong>:
+For the simulation study, I generate 100 datasets. Each dataset contain 1200 subjects with 7200 observations.  There are 23 parameters need to be estimated. The dataset is randomly split into 6 subsets. For each subset chains, I run the MLIRT model [<a href="http://li-kan.com/files/MLIRT_model.stan" target="_blank">code</a>] for 1000 iterations after 3000 burn-in. Thinning by 1 results in 1000 samples.  The posteriors samples of each subset chain are aggregated by PART-KD. The results of PART are obtained with minimal cut length as 0.01, minimal fraction block as 0.1 and 10 trees. The model inference using 1200 subjects takes around 27 hours to finish, while each sub-chain (using 200 subjects) takes 2 to 3 hours to finish, and could be run in parallel. I repeat the process on all 100 datasets and obtain 100 copies of aggregated posterior each has 10000 samples.</p>
+
+<p><strong>Results</strong>:
+The simulation results is summarized in the blow table. Majority of the parameters have a small bias and the coverage probability is around 0.95.
+<img src="http://li-kan.com/image/post/P_MCMC/Table_paraMCMC.png" id="mainImg0" class="mainImgStyle"> <br></p>
+
+<p>The posteriors are plot in figures. The grey lines are the density of 100 copies of aggregated posterior. The solid wide line is density of combine the 100 copies together. The vertical line is the true value of the parameter.</p>
+
+<p><img src="http://li-kan.com/image/post/P_MCMC/1.png" id="mainImg1" class="mainImgStyle"></p>
+
+<div id="div1" onclick="changeImg(event,'mainImg1')" class="imgStyle">
+    <ul class="imgStyle"> 
+        <li class="imgStyle"><img src="http://li-kan.com/image/post/P_MCMC/2.png"/></li>
+        <li class="imgStyle"><img src="http://li-kan.com/image/post/P_MCMC/3.png"/></li>
+        <li class="imgStyle"><img src="http://li-kan.com/image/post/P_MCMC/4.png"/></li>
+        <li class="imgStyle"><img src="http://li-kan.com/image/post/P_MCMC/5.png"/></li>        
+        <li class="imgStyle"><img src="http://li-kan.com/image/post/P_MCMC/6.png"/></li>
+
+    </ul>
+</div>
+
+
+<p></span>
+<br></p>
+
+<p>In conclusion, the PART method could dramatically decreases the computation time for Bayesian inference of large data set and provides relative good estimations (after aggregating sub-chains) in a moderate complex model.</p>
+
+<script type="text/javascript">
+    function changeImg(event, mainimg)
+    {
+        event = event || window.event;
+        var targetElement = event.target || event.srcElement;
+        document.getElementById(mainimg).src = targetElement.getAttribute("src");
+    }
+</script>
+
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Classification of Alzheimer’s Disease patient base on gene expression data</title>
+      <link href="http://li-kan.com/2016/08/Sparse-classification/"/>
+      <pubDate>2016-08-10T00:00:00-05:00</pubDate>
+      <author>Kan Li</author>
+      <guid>http://li-kan.com/2016/08/Sparse-classification</guid>
+      <content:encoded><![CDATA[<p>The work investigates the sparse classification methods for high dimensional data. Here I provide a toy example to classify patient with Alzheimer’s Disease (AD) using gene expression data (select 500 gene expression). Two methods were adopted to carry out classification: <strong>sparse logistic regression</strong> and <strong>sparse proximal support vector machine</strong> (SVM). I assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. I conducted a 5-fold cross validation to avoid overestimation of the performance. All gene expression measures were scaled to zero mean and unit variance. The <a href="https://cran.r-project.org/web/packages/gglasso/index.html" target="_blank">gglasso</a> package is used. The optimal value of penalty parameter lambda was selected from a series of lambdas which gave the minimum cross validation error on training data set. The simulation results were presented in below tables.</p>
+
+<p><img src="http://li-kan.com/image/post/sparse_logit.png" id="mainImg0" class="mainImgStyle"> <br>
+<img src="http://li-kan.com/image/post/sparse_svm.png" id="mainImg1" class="mainImgStyle"> <br></p>
+
+<p>The 500 gene expression gave a relative poor discriminative capability. The mean classification accuracy was around 0.62 via both methods. The sensitivity was surprising low, about 0.2, which indicated a poor capability of identifying AD patients. The high specificity and low sensitivity indicated that the model was inclined to classify patient as cognitive normal. The frequency of cognitive normal patient was 273/447 = 0.611, which was close to the mean accuracies we got from the models. The classification model can be viewed as simple guessing.</p>
+
+<p>I then conducted functional principal component (FPC) analysis on the scaled 500 gene expression data. I selected the first 2 FPC scores which explained 95% of variance in the data. Hotelling's t-test was conducted between case and control group on FPC scores. The test statistic is 1.49 with p-value 0.226, which indicates that there was on significant different in the gene expression sequence between cognitive normal patients and AD patients. This somehow explains the poor performance of the models in the first analysis.</p>
+
+<p>In conclusion, using all 500 gene expression may not help to identify AD patient. Fitting the model with selected significant genes may improve the discriminative capability. The R <a href="http://li-kan.com/files/sparse_classification.R" target="_blank">code</a> for this toy example is provided.</p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>Beta Rectangular (BR) Regression</title>
