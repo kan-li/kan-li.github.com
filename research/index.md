@@ -11,7 +11,7 @@ title: Research
 
 Other interesting works: <br>
 <a href="{{ site.url }}/2016/04/Beta-Regression/" target="_blank">Beta rectangular regression</a>, 
-<a href="https://" target="_blank">Parallel MCMC</a>, 
+<a href="{{ site.url }}/2016/10/Parallelizing-MCMC/" target="_blank">Parallelizing MCMC</a>, 
 <a href="https://github.com/kan-li/Rcpp-arms.git" target="_blank">Using Rcpp</a>
 
 <span id="FDA">
@@ -98,8 +98,8 @@ I also parsed large data set to reconstruct social contact networks, conducted n
 </span>
 
 <span id="sparseSVM">
-###Classification of Alzheimer’s Disease patient base on gene expression data <a href="https://" target="_blank">[Post]</a><br>
-The work aims to classify patient with Alzheimer’s Disease (AD) using 500 gene expression. Two methods were adopted to carry out classification: **sparse logistic regression** and **sparse support vector machine**. We assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
+###Sparse Classification for High Dimensional Data <a href="{{site.url }}/2016/08/Sparse-classification/" target="_blank">[Post]</a><br>
+The work aims to classify patient with Alzheimer’s Disease (AD) using gene expression data. Two methods were adopted to carry out classification: **sparse logistic regression** and **sparse support vector machine**. We assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
 </span>
 <br>
 
@@ -114,7 +114,7 @@ Word cloud generated from the searching results of Alzheimer’s Disease
 
 
 <span id="EMcluster">
-###Clustering using **EM algorithm** in Multivariate Gaussian Mixture Models 
+###Clustering using robust **EM algorithm** in Multivariate Gaussian Mixture Models 
 The purpose of this project is to implement expectation maximization (EM) algorithms to determine the structure of clustered data, with or without prior knowledge of the number of clusters. In practice, each cluster can be mathematically represented by a parametric distribution. The entire data set is therefore modeled by a mixture of these distributions.
 For clustering, we need to address the issue of determining the number of clusters within the data as well.  Figueiredo and Jain proposed a robust EM to deal simultaneously with the number of clusters and also the estimate of parameters for mixture models by using the particular form of a minimum message length (MML) criterion. I improved Figueiredo-Jain Algorithm to ensures the algorithm converge faster and be more rousted. The proposed model is evaluated by simulation studies and is applied to the real data retrieved from the UCI Machine Learning Repository. 
 
