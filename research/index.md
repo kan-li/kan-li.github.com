@@ -83,7 +83,7 @@ The prevalence of hepatitis C virus (HCV) in United States prisoners is high; ho
 <br>
 
 <span id="SMART">
-###Social Mixing And Respiratory Transmission in Schools <a href="https://http://smart.pitt.edu/" target="_blank">(SMART)</a><br>
+###Social Mixing And Respiratory Transmission in Schools <a href="http://smart.pitt.edu/" target="_blank">(SMART)</a><br>
 A CDC founded project that attempts to quantify the contact pattern of school age children and study respiratory transmission in school settings. I developed an agent-based simulation models of infectious disease transmission and evaluated intervention strategies via simulation and statistical analysis <a href="http://www.smart.pitt.edu/archive/simudemo/bhhs.swf.html" target="_blank">(animation)</a>.<br>
 I also parsed large data set to reconstruct social contact networks, conducted network analysis and parameterized simulation models. The figure blow display the heat map of contact duration matrix between students in a high school. The contact pattern predicted from  simulation model (left panel) is similar to the contact pattern constructed from real contact data (right panal).
 
@@ -99,7 +99,7 @@ I also parsed large data set to reconstruct social contact networks, conducted n
 
 <span id="sparseSVM">
 ###Sparse Classification Methods for High Dimensional Data <a href="{{site.url }}/2016/08/Sparse-classification/" target="_blank">[Post]</a><br>
-The work aims to classify patient with Alzheimer’s Disease (AD) using gene expression data. Two methods were adopted to carry out classification: **sparse logistic regression** and **sparse proximal support vector machine**. We assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
+The work aims to classify patient with Alzheimer’s Disease (AD) using gene expression data. Two methods were adopted to carry out classification: **sparse logistic regression** and **sparse proximal support vector machine**. I assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. A toy model is detailed in the post.
 </span>
 <br>
 
