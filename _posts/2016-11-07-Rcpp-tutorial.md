@@ -38,9 +38,7 @@ I only test the tool on Windows and Linux. No matter which platform you prefer, 
 In this session we’ll learn how to improve our R code performance by rewriting key functions in C++. Typical bottlenecks that C++ can address include:
 
 - Loops that can’t be easily vectorized because subsequent iterations depend on previous ones.
-
 - Recursive functions, or problems which involve calling functions millions of times. The overhead of calling a function in C++ is much lower than that in R.
-
 - Problems that require advanced data structures and algorithms that R doesn’t provide. Through the standard template library (STL), C++ has efficient implementations of many important data structures, from ordered maps to double-ended queues.
 
 To use Rcpp, a working knowledge of C++ is helpful, but not essential. Many good tutorials and references are freely available, including  <a href="http://www.learncpp.com/">http://www.learncpp.com/</a>  and <a href="http://www.cplusplus.com/">http://www.cplusplus.com/</a>.  You may also enjoy Dirk Eddelbuettel’s <a href="http://www.springer.com/statistics/computational+statistics/book/978-1-4614-6867-7">Seamless R and C++ integration with Rcpp</a>, which goes into much detail into all aspects of Rcpp.
@@ -76,14 +74,14 @@ This will compile the function and make it so we can access the C++ code from R 
 using namespace Rcpp;
 </code></pre>
 
-- We also put one of these statements before each function we want to make available to R:
+- We also put this statement before each function we want to make available to R:
 <pre><code class="language-cpp">
 //[[Rcpp::export]]
 </code></pre>
 
 We can also define multiple C++ functions in the same file (not necessarily recommended unless some of them will be used by the main function), so we can put one in front of each one we want to make visible.
 
--  We can include R code blocks in C++ files processed with sourceCpp. The R code will be automatically run after the compilation.
+-  We can include R code blocks in C++ files processed with <code> sourceCpp </code>. The R code will be automatically run after the compilation.
 <pre><code class="language-cpp">
 /*** R
 timesTwo(42)
@@ -135,7 +133,7 @@ We then write following R code and run it.
 > library(Rcpp)
 > library(RcppArmadillo)
 
-> sourceCpp('C:/Users/Kan/Desktop/Rcpp-arms-master/test/test.cpp')
+> sourceCpp('test.cpp')
 > vecA = rnorm(100000)
 
 > inner(vecA,vecA)
@@ -255,7 +253,7 @@ logden.u &lt; - function(x, mybeta, myy, mycovariate, mytau) {
 
 The log density function coded in C++:
 
-<pre><code class="language-r">
+<pre><code class="language-cpp">
 // [[Rcpp::export]]
 double logden_beta(vec x, vec myu_long, mat design_matrix, vec y){
   vec temp = design_matrix*x + myu_long;
@@ -282,8 +280,9 @@ double logden_u(double x, vec mybeta, vec myy, mat mycovariate, double mytau){
 - In C++, we need to define the variable before use it while R does not require that.
 - Don't forget to write the semicolon after each line of the code in C++.
 
-
+<span id="MCMC">
 ## Resources
+</span>
 
 For additional information and advanced use, following resources provide a helpful introduction:
 
