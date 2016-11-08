@@ -93,7 +93,7 @@ timesTwo(42)
 </span>
 We introduce our first example of calculating inner product of two vectors, and use data structure of Armadillo. The C++ code is:
 <pre><code class="language-cpp">
-# include <RcppArmadillo.h>
+#include &lt;RcppArmadillo.h&gt;
 // [[Rcpp::depends( RcppArmadillo)]]
 using namespace arma;
 
@@ -121,7 +121,7 @@ Also note that for all of the objects, we have to specify their type as we defin
 
 - For <strong>decimal numbers</strong> like <code>1.2347</code> we need to use the <code>double</code> declaration, followed by the name of the argument (e.g.. <code>my_double</code>)
 - For <strong>integers</strong> (whole numbers) like <code>26</code> we use the <code>int</code> declaration, followed by the argument. 
-- For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the *i*th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.
+- For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the *i* th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.
 - For <strong>numeric matrices</strong>, we use the <code>arma::mat</code> declaration, followed by the argument. Again, make sure it is just numbers in there.  
 
 We then write following R code and run it.
