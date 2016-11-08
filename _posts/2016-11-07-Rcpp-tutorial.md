@@ -10,7 +10,7 @@ This tutorial was presented as part of PH 1930 Statistical Computing. The exampl
 [Configure the environment](#CE)<br>
 [Rcpp and RcppArmadillo](#Rcpp)<br>
 [Getting started](#Start)<br>
-[First Example](#FE)<br>
+[First example](#FE)<br>
 [Parallelization](#OpenMP)<br>
 [MCMC for GLMM](#MCMC)<br>
 
@@ -23,7 +23,6 @@ While it is possible to write C or Fortran code for use in R as covered previous
 </span>
 
 In general, R is not a fast or most memory efficient language -- but it is very easy to use, to share, and makes very pretty output. C++ is very fast, but not so easy to use, and debugging could be painful. Rcpp supports implementing R functions in C++ for high performance computing and to easily interface R with external libraries.
-Configure the environment for using C++ code with R
 
 <span id="CE">
 ##Configure the environment for using C++ code with R
@@ -89,11 +88,11 @@ timesTwo(42)
 </code></pre>
 
 <span id="FE">
-##First Example
+##First example
 </span>
 We introduce our first example of calculating inner product of two vectors, and use data structure of Armadillo. The C++ code is:
 <pre><code class="language-cpp">
-# include <RcppArmadillo.h>
+#include &lt;RcppArmadillo.h&gt;
 // [[Rcpp::depends( RcppArmadillo)]]
 using namespace arma;
 
@@ -121,7 +120,7 @@ Also note that for all of the objects, we have to specify their type as we defin
 
 - For <strong>decimal numbers</strong> like <code>1.2347</code> we need to use the <code>double</code> declaration, followed by the name of the argument (e.g.. <code>my_double</code>)
 - For <strong>integers</strong> (whole numbers) like <code>26</code> we use the <code>int</code> declaration, followed by the argument. 
-- For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the *i*th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.
+- For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the *i* th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.
 - For <strong>numeric matrices</strong>, we use the <code>arma::mat</code> declaration, followed by the argument. Again, make sure it is just numbers in there.  
 
 We then write following R code and run it.
@@ -140,10 +139,10 @@ We then write following R code and run it.
 
 
 <span id="OpenMP">
-##Parallelization in Rcpp via OpenMP
+##Parallelization in Rcpp via OpenMP
 </span>
 
-Now we make a small extension of the example and simply introduce using OpenMP to parallelize our C++ function. In order for the compiler to recognize OpenMP, we need to include the OpenMP header flag.  Additionally, Rcpp has a plugin that will automatically add the OpenMP compiler flags.  Add the following to the top of your C++ program.
+Now we make a small extension of the example and simply introduce using OpenMP to parallelize our C++ function. In order for the compiler to recognize OpenMP, we need to include the OpenMP header flag.  Additionally, Rcpp has a plugin that will automatically add the OpenMP compiler flags.  Add the following to the top of your C++ program.
 
 <pre><code class="language-cpp">
 #include &lt;omp.h&gt;
@@ -202,7 +201,7 @@ omp_set_num_threads(int)
 #pragma omp parallel for
 </code></pre>
 
-The first line selects the number of cores to use.  This should not exceed the number of cores in your system.  The only real trick here in this example is making use of the <code> shared() </code> and <code> reduction() </code> keyword, and it pretty much does what it looks like. We’re telling the compiler that while each iteration of the loop should be run in parallel, they share the same information from vector <code> x </code>, and in the end we want the private (by thread) copies of the variable <code> sum </code> to be added up.  The code <code> cout &lt;&lt;  i &lt;&lt;  ", "omp_get_thread_num() &lt;&lt;  " of " &lt;&lt;  omp_get_num_threads() &lt;&lt;  endl; </code> is C++ standard way to do <code> print() </code>. This code just tells which thread is currently working on the *i* th iteration, and the total number of thread are working together.
+The first line selects the number of cores to use.  This should not exceed the number of cores in your system.  The only real trick here in this example is making use of the <code> shared() </code> and <code> reduction() </code> keyword, and it pretty much does what it looks like. We’re telling the compiler that while each iteration of the loop should be run in parallel, they share the same information from vector <code> x </code>, and in the end we want the private (by thread) copies of the variable <code> sum </code> to be added up.  The code <code> cout &lt;&lt;  i &lt;&lt;  ", "omp_get_thread_num() &lt;&lt;  " of " &lt;&lt;  omp_get_num_threads() &lt;&lt;  endl; </code> is C++ standard way to do <code> print() </code>. This code just tells which thread is currently working on the *i* th iteration, and the total number of thread are working together.
 
 A small experiment is used to compare different methods proposed. A small set of micro-benchmarks in a variety of methods are conducted.
 <pre><code class="language-r">
