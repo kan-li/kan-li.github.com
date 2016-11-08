@@ -120,11 +120,8 @@ statement as in the example code provided by RStudio, but replace it with:
 Also note that for all of the objects, we have to specify their type as we define the argument. This is a feature of C++ that is different from R where we just create objects without having to specify their type. Some basic C++ Armadillo objects we can pass in:
 
 - For <strong>decimal numbers</strong> like <code>1.2347</code> we need to use the <code>double</code> declaration, followed by the name of the argument (e.g.. <code>my_double</code>)
-
 - For <strong>integers</strong> (whole numbers) like <code>26</code> we use the <code>int</code> declaration, followed by the argument. 
-
 - For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the *i*th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.
-
 - For <strong>numeric matrices</strong>, we use the <code>arma::mat</code> declaration, followed by the argument. Again, make sure it is just numbers in there.  
 
 We then write following R code and run it.
