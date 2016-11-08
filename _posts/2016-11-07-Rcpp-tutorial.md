@@ -174,7 +174,7 @@ double sumsq_serial(vec x)
 }
 </code></pre>
 
-The function <code> sq()</code>  is simple square of a number as.
+The function <code> sq()</code>  is simply squaring a number as
 <pre><code class="language-cpp">
 double sq(double x){
   return(x*x);
