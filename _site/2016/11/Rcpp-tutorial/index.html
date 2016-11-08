@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Kan Li" />
+    <title>Rcpp - Using C++ and R code Together | Kan Li</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="http://li-kan.com/feed/" rel="alternate" title="Kan Li" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css">
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+          $(window).scroll(function(){
+              if ($(this).scrollTop() > 50) {
+                  $('#backToTop').fadeIn('slow');
+              } else {
+                  $('#backToTop').fadeOut('slow');
+              }
+          });
+          $('#backToTop').click(function(){
+              $("html, body").scrollTop(0);
+              return false;
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>Rcpp - Using C++ and R code Together</h1>
+        </header>
+        <nav>
+  	      <span><a title="home" class="" href="http://li-kan.com/">home</a></span>
+          <span><a title="vitae" class="" href="http://li-kan.com/vitae/">vitae</a></span>
+     	    <span><a title="research" class="" href="http://li-kan.com/research/">research</a></span> 
+          <span><a title="post" class="" href="http://li-kan.com/posts/">post</a></span>   
+          <span><a title="tags" class="" href="http://li-kan.com/tags/">tags</a></span>
+          <span><a title="contact" class="" href="http://li-kan.com/contact/">contact</a></span> 
+          <!--<span><a title="links" class="" href="http://li-kan.com/links/">links</a></span> -->
+          <!-- <span><a title="subscribe by RSS" class="" href="http://li-kan.com/feed/">subscribe</a></span> -->
+        </nav>
+        <article class="content">
+        <section class="post">
+<p>This tutorial was presented as part of PH 1930 Statistical Computing. The examples for this session are available on Github at the <a href="https://github.com/kan-li/Rcpp-arms" target="_blank">link</a>.</p>
+
+<p><a href="#OV">Overview</a><br>
+<a href="#CE">Configure the environment</a><br>
+<a href="#Rcpp">Rcpp and RcppArmadillo</a><br>
+<a href="#Start">Getting started</a><br>
+<a href="#FE">First Example</a><br></p>
+
+<p>While it is possible to write C or Fortran code for use in R as covered previously in this course, Rcpp provides a clean, approachable API that lets we write high-performance code much easily and joyfully.</p>
+
+<p><span id="OV">
+<strong>Overview</strong>
+</span>
+In general, R is not a fast or most memory efficient language -- but it is very easy to use, to share, and makes very pretty output. C++ is very fast, but not so easy to use, and debugging could be painful. Rcpp supports implementing R functions in C++ for high performance computing and to easily interface R with external libraries.
+Configure the environment for using C++ code with R</p>
+
+<p><span id="CE">
+<strong>Configure the environment for using C++ code with R</strong>
+</span>
+I only test the tool on Windows and Linux. No matter which platform you prefer, <a href="https://www.rstudio.com/" target="_blank">RStudio</a> is highly recommended to do the work. For a Windows user, you will need to make sure you have the latest release of R (3.2.0+) and will also need to install the <a href="http://cran.r-project.org/bin/windows/Rtools">Rtools</a>  library before you can use any packages with C++ code in them. Usually RStudio will help to check whether the Rtools are installed and install it for you when you first use Rcpp. If you are Linux user, everything probably just works. You may also want to visit this <a href="https://cdrv.wordpress.com/2013/01/12/getting-compilers-to-work-with-rcpp-rcpparmadillo/">blog post</a> which has more information on making C++ work with R under Windows/Mac if you end up encountering any weirdness.</p>
+
+<p><span id="Rcpp">
+<strong>Rcpp and RcppArmadillo</strong>
+</span>
+In this session we’ll learn how to improve our R code performance by rewriting key functions in C++. Typical bottlenecks that C++ can address include:</p>
+
+<ul>
+<li><p>Loops that can’t be easily vectorized because subsequent iterations depend on previous ones.</p></li>
+<li><p>Recursive functions, or problems which involve calling functions millions of times. The overhead of calling a function in C++ is much lower than that in R.</p></li>
+<li><p>Problems that require advanced data structures and algorithms that R doesn’t provide. Through the standard template library (STL), C++ has efficient implementations of many important data structures, from ordered maps to double-ended queues.</p></li>
+</ul>
+
+
+<p>To use Rcpp, a working knowledge of C++ is helpful, but not essential. Many good tutorials and references are freely available, including  <a href="http://www.learncpp.com/">http://www.learncpp.com/</a>  and <a href="http://www.cplusplus.com/">http://www.cplusplus.com/</a>.  You may also enjoy Dirk Eddelbuettel’s <a href="http://www.springer.com/statistics/computational+statistics/book/978-1-4614-6867-7">Seamless R and C++ integration with Rcpp</a>, which goes into much detail into all aspects of Rcpp.</p>
+
+<p><code>RcppArmadillo</code> is an add-on package that gives you access to tons of useful linear algebra functionality in C++. In particular it makes passing in and working with arrays, matrices and vectors pretty easy. You can check out the Armadillo docs here: <a href="http://arma.sourceforge.net/docs.html">http://arma.sourceforge.net/docs.html</a>. This is where I go to look up functions to see how to use them or if they exist.</p>
+
+<p>Although the base Rcpp package provides its own data structures (e.g., array, matrix, list) that can be passed easily between R and C++, the Armadillo data structures provided by the <code>RcppArmadillo</code>  package are really nice and easier to use. Additionally, the Armadillo data structures are native C++ data structures, have multi-thread support and less unpredictable bad errors are encountered in practice. So I suggest using Armadillo data structures in most cases.</p>
+
+<p><span id="Start">
+<strong>Getting started</strong>
+</span>
+Before we start the first example, we install the two R package using
+<code>{r}
+install.packages("Rcpp")
+install.packages("RcppArmadillo")
+</code>
+in Rstudio command line.</p>
+
+<p>We start by creating a new file in RStudio by clicking on the icon in the top left corner of the screen and select <strong>C++ File</strong> from the drop down menu.
+<img src="http://li-kan.com/image/post/Rcpp/create_file.png" id="mainImg0" class="mainImgStyle"> <br></p>
+
+<p>A sample <em>timesTwo</em>* C++ program will pop up. We will now need to save that file somewhere. Once we have done so, we can click on the <strong>Source</strong> button and you will see that RStudio automatically calls <code>Rcpp::sourceCpp()</code> on the file.<br/>
+<img src="http://li-kan.com/image/post/Rcpp/check_run.png" id="mainImg1" class="mainImgStyle"> <br></p>
+
+<p>This will compile the function and make it so we can access the C++ code from R -  much easier than Calling C from R we taught before. The example can help you to check everything needed are correctly installed on your computer.</p>
+
+<p>Some other things to note:
+- This statement include Rcpp header file in the program. The function is similar as library( ) in R.  It also tells us that we can call any Rcpp constructs by their given name without the <code>Rcpp::</code> prefix.
+```cpp</p>
+
+<h1>include &lt;Rcpp.h></h1>
+
+<p>using namespace Rcpp;
+```</p>
+
+<ul>
+<li><p>We also put one of these statements before each function we want to make available to R:
+<code>cpp
+/[[Rcpp::export]]
+</code>
+We can also define multiple C++ functions in the same file (not necessarily recommended unless some of them will be used by the main function), so we can put one in front of each one we want to make visible.</p></li>
+<li><p>We can include R code blocks in C++ files processed with sourceCpp. The R code will be automatically run after the compilation.
+<code>cpp
+/*** R
+timesTwo(42)
+*/
+</code></p></li>
+</ul>
+
+
+</section>
+<section class="meta">
+<span class="author">
+  <a href="http://www.pitt.edu/~lik25">Kan Li</a>
+</span>
+<span class="time">
+  /
+  <time datetime="2016-11-07">2016-11-07</time>
+</span>
+<br />
+<span class="license">
+  Published under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">(CC) BY-NC-SA</a>
+</span>
+
+<span class="categories">
+  in categories
+  
+  <a href="http://li-kan.com/categories/#tutorial" title="tutorial">tutorial</a>&nbsp;
+  
+</span>
+
+
+<span class="tags">
+  tagged with 
+  
+  <a href="http://li-kan.com/tags/#Rcpp" title="Rcpp">Rcpp</a>&nbsp;
+  
+  <a href="http://li-kan.com/tags/#RcppArmadillo" title="RcppArmadillo">RcppArmadillo</a>&nbsp;
+  
+  <a href="http://li-kan.com/tags/#OpenMP" title="OpenMP">OpenMP</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="comment">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kanli'; // required: replace example with your forum shortname
+    //var disqus_url = 'http://li-kan.com/2016/11/Rcpp-tutorial/';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+<script type="text/javascript">
+$(function(){
+  $(document).keydown(function(e) {
+    if (e.target.nodeName.toUpperCase() != 'BODY') return;
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = 'http://li-kan.com/2016/10/Parallelizing-MCMC/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        }
+        if (url) {
+            window.location = url;
+        }
+  });
+})
+</script>
+
+
+        <a href="#" ID="backToTop"></a>
+        </article>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1988641-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
