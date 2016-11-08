@@ -11,6 +11,9 @@ This tutorial was presented as part of PH 1930 Statistical Computing. The exampl
 [Rcpp and RcppArmadillo](#Rcpp)<br>
 [Getting started](#Start)<br>
 [First Example](#FE)<br>
+[Parallelization](#OpenMP)<br>
+[MCMC for GLMM](#MCMC)<br>
+
 
 While it is possible to write C or Fortran code for use in R as covered previously in this course, Rcpp provides a clean, approachable API that lets we write high-performance code much easily and joyfully.
 
@@ -54,8 +57,7 @@ Before we start the first example, we install the two R package using
 <pre><code class="language-r">
 install.packages("Rcpp")
 install.packages("RcppArmadillo")
-</code>
-</pre>
+</code></pre>
 in Rstudio command line.
 
 We start by creating a new file in RStudio by clicking on the icon in the top left corner of the screen and select <strong>C++ File</strong> from the drop down menu.
@@ -66,39 +68,237 @@ A sample <em>timesTwo</em>* C++ program will pop up. We will now need to save th
 
 This will compile the function and make it so we can access the C++ code from R -  much easier than Calling C from R we taught before. The example can help you to check everything needed are correctly installed on your computer.
 
-Some other things to note:
-- This statement include Rcpp header file in the program. The function is similar as library( ) in R.  It also tells us that we can call any Rcpp constructs by their given name without the <code>Rcpp::</code> prefix.
-<pre><code class="language-cpp">
-#include <Rcpp.h>
-using namespace Rcpp;
-</code>
-</pre>
+**Some other things to note**:
 
+- This statement include Rcpp header file in the program. The function is similar as <code>library( )</code> in R.  It also tells us that we can call any Rcpp constructs by their given name without the <code>Rcpp::</code> prefix.
+<pre><code class="language-cpp">
+#include &lt;Rcpp.h&gt;
+using namespace Rcpp;
+</code></pre>
 
 - We also put one of these statements before each function we want to make available to R:
-
 <pre><code class="language-cpp">
-/[[Rcpp::export]]
-</code>
-</pre>
+//[[Rcpp::export]]
+</code></pre>
 
 We can also define multiple C++ functions in the same file (not necessarily recommended unless some of them will be used by the main function), so we can put one in front of each one we want to make visible.
 
 -  We can include R code blocks in C++ files processed with sourceCpp. The R code will be automatically run after the compilation.
-
 <pre><code class="language-cpp">
 /*** R
 timesTwo(42)
 */
-</code>
-</pre>
+</code></pre>
 
+<span id="FE">
+##First Example
+</span>
+We introduce our first example of calculating inner product of two vectors, and use data structure of Armadillo. The C++ code is:
+<pre><code class="language-cpp">
+# include <RcppArmadillo.h>
+// [[Rcpp::depends( RcppArmadillo)]]
+using namespace arma;
+
+// [[Rcpp::export]]
+arma::mat inner(arma::vec x, arma::vec y){
+  arma::mat ip=x.t()*y;
+  return(ip);
+}
+
+/*** R
+vecA = rnorm(100000)
+*/
+</code></pre>
+
+Note that we no longer use the:
+<pre><code class="language-cpp">#include &lt;Rcpp.h&gt;
+</code></pre>
+statement as in the example code provided by RStudio, but replace it with:
+<pre><code class="language-cpp">
+#include &lt;RcppArmadillo.h&gt;
+//[[Rcpp::depends(RcppArmadillo)]]
+</code></pre>
+
+Also note that for all of the objects, we have to specify their type as we define the argument. This is a feature of C++ that is different from R where we just create objects without having to specify their type. Some basic C++ Armadillo objects we can pass in:
+
+- For <strong>decimal numbers</strong> like <code>1.2347</code> we need to use the <code>double</code> declaration, followed by the name of the argument (e.g.. <code>my_double</code>)
+
+- For <strong>integers</strong> (whole numbers) like <code>26</code> we use the <code>int</code> declaration, followed by the argument. 
+
+- For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the *i*th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.
+
+- For <strong>numeric matrices</strong>, we use the <code>arma::mat</code> declaration, followed by the argument. Again, make sure it is just numbers in there.  
+
+We then write following R code and run it.
+
+<pre><code class="language-r">
+> library(Rcpp)
+> library(RcppArmadillo)
+
+> sourceCpp('C:/Users/Kan/Desktop/Rcpp-arms-master/test/test.cpp')
+> vecA = rnorm(100000)
+
+> inner(vecA,vecA)
+         [,1]
+[1,] 100317.2
+</code></pre>
+
+
+<span id="OpenMP">
+##Parallelization in Rcpp via OpenMP
+</span>
+
+Now we make a small extension of the example and simply introduce using OpenMP to parallelize our C++ function. In order for the compiler to recognize OpenMP, we need to include the OpenMP header flag.  Additionally, Rcpp has a plugin that will automatically add the OpenMP compiler flags.  Add the following to the top of your C++ program.
+
+<pre><code class="language-cpp">
+#include &lt;omp.h&gt;
+// [[Rcpp::plugins(openmp)]]
+</code></pre>
+
+We also have to set some compiler flags in R code. Add the following to your R code.
+
+<pre><code class="language-cpp">
+Sys.setenv("PKG_CXXFLAGS" = "-fopenmp")
+Sys.setenv("PKG_LIBS" = "-fopenmp")
+</code></pre>
+
+The example we are going to use is element-wised sum square of a vector. It is a special case of the inner product of two same vectors.  In serial way, we can realize this in Rcpp like so:
+
+<pre><code class="language-cpp">
+// [[Rcpp::export]]
+double sumsq_serial(vec x)
+{
+  double sum = 0.0;
+  for (int i=0; i<x.size(); i++){
+    sum += sq(x(i));
+  }  
+  return sum;
+}
+</code></pre>
+
+The function <code> sq()</code>  is simple square of a number as.
+<pre><code class="language-cpp">
+double sq(double x){
+  return(x*x);
+}
+</code></pre>
+
+I do not put <code> // [[Rcpp::export]] </code> before this function because I will never call it from R. Calling such a function will slow down the performance of the code, comparing with <code class="language-cpp"> sum += x(i)*x(i); </code>. I include a function here to ascertain that each thread can correctly recognizes the user defined function when doing parallel computing later.
+
+And in parallel using OpenMP, we just add the basic compiler pragma:
+<pre><code class="language-cpp">
+// [[Rcpp::export]]
+double sumsq_parallel(vec x, int ncores)
+{
+  double sum = 0.0;
+  omp_set_num_threads(ncores);
+  #pragma omp parallel for shared(x) reduction(+:sum)
+  for (int i=0; i<x.size(); i++){
+	// cout << i << ", "omp_get_thread_num() << " of " << omp_get_num_threads() << endl;
+    sum += sq(x(i));
+  }
+  return sum;
+}
+</code></pre>
+
+Basically, we identify the loop in which we want to parallelize and add the following lines above it
+<pre><code class="language-cpp">
+omp_set_num_threads(int)
+#pragma omp parallel for
+</code></pre>
+
+The first line selects the number of cores to use.  This should not exceed the number of cores in your system.  The only real trick here in this example is making use of the <code> shared() </code> and <code> reduction() </code> keyword, and it pretty much does what it looks like. We’re telling the compiler that while each iteration of the loop should be run in parallel, they share the same information from vector <code> x </code>, and in the end we want the private (by thread) copies of the variable <code> sum </code> to be added up.  The code <code> cout << i << ", "omp_get_thread_num() << " of " << omp_get_num_threads() << endl; </code> is C++ standard way to do <code> print() </code>. This code just tells which thread is currently working on the *i* th iteration, and the total number of thread are working together.
+
+A small experiment is used to compare different methods proposed. A small set of micro-benchmarks in a variety of methods are conducted.
+<pre><code class="language-r">
+library(rbenchmark)
+bench = benchmark(
+		  vecA%*%vecA,
+          inner(vecA,vecA),
+          sumsq_parallel(vecA,1),
+          sumsq_parallel(vecA,2),
+          sumsq_parallel(vecA,3),
+          sumsq_parallel(vecA,4), order = NULL, replications=1000)
+
+print(bench[,1:4])
+
+# test replications elapsed relative
+# 1           vecA %*% vecA         1000   0.721    4.682
+# 2       inner(vecA, vecA)         1000   0.229    1.487
+# 3 sumsq_parallel(vecA, 1)         1000   0.319    2.071
+# 4 sumsq_parallel(vecA, 2)         1000   0.203    1.318
+# 5 sumsq_parallel(vecA, 3)         1000   0.154    1.000
+# 6 sumsq_parallel(vecA, 4)         1000   0.157    1.019
+</code></pre>
+
+We can see that C++ functions are much faster than R function <code> %*% </code>. As more cores were used in parallel computing, the execution time becomes shorter. Because I only had 4 cores on my desktop, the maximal number of core I tested was 4. It seems requiring all the resources on your computer to do the work may slow down the overall performance. 
+
+<span id="MCMC">
+##MCMC for GLMM
+</span>
+
+This tutorial session has only touched on a small part of Rcpp, giving you the basic tools to rewrite poorly performing R code in C++. With the basic knowledge of Rcpp, it will be much easier for you to understand the example of MCMC for generalized linear mixed model using Adaptive rejection Metropolis sampling (ARMS) I provide <a href="https://github.com/kan-li/Rcpp-arms" target="_blank">here</a> . Three methods are compared. The first method is pure R code, using the <code> arms </code> function in R <code> Hi </code> package. The second method is writing log density functions in C++, but sampling process is still coded in R with modified <code> arms </code> function.  The third method is coding both log density functions and sampling process in Rcpp/C++. The pure R example takes 36.14 mins. The hybrid method takes 9.80 mins and the C++ code used only 1.17 mins. 
+
+The log density function coded in R:
+<pre><code class="language-r">
+logden.beta <- function(x, myu) {
+  myu.long <- as.vector(mapply(rep, myu, nobs))
+  temp <- as.vector(design.matrix %*% as.matrix(x, ncol=1)) + myu.long
+  return(sum(y*temp - log(1+exp(temp))))
+}
+
+logden.u <- function(x, mybeta, myy, mycovariate, mytau) {
+  temp <- mycovariate %*% as.matrix(mybeta, ncol=1) + x
+  return(sum(myy * temp - log(1+exp(temp))) - 0.5*x^2*mytau)
+}
+</code></pre>
+
+The log density function coded in C++:
+
+<pre><code class="language-r">
+// [[Rcpp::export]]
+double logden_beta(vec x, vec myu_long, mat design_matrix, vec y){
+  vec temp = design_matrix*x + myu_long;
+  vec one; one.ones(size(temp));
+  vec logden = y%temp - log(one + exp(temp));
+  return(sum(logden));
+}
+
+// [[Rcpp::export]]
+double logden_u(double x, vec mybeta, vec myy, mat mycovariate, double mytau){
+  vec x_long(size(myy)); x_long.fill(x);
+  vec temp = mycovariate*mybeta + x_long;
+  vec one; one.ones(size(temp));
+  vec logden = myy%temp - log(one + exp(temp));
+  return(sum(logden)-0.5*pow(x,2)*mytau);
+}
+</code></pre>
+
+<span id="MCMC">
+##Common Pitfalls
+</span>
+
+- The number one pitfall I have made while working with C++ and R is forgetting that while R starts vector and matrix indexes from 1, C++ (along with pretty much every other programming language), starts indexes from zero, so you need to plan accordingly.
+- In C++, we need to define the variable before use it while R does not require that.
+- Don't forget to write the semicolon after each line of the code in C++.
+
+
+## Resources
+
+For additional information and advanced use, following resources provide a helpful introduction:
+
+- Rcpp: Seamless R and C++ Integration
+- [Rcpp website](http://www.rcpp.org/)
+- [Rcpp book](http://www.rcpp.org/book/)
+- [Rcpp Quick Reference Guide](http://cran.rstudio.com/web/packages/Rcpp/vignettes/Rcpp-quickref.pdf)
+- [High performance functions with Rcpp](http://adv-r.had.co.nz/Rcpp.html)
+- [Introduction to Rcpp Attributes](http://cran.rstudio.com/web/packages/Rcpp/vignettes/Rcpp-attributes.pdf)
+- [Gallery of examples](http://gallery.rcpp.org/)
+- [Armadillo C++ linear algebra library](http://arma.sourceforge.net/docs.html)
 
 <head>
-	...
 	<link href="{{ site.url }}/media/css/prism.css" rel="stylesheet" />
 </head>
 <body>
-	...
 	<script src="{{ site.url }}/media/js/prism.js"></script>
 </body>
