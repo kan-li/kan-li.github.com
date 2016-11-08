@@ -169,7 +169,7 @@ The example we are going to use is element-wised sum square of a vector. It is a
 double sumsq_serial(vec x)
 {
   double sum = 0.0;
-  for (int i=0; i<x.size(); i++){
+  for (int i=0; i&lt;x.size(); i++){
     sum += sq(x(i));
   }  
   return sum;
@@ -193,8 +193,8 @@ double sumsq_parallel(vec x, int ncores)
   double sum = 0.0;
   omp_set_num_threads(ncores);
   #pragma omp parallel for shared(x) reduction(+:sum)
-  for (int i=0; i<x.size(); i++){
-	// cout << i << ", "omp_get_thread_num() << " of " << omp_get_num_threads() << endl;
+  for (int i=0; i&lt;x.size(); i++){
+	// cout &lt;&lt; i &lt;&lt; ", "omp_get_thread_num() &lt;&lt;  " of " &lt;&lt;  omp_get_num_threads() << endl;
     sum += sq(x(i));
   }
   return sum;
@@ -207,7 +207,7 @@ omp_set_num_threads(int)
 #pragma omp parallel for
 </code></pre>
 
-The first line selects the number of cores to use.  This should not exceed the number of cores in your system.  The only real trick here in this example is making use of the <code> shared() </code> and <code> reduction() </code> keyword, and it pretty much does what it looks like. We’re telling the compiler that while each iteration of the loop should be run in parallel, they share the same information from vector <code> x </code>, and in the end we want the private (by thread) copies of the variable <code> sum </code> to be added up.  The code <code> cout << i << ", "omp_get_thread_num() << " of " << omp_get_num_threads() << endl; </code> is C++ standard way to do <code> print() </code>. This code just tells which thread is currently working on the *i* th iteration, and the total number of thread are working together.
+The first line selects the number of cores to use.  This should not exceed the number of cores in your system.  The only real trick here in this example is making use of the <code> shared() </code> and <code> reduction() </code> keyword, and it pretty much does what it looks like. We’re telling the compiler that while each iteration of the loop should be run in parallel, they share the same information from vector <code> x </code>, and in the end we want the private (by thread) copies of the variable <code> sum </code> to be added up.  The code <code> cout &lt;&lt;  i &lt;&lt;  ", "omp_get_thread_num() &lt;&lt;  " of " &lt;&lt;  omp_get_num_threads() &lt;&lt;  endl; </code> is C++ standard way to do <code> print() </code>. This code just tells which thread is currently working on the *i* th iteration, and the total number of thread are working together.
 
 A small experiment is used to compare different methods proposed. A small set of micro-benchmarks in a variety of methods are conducted.
 <pre><code class="language-r">
@@ -241,14 +241,14 @@ This tutorial session has only touched on a small part of Rcpp, giving you the b
 
 The log density function coded in R:
 <pre><code class="language-r">
-logden.beta <- function(x, myu) {
-  myu.long <- as.vector(mapply(rep, myu, nobs))
-  temp <- as.vector(design.matrix %*% as.matrix(x, ncol=1)) + myu.long
+logden.beta &lt; - function(x, myu) {
+  myu.long &lt; - as.vector(mapply(rep, myu, nobs))
+  temp &lt; - as.vector(design.matrix %*% as.matrix(x, ncol=1)) + myu.long
   return(sum(y*temp - log(1+exp(temp))))
 }
 
-logden.u <- function(x, mybeta, myy, mycovariate, mytau) {
-  temp <- mycovariate %*% as.matrix(mybeta, ncol=1) + x
+logden.u &lt; - function(x, mybeta, myy, mycovariate, mytau) {
+  temp &lt;- mycovariate %*% as.matrix(mybeta, ncol=1) + x
   return(sum(myy * temp - log(1+exp(temp))) - 0.5*x^2*mytau)
 }
 </code></pre>
