@@ -282,7 +282,7 @@ double logden_u(double x, vec mybeta, vec myy, mat mycovariate, double mytau){
 
 For additional information and advanced use, following resources provide a helpful introduction:
 
-- Rcpp: Seamless R and C++ Integration
+- [Rcpp: Seamless R and C++ Integration](http://www.springer.com/statistics/computational+statistics/book/978-1-4614-6867-7)
 - [Rcpp website](http://www.rcpp.org/)
 - [Rcpp book](http://www.rcpp.org/book/)
 - [Rcpp Quick Reference Guide](http://cran.rstudio.com/web/packages/Rcpp/vignettes/Rcpp-quickref.pdf)
@@ -290,6 +290,8 @@ For additional information and advanced use, following resources provide a helpf
 - [Introduction to Rcpp Attributes](http://cran.rstudio.com/web/packages/Rcpp/vignettes/Rcpp-attributes.pdf)
 - [Gallery of examples](http://gallery.rcpp.org/)
 - [Armadillo C++ linear algebra library](http://arma.sourceforge.net/docs.html)
+- [Guide into OpenMP](http://bisqwit.iki.fi/story/howto/openmp/)
+- [Introduction to MPI and OpenMP](http://www.ee.ryerson.ca/~courses/ee8218/mpi_openmp.pdf)
 
 <head>
 	<link href="{{ site.url }}/media/css/prism.css" rel="stylesheet" />
