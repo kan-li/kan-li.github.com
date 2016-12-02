@@ -37,7 +37,7 @@ title: Resume
 </span>
 <img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Ph.D. Candidate in Biostatistics, The University of Texas Health Science Center at Houston	
-_Expected Dec 2017_
+_Expected Dec. 2017_
 
 - GPA: 4.0/4.0
 - Minor: Bioinformatics
