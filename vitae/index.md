@@ -20,7 +20,7 @@ title: Resume
 [Publications](#Publications)<br>
 [Course Work](#CourseWork)<br>
 <span id="Technical">
-***
+---
 ## Technical Strengths
 ---
 </span>
