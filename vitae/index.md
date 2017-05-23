@@ -60,6 +60,14 @@ _Jul. 2009_
 ---
 </span>
 
+<img align="right" src="{{ site.url }}/image/Merck.png">
+#### Biostatistics Intern, Merck & Co., Inc.
+_May 2017 – Present_
+
+**Project: Continuous safety monitoring and benefit-risk analysis.** 
+
+<br>
+
 <img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
 _July 2015 – Present_
@@ -167,15 +175,15 @@ _Dec. 2007_
 ## Publications
 ---
 </span>
-1.**Li, K**., Luo, S., 2016. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. (Submitted for Initial Review)
+1.**Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. (Resubmitted)
 
-2.**Li, K**., Luo, S., 2016. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Submitted for Initial Review)
+2.**Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Resubmitted)
 
-3.**Li, K**., Stimming, E. F., Luo, S., 2016. “Dynamic Predictions of motor diagnosis in Huntington’s disease using a joint modeling approach.” Journal of Huntington's Disease. (Submitted for Initial Review)
+3.**Li, K**., Stimming, E. F., Luo, S., 2017. “Dynamic Predictions of motor diagnosis in Huntington’s disease using a joint modeling approach.” Journal of Huntington's Disease. (Accepted)
 
-4.**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2016. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-to-Event Data.” Alzheimer’s & Dementia. (Resubmitted)
+4.**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2017. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-To-Event Data.” Journal of Alzheimer’s Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]</a> <a href="http://www.iospress.nl/ios_news/prediction-of-conversion-to-alzheimers-disease-with-longitudinal-measures-and-time-to-event-data/" target="_blank">[Media]</a>
 
-5.Csencsits, K., Suescun, J., **Li, K**., Luo, S., Bick, D., 2016. “Multiple system atrophy is associated with faster rates of change in plasma cytokine concentrations.” Neuroimmunomodulation. (Resubmitted)
+5.Csencsits, K., Suescun, J., **Li, K**., Luo, S., Bick, D., 2017. “Serum Lymphocyte-Associated Cytokine Concentrations Change More Rapidly over Time in Multiple System Atrophy Compared to Parkinson Disease.” Neuroimmunomodulation. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]
 
 6.Rafferty, M. R., Schmidt, P. N., Luo, S. T., **Li, K**., Marras, C., Davis, T. L., ... & Simuni, T., 2016. “Regular Exercise, Quality of Life, and Mobility in Parkinson’s Disease: A Longitudinal Analysis of National Parkinson Foundation Quality Improvement Initiative Data.” Journal of Parkinson's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27858719/" target="_blank">[Paper]</a>
 
