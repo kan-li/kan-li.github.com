@@ -11,7 +11,7 @@ title: Resume
 - Willing to learn and accept constructive criticism.
 - Outstanding teamwork building ability and strong interpersonal skills.                                                            
 
----
+-
 [Technical Strengths](#Technical)<br>
 [Education](#Education)<br>
 [Employment](#Employment)<br>
@@ -20,7 +20,7 @@ title: Resume
 [Publications](#Publications)<br>
 [Course Work](#CourseWork)<br>
 <span id="Technical">
----
+***
 ## Technical Strengths
 ---
 </span>
