@@ -12,26 +12,24 @@ title: Resume
 - Outstanding teamwork building ability and strong interpersonal skills.                                                            
 
 -
-[Technical Strengths](#Technical)<br>
+[Technical Strengths](#Technical-Strengths)<br>
 [Education](#Education)<br>
 [Employment](#Employment)<br>
 [Certifications](#Certifications)<br>
 [Honers](#Honers)<br>
 [Publications](#Publications)<br>
-[Course Work](#CourseWork)<br>
-<span id="Technical">
-***
+[Course Work](#Course-Work)<br>
+
+
+---
 ## Technical Strengths
 ---
-</span>
 
 - Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
 - Programming Languages: Java, Python, Shell, Julia, SQL, VBA. 
 - Platforms: Linux, Windows
 
-
-<span id="Education">
-***
+---
 ## Education
 ---
 </span>
@@ -54,11 +52,9 @@ _Jul. 2009_
 
 - GPA: 3.7/4.0
 
-<span id="Employment">
-***
+---
 ## Employment
 ---
-</span>
 
 <img align="right" src="{{ site.url }}/image/Merck.png">
 #### Biostatistics Intern, Merck & Co., Inc.
@@ -132,11 +128,9 @@ _Jan. 2010 - Aug. 2011_
 - Developed Excel VBA based spreadsheet tools for decision-making in vaccine administration.
 
 
-<span id="Certifications">
-***
+---
 ## Certifications
 ---
-</span>
 
 - SAS Advanced Programming Certificate for SAS 9
 
@@ -147,11 +141,9 @@ _July 2013_
 _May 2013_
 
 
-<span id="Honers">
-***
+---
 ## Honers
 ---
-</span>
 
 - R.Hardy and C. Morton Hawkins Endowed Scholarship, The University of Texas Health Science Center 
 
@@ -170,11 +162,10 @@ _Jun. 2009_
 _Dec. 2007_
 
 
-<span id="Publications">
-***
+---
 ## Publications
 ---
-</span>
+
 1.**Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. (Resubmitted)
 
 2.**Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Resubmitted)
@@ -190,11 +181,9 @@ _Dec. 2007_
 7.He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a>
 
 
-<span id="CourseWork">
-***
+---
 ## Course Work
 ---
-</span>
 
 - Multiple Regression Analysis (SAS, R)
 - Correlate data Analysis (R)
