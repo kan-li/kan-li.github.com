@@ -17,7 +17,7 @@ title: Resume
 [Certifications](#certifications)<br>
 [Honers](#honers)<br>
 [Publications](#publications)<br>
-[Course Work](#course-Work)<br>
+[Course Work](#course-work)<br>
 
 
 ---
