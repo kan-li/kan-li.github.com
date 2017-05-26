@@ -11,14 +11,13 @@ title: Resume
 - Willing to learn and accept constructive criticism.
 - Outstanding teamwork building ability and strong interpersonal skills.                                                            
 
--
-[Technical Strengths](#Technical-Strengths)<br>
-[Education](#Education)<br>
-[Employment](#Employment)<br>
-[Certifications](#Certifications)<br>
-[Honers](#Honers)<br>
-[Publications](#Publications)<br>
-[Course Work](#Course-Work)<br>
+[Technical Strengths](#technical-strengths)<br>
+[Education](#education)<br>
+[Employment](#employment)<br>
+[Certifications](#certifications)<br>
+[Honers](#honers)<br>
+[Publications](#publications)<br>
+[Course Work](#course-Work)<br>
 
 
 ---
