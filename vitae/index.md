@@ -167,9 +167,9 @@ _Dec. 2007_
 
 1.**Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. (Resubmitted)
 
-2.**Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. (Resubmitted)
+2.**Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. <a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7381/full" target="_blank">[Paper]</a> 
 
-3.**Li, K**., Stimming, E. F., Luo, S., 2017. “Dynamic Predictions of motor diagnosis in Huntington’s disease using a joint modeling approach.” Journal of Huntington's Disease. (Accepted)
+3.**Li, K**., Stimming, E. F., Luo, S., 2017. “Dynamic Predictions of motor diagnosis in Huntington’s disease using a joint modeling approach.” Journal of Huntington's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28582868" target="_blank">[Paper]</a> 
 
 4.**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2017. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-To-Event Data.” Journal of Alzheimer’s Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]</a> <a href="http://www.iospress.nl/ios_news/prediction-of-conversion-to-alzheimers-disease-with-longitudinal-measures-and-time-to-event-data/" target="_blank">[Media]</a>
 
