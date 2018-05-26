@@ -2,7 +2,7 @@
 layout: page
 title: Research
 ---
-
+[Benefit-Risk Assessment](#BRA)<br>
 [Functional Data Analysis](#functional-data-analysis)<br>
 [Dynamic Prediction](#dynamic-prediction)<br>
 [Multivariate Longitudinal Outcomes](#multivariate-longitudinal-outcomes)<br>
@@ -14,13 +14,23 @@ Other interesting works: <br>
 <a href="{{ site.url }}/2016/10/Parallelizing-MCMC/" target="_blank">Parallelizing MCMC</a>, 
 <a href="https://github.com/kan-li/Rcpp-arms.git" target="_blank">Using Rcpp</a>
 
+
+---
+## Benefit-Risk Assessment
+---
+
+<span id="BRA">
+### Benefit-Risk Assessment  of Medical Products<br>
+Benefit-risk (BR) assessment is essential to ensure the best decisions are made for a medical product in the clinical development process, regulatory marketing authorization, post-market surveillance, and coverage and reimbursement decisions. One challenge of BR assessment in practice is that the benefit and risk profile may keep evolving while new evidence is accumulating. Regulators and the International Conference on Harmonization (ICH) recommend performing periodic benefit-risk evaluation report (PBRER) through the product's lifecycle.  Moreover, Food and Drug Administration (FDA) launched the Patient Preference Initiative and emphasized the importance of patient engagement in product approval and patient-focused drug development. We developed a series of methods for benefit-risk assessment to address issues to support medical decision making.
+
+
 ---
 ## Functional Data Analysis
 ---
 
 <span id="FJM">
-### Functional Joint Models for Longitudinal and Time-to-Event Data: An Application to Alzheimer's Disease <a href="files/2016JSM.pdf" target="_blank">[slides]</a> <br>
-Studies for Alzheimer's disease (AD) often collect repeated measurements of clinical variables, event history, and functional data, to better understand the disease. An accurate prediction of the time to dementia based on the information is particularly helpful for physicians to monitor patients' disease progression and make informative medical decisions. I proposed a functional joint model (**FJM**) to account for functional predictors (high dimensional magnetic resonance imaging) in both longitudinal and survival submodels in the joint modeling framework. The FJM provides the accurate dynamic prediction of target patients' future outcome trajectories and risk of AD conversion, based on both scalar and functional measures.  The proposed model is evaluated by a simulation study and is applied to the Alzheimer's Disease Neuroimaging Initiative (ADNI) study, a motivating clinical study testing whether serial brain imaging, clinical and neuropsychological assessments can be combined to measure the progression of Alzheimer's disease.
+### Functional Joint Models for Longitudinal and Time-to-Event Data: An Application to Alzheimer's Disease <a href="files/Kan_FJM.pdf" target="_blank">[slides]</a> <br>
+In the study of Alzheimer's disease (AD), researchers often collect repeated measurements of clinical variables, neurocognitive assessments (scalar outcomes), neuroimaging (functional outcome), genetic information, and event history to better understand the diseases. Given the lack of disease-modifying treatments for AD, an accurate prediction of the time to AD conversion based on this cumulative information is particularly helpful for physicians to monitor patients' disease progression and to plan timely interventions. We propose a series of novel functional joint models (FJM) to incorporate both scalar outcomes and functional outcomes in the framework of joint modeling of longitudinal and survival data. We first propose a functional joint model that accounts for time-invariant functional outcomes as predictors in both longitudinal and survival submodels in a joint model. In the second part of this work, we extend the model to account for time-variant functional outcome in a Bayesian multivariate joint modeling framework.  A dynamic prediction approach for predicting the patient's future scalar and functional outcomes, as well as the risk of AD conversion, is also developed. In the third part, we propose a novel framework for the use of multiple longitudinal scalar outcomes and longitudinal high-dimensional functional outcome (e.g., neuroimaging) to further improve the prediction of AD progression. We conduct extensive simulation studies to assess the performance of our proposed methods. The models are applied to the motivating Alzheimer's Disease Neuroimaging Initiative (ADNI) study, suggesting that incorporating the imaging markers as functional predictors into the model could improve the predictive ability of AD progression.
 
 Hippocampus surface morphology data
 <img src="files/Hippo_HRD.png" id="mainImg0" class="mainImgStyle">

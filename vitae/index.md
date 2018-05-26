@@ -65,7 +65,7 @@ _Apr. 2018 –  Present_
 
 <img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Graduate Research Assistant, Department of Biostatistics, The University of Texas Health Science Center at Houston
-_July 2015 – Present_
+_July 2015 – Mar. 2018_
 
 **Dissertation: Functional Joint Models: an application to Alzheimer’s disease (AD)**
 
@@ -177,7 +177,7 @@ _Dec. 2007_
 ---
 - **Li, K**, Yuan, S., Wang, W.,  et al., 2018. “Periodic Benefit-Risk Assessment using Bayesian Stochastic Multi-criteria Acceptability Analysis.” Contemporary Clinical Trials. <a href="https://www.contemporaryclinicaltrials.com/article/S1551-7144(17)30775-9/fulltext" target="_blank">[Paper]</a>
 
-- **Li, K**,  O'Brien, R., Lutz, M., Luo, S., 2018. “A Prognostic Model of Alzheimer's Disease Relying on Multiple Longitudinal Measures and Time-to-Event Data.“ Alzheimer's \& Dementia. <a href="https://www.alzheimersanddementia.com/article/S1552-5260(17)33840-2/abstract" target="_blank">[Paper]</a>
+- **Li, K**,  O'Brien, R., Lutz, M., Luo, S., 2018. “A Prognostic Model of Alzheimer's Disease Relying on Multiple Longitudinal Measures and Time-to-Event Data.”  Alzheimer's \& Dementia. <a href="https://www.alzheimersanddementia.com/article/S1552-5260(17)33840-2/abstract" target="_blank">[Paper]</a>
 
 - **Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. <a href="http://journals.sagepub.com/doi/abs/10.1177/0962280217722177" target="_blank">[Paper]</a>
 
