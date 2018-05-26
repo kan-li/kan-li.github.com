@@ -33,11 +33,11 @@ title: Resume
 ---
 </span>
 <img align="right" src="{{ site.url }}/image/uth.jpg">
-#### Ph.D. Candidate in Biostatistics, The University of Texas Health Science Center at Houston	
-_Expected Dec. 2017_
+#### Ph.D. in Biostatistics, The University of Texas Health Science Center at Houston	
+_Mar. 2018_
 
 - GPA: 4.0/4.0
-- Minor: Bioinformatics
+- Minor: Bioinformatics, Health economics
 
 <img align="right" src="{{ site.url }}/image/upitts.jpg">
 #### M.S. in Industrial Engineering & Operations Research, University of Pittsburgh
@@ -56,10 +56,10 @@ _Jul. 2009_
 ---
 
 <img align="right" src="{{ site.url }}/image/Merck.png">
-#### Biostatistics Intern, Merck & Co., Inc.
-_May 2017 – Present_
+#### Sr. Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
+_Apr. 2018 –  Present_
 
-**Project: Continuous safety monitoring and benefit-risk analysis.** 
+- Late stage statistician on oncology studies.
 
 <br>
 
@@ -85,6 +85,14 @@ _July 2015 – Present_
 - Prepared statistical reports for non-statistical medical researchers and revised analysis based on their feedback accordingly.
 
 <br>
+
+<img align="right" src="{{ site.url }}/image/Merck.png">
+#### Biostatistics Intern, Merck & Co., Inc.
+_May 2017 –  Aug. 2017_
+
+**Project: Continuous safety monitoring and benefit-risk analysis.** <a href="{{ site.url }}/research/#BRA" target="_blank">[abstract]</a>
+
+ <br>
 
 <img align="right" src="{{ site.url }}/image/mda.png">
 #### Research Assistant, Department of Health Service, The University of Texas MD Anderson Cancer Center
@@ -143,6 +151,9 @@ _May 2013_
 ---
 ## Honers
 ---
+- JSM 2018  Biopharmaceutical Student Paper Award, American Statistical Association
+
+_July.  2018_
 
 - R.Hardy and C. Morton Hawkins Endowed Scholarship, The University of Texas Health Science Center 
 
@@ -164,20 +175,23 @@ _Dec. 2007_
 ---
 ## Publications
 ---
+- **Li, K**, Yuan, S., Wang, W.,  et al., 2018. “Periodic Benefit-Risk Assessment using Bayesian Stochastic Multi-criteria Acceptability Analysis.” Contemporary Clinical Trials. <a href="https://www.contemporaryclinicaltrials.com/article/S1551-7144(17)30775-9/fulltext" target="_blank">[Paper]</a>
 
-1.**Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. (Resubmitted)
+- **Li, K**,  O'Brien, R., Lutz, M., Luo, S., 2018. “A Prognostic Model of Alzheimer's Disease Relying on Multiple Longitudinal Measures and Time-to-Event Data.“ Alzheimer's \& Dementia. <a href="https://www.alzheimersanddementia.com/article/S1552-5260(17)33840-2/abstract" target="_blank">[Paper]</a>
 
-2.**Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. <a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7381/full" target="_blank">[Paper]</a> 
+- **Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. <a href="http://journals.sagepub.com/doi/abs/10.1177/0962280217722177" target="_blank">[Paper]</a>
 
-3.**Li, K**., Stimming, E. F., Luo, S., 2017. “Dynamic Predictions of motor diagnosis in Huntington’s disease using a joint modeling approach.” Journal of Huntington's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28582868" target="_blank">[Paper]</a> 
+- **Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. <a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7381/full" target="_blank">[Paper]</a> 
 
-4.**Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2017. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-To-Event Data.” Journal of Alzheimer’s Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]</a> <a href="http://www.iospress.nl/ios_news/prediction-of-conversion-to-alzheimers-disease-with-longitudinal-measures-and-time-to-event-data/" target="_blank">[Media]</a>
+- **Li, K**., Stimming, E. F., Luo, S., 2017. “Dynamic Predictions of motor diagnosis in Huntington’s disease using a joint modeling approach.” Journal of Huntington's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28582868" target="_blank">[Paper]</a> 
 
-5.Csencsits, K., Suescun, J., **Li, K**., Luo, S., Bick, D., 2017. “Serum Lymphocyte-Associated Cytokine Concentrations Change More Rapidly over Time in Multiple System Atrophy Compared to Parkinson Disease.” Neuroimmunomodulation. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]
+- **Li, K**., Chan, W., Doody, R.S., Luo, S., the ADNI, 2017. “Prediction of Conversion to Alzheimer’s Disease with Longitudinal Measures and Time-To-Event Data.” Journal of Alzheimer’s Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]</a> <a href="http://www.iospress.nl/ios_news/prediction-of-conversion-to-alzheimers-disease-with-longitudinal-measures-and-time-to-event-data/" target="_blank">[Media]</a>
 
-6.Rafferty, M. R., Schmidt, P. N., Luo, S. T., **Li, K**., Marras, C., Davis, T. L., ... & Simuni, T., 2016. “Regular Exercise, Quality of Life, and Mobility in Parkinson’s Disease: A Longitudinal Analysis of National Parkinson Foundation Quality Improvement Initiative Data.” Journal of Parkinson's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27858719/" target="_blank">[Paper]</a>
+- Csencsits, K., Suescun, J., **Li, K**., Luo, S., Bick, D., 2017. “Serum Lymphocyte-Associated Cytokine Concentrations Change More Rapidly over Time in Multiple System Atrophy Compared to Parkinson Disease.” Neuroimmunomodulation. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28436391/" target="_blank">[Paper]
 
-7.He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a>
+- Rafferty, M. R., Schmidt, P. N., Luo, S. T., **Li, K**., Marras, C., Davis, T. L., ... & Simuni, T., 2016. “Regular Exercise, Quality of Life, and Mobility in Parkinson’s Disease: A Longitudinal Analysis of National Parkinson Foundation Quality Improvement Initiative Data.” Journal of Parkinson's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27858719/" target="_blank">[Paper]</a>
+
+- He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a>
 
 
 ---

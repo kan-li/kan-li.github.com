@@ -7,13 +7,13 @@
     <title>Kan Li</title>
     <link href="http://li-kan.com/feed/" rel="self" />
     <link href="https://kan-li.github.io/" />
-    <lastBuildDate>2016-11-07T16:30:14-06:00</lastBuildDate>
+    <lastBuildDate>2018-05-25T21:42:02-04:00</lastBuildDate>
     <webMaster>kan.li@uth.tmc.edu</webMaster>
     
     <item>
       <title>Rcpp - Using C++ and R code Together</title>
       <link href="http://li-kan.com/2016/11/Rcpp-tutorial/"/>
-      <pubDate>2016-11-07T00:00:00-06:00</pubDate>
+      <pubDate>2016-11-07T00:00:00-05:00</pubDate>
       <author>Kan Li</author>
       <guid>http://li-kan.com/2016/11/Rcpp-tutorial</guid>
       <content:encoded><![CDATA[<p>This tutorial was presented as part of PH 1930 Statistical Computing. The examples for this session are available on Github at the <a href="https://github.com/kan-li/Rcpp-arms" target="_blank">link</a>.</p>
@@ -22,30 +22,40 @@
 <a href="#CE">Configure the environment</a><br>
 <a href="#Rcpp">Rcpp and RcppArmadillo</a><br>
 <a href="#Start">Getting started</a><br>
-<a href="#FE">First Example</a><br></p>
+<a href="#FE">First example</a><br>
+<a href="#OpenMP">Parallelization</a><br>
+<a href="#MCMC">MCMC for GLMM</a><br></p>
 
 <p>While it is possible to write C or Fortran code for use in R as covered previously in this course, Rcpp provides a clean, approachable API that lets we write high-performance code much easily and joyfully.</p>
 
-<p><span id="OV">
-<strong>Overview</strong>
-</span>
-In general, R is not a fast or most memory efficient language -- but it is very easy to use, to share, and makes very pretty output. C++ is very fast, but not so easy to use, and debugging could be painful. Rcpp supports implementing R functions in C++ for high performance computing and to easily interface R with external libraries.
-Configure the environment for using C++ code with R</p>
+<p><span id="OV"></p>
 
-<p><span id="CE">
-<strong>Configure the environment for using C++ code with R</strong>
-</span>
-I only test the tool on Windows and Linux. No matter which platform you prefer, <a href="https://www.rstudio.com/" target="_blank">RStudio</a> is highly recommended to do the work. For a Windows user, you will need to make sure you have the latest release of R (3.2.0+) and will also need to install the <a href="http://cran.r-project.org/bin/windows/Rtools">Rtools</a>  library before you can use any packages with C++ code in them. Usually RStudio will help to check whether the Rtools are installed and install it for you when you first use Rcpp. If you are Linux user, everything probably just works. You may also want to visit this <a href="https://cdrv.wordpress.com/2013/01/12/getting-compilers-to-work-with-rcpp-rcpparmadillo/">blog post</a> which has more information on making C++ work with R under Windows/Mac if you end up encountering any weirdness.</p>
+<h2>Overview</h2>
 
-<p><span id="Rcpp">
-<strong>Rcpp and RcppArmadillo</strong>
-</span>
-In this session we’ll learn how to improve our R code performance by rewriting key functions in C++. Typical bottlenecks that C++ can address include:</p>
+<p></span></p>
+
+<p>In general, R is not a fast or most memory efficient language -- but it is very easy to use, to share, and makes very pretty output. C++ is very fast, but not so easy to use, and debugging could be painful. Rcpp supports implementing R functions in C++ for high performance computing and to easily interface R with external libraries.</p>
+
+<p><span id="CE"></p>
+
+<h2>Configure the environment for using C++ code with R</h2>
+
+<p></span></p>
+
+<p>I only test the tool on Windows and Linux. No matter which platform you prefer, <a href="https://www.rstudio.com/" target="_blank">RStudio</a> is highly recommended to do the work. For a Windows user, you will need to make sure you have the latest release of R (3.2.0+) and will also need to install the <a href="http://cran.r-project.org/bin/windows/Rtools">Rtools</a>  library before you can use any packages with C++ code in them. Usually RStudio will help to check whether the Rtools are installed and install it for you when you first use Rcpp. If you are Linux user, everything probably just works. You may also want to visit this <a href="https://cdrv.wordpress.com/2013/01/12/getting-compilers-to-work-with-rcpp-rcpparmadillo/">blog post</a> which has more information on making C++ work with R under Windows/Mac if you end up encountering any weirdness.</p>
+
+<p><span id="Rcpp"></p>
+
+<h2>Rcpp and RcppArmadillo</h2>
+
+<p></span></p>
+
+<p>In this session we’ll learn how to improve our R code performance by rewriting key functions in C++. Typical bottlenecks that C++ can address include:</p>
 
 <ul>
-<li><p>Loops that can’t be easily vectorized because subsequent iterations depend on previous ones.</p></li>
-<li><p>Recursive functions, or problems which involve calling functions millions of times. The overhead of calling a function in C++ is much lower than that in R.</p></li>
-<li><p>Problems that require advanced data structures and algorithms that R doesn’t provide. Through the standard template library (STL), C++ has efficient implementations of many important data structures, from ordered maps to double-ended queues.</p></li>
+<li>Loops that can’t be easily vectorized because subsequent iterations depend on previous ones.</li>
+<li>Recursive functions, or problems which involve calling functions millions of times. The overhead of calling a function in C++ is much lower than that in R.</li>
+<li>Problems that require advanced data structures and algorithms that R doesn’t provide. Through the standard template library (STL), C++ has efficient implementations of many important data structures, from ordered maps to double-ended queues.</li>
 </ul>
 
 
@@ -55,15 +65,21 @@ In this session we’ll learn how to improve our R code performance by rewriting
 
 <p>Although the base Rcpp package provides its own data structures (e.g., array, matrix, list) that can be passed easily between R and C++, the Armadillo data structures provided by the <code>RcppArmadillo</code>  package are really nice and easier to use. Additionally, the Armadillo data structures are native C++ data structures, have multi-thread support and less unpredictable bad errors are encountered in practice. So I suggest using Armadillo data structures in most cases.</p>
 
-<p><span id="Start">
-<strong>Getting started</strong>
-</span>
-Before we start the first example, we install the two R package using
-<code>{r}
+<p><span id="Start"></p>
+
+<h2>Getting started</h2>
+
+<p></span></p>
+
+<p>Before we start the first example, we install the two R package using</p>
+
+<pre><code class="language-r">
 install.packages("Rcpp")
 install.packages("RcppArmadillo")
-</code>
-in Rstudio command line.</p>
+</code></pre>
+
+
+<p>in Rstudio command line.</p>
 
 <p>We start by creating a new file in RStudio by clicking on the icon in the top left corner of the screen and select <strong>C++ File</strong> from the drop down menu.
 <img src="http://li-kan.com/image/post/Rcpp/create_file.png" id="mainImg0" class="mainImgStyle"> <br></p>
@@ -73,36 +89,302 @@ in Rstudio command line.</p>
 
 <p>This will compile the function and make it so we can access the C++ code from R -  much easier than Calling C from R we taught before. The example can help you to check everything needed are correctly installed on your computer.</p>
 
-<p>Some other things to note:
-- This statement include Rcpp header file in the program. The function is similar as library( ) in R.  It also tells us that we can call any Rcpp constructs by their given name without the <code>Rcpp::</code> prefix.
-```cpp</p>
-
-<h1>include &lt;Rcpp.h></h1>
-
-<p>using namespace Rcpp;
-```</p>
+<p><strong>Some other things to note</strong>:</p>
 
 <ul>
-<li><p>We also put one of these statements before each function we want to make available to R:
-<code>cpp
-/[[Rcpp::export]]
-</code>
-We can also define multiple C++ functions in the same file (not necessarily recommended unless some of them will be used by the main function), so we can put one in front of each one we want to make visible.</p></li>
-<li><p>We can include R code blocks in C++ files processed with sourceCpp. The R code will be automatically run after the compilation.
-<code>cpp
+<li>This statement include Rcpp header file in the program. The function is similar as <code>library( )</code> in R.  It also tells us that we can call any Rcpp constructs by their given name without the <code>Rcpp::</code> prefix.</li>
+</ul>
+
+
+<pre><code class="language-cpp">
+#include &lt;Rcpp.h&gt;
+using namespace Rcpp;
+</code></pre>
+
+
+<ul>
+<li>We also put this statement before each function we want to make available to R:</li>
+</ul>
+
+
+<pre><code class="language-cpp">
+//[[Rcpp::export]]
+</code></pre>
+
+
+<p>We can also define multiple C++ functions in the same file (not necessarily recommended unless some of them will be used by the main function), so we can put one in front of each one we want to make visible.</p>
+
+<ul>
+<li>We can include R code blocks in C++ files processed with <code> sourceCpp </code>. The R code will be automatically run after the compilation.</li>
+</ul>
+
+
+<pre><code class="language-cpp">
 /*** R
 timesTwo(42)
 */
-</code></p></li>
+</code></pre>
+
+
+<p><span id="FE"></p>
+
+<h2>First example</h2>
+
+<p></span>
+We introduce our first example of calculating inner product of two vectors, and use data structure of Armadillo. The C++ code is:</p>
+
+<pre><code class="language-cpp">
+#include &lt;RcppArmadillo.h&gt;
+// [[Rcpp::depends( RcppArmadillo)]]
+using namespace arma;
+
+// [[Rcpp::export]]
+arma::mat inner(arma::vec x, arma::vec y){
+  arma::mat ip=x.t()*y;
+  return(ip);
+}
+
+/*** R
+vecA = rnorm(100000)
+*/
+</code></pre>
+
+
+<p>Note that we no longer use the:</p>
+
+<pre><code class="language-cpp">#include &lt;Rcpp.h&gt;
+</code></pre>
+
+
+<p>statement as in the example code provided by RStudio, but replace it with:</p>
+
+<pre><code class="language-cpp">
+#include &lt;RcppArmadillo.h&gt;
+//[[Rcpp::depends(RcppArmadillo)]]
+</code></pre>
+
+
+<p>Also note that for all of the objects, we have to specify their type as we define the argument. This is a feature of C++ that is different from R where we just create objects without having to specify their type. Some basic C++ Armadillo objects we can pass in:</p>
+
+<ul>
+<li>For <strong>decimal numbers</strong> like <code>1.2347</code> we need to use the <code>double</code> declaration, followed by the name of the argument (e.g.. <code>my_double</code>)</li>
+<li>For <strong>integers</strong> (whole numbers) like <code>26</code> we use the <code>int</code> declaration, followed by the argument.</li>
+<li>For <strong>numeric vectors</strong>, we use the <code>arma::vec</code> declaration, followed by the argument. This code should crash if you try to pass in anything other than a numeric vector  (can contain doubles or integers). When you refer to the <em>i</em> th elements of a vector such as <code> x </code>, we use  <code> x(i) </code> instead of <code> x[i] </code> as in R.</li>
+<li>For <strong>numeric matrices</strong>, we use the <code>arma::mat</code> declaration, followed by the argument. Again, make sure it is just numbers in there.</li>
 </ul>
 
+
+<p>We then write following R code and run it.</p>
+
+<pre><code class="language-r">
+> library(Rcpp)
+> library(RcppArmadillo)
+
+> sourceCpp('test.cpp')
+> vecA = rnorm(100000)
+
+> inner(vecA,vecA)
+         [,1]
+[1,] 100317.2
+</code></pre>
+
+
+<p><span id="OpenMP"></p>
+
+<h2>Parallelization in Rcpp via OpenMP</h2>
+
+<p></span></p>
+
+<p>Now we make a small extension of the example and simply introduce using OpenMP to parallelize our C++ function. In order for the compiler to recognize OpenMP, we need to include the OpenMP header flag.  Additionally, Rcpp has a plugin that will automatically add the OpenMP compiler flags.  Add the following to the top of your C++ program.</p>
+
+<pre><code class="language-cpp">
+#include &lt;omp.h&gt;
+// [[Rcpp::plugins(openmp)]]
+</code></pre>
+
+
+<p>We also have to set some compiler flags in R code. Add the following to your R code.</p>
+
+<pre><code class="language-cpp">
+Sys.setenv("PKG_CXXFLAGS" = "-fopenmp")
+Sys.setenv("PKG_LIBS" = "-fopenmp")
+</code></pre>
+
+
+<p>The example we are going to use is element-wised sum square of a vector. It is a special case of the inner product of two same vectors.  In serial way, we can realize this in Rcpp like so:</p>
+
+<pre><code class="language-cpp">
+// [[Rcpp::export]]
+double sumsq_serial(vec x)
+{
+  double sum = 0.0;
+  for (int i=0; i&lt;x.size(); i++){
+    sum += sq(x(i));
+  }  
+  return sum;
+}
+</code></pre>
+
+
+<p>The function <code> sq()</code>  is simply squaring a number as</p>
+
+<pre><code class="language-cpp">
+double sq(double x){
+  return(x*x);
+}
+</code></pre>
+
+
+<p>I do not put <code> // [[Rcpp::export]] </code> before this function because I will never call it from R. Calling such a function will slow down the performance of the code, comparing with <code class="language-cpp"> sum += x(i)*x(i); </code>. I include a function here to ascertain that each thread can correctly recognizes the user defined function when doing parallel computing later.</p>
+
+<p>And in parallel using OpenMP, we just add the basic compiler pragma:</p>
+
+<pre><code class="language-cpp">
+// [[Rcpp::export]]
+double sumsq_parallel(vec x, int ncores)
+{
+  double sum = 0.0;
+  omp_set_num_threads(ncores);
+  #pragma omp parallel for shared(x) reduction(+:sum)
+  for (int i=0; i&lt;x.size(); i++){
+    // cout &lt;&lt; i &lt;&lt; ", "omp_get_thread_num() &lt;&lt;  " of " &lt;&lt;  omp_get_num_threads() << endl;
+    sum += sq(x(i));
+  }
+  return sum;
+}
+</code></pre>
+
+
+<p>Basically, we identify the loop in which we want to parallelize and add the following lines above it</p>
+
+<pre><code class="language-cpp">
+omp_set_num_threads(int)
+#pragma omp parallel for
+</code></pre>
+
+
+<p>The first line selects the number of cores to use.  This should not exceed the number of cores in your system.  If we do not write this line, all the cores available on your computer will be used. The only real trick here in this example is making use of the <code> shared() </code> and <code> reduction() </code> keyword, and it pretty much does what it looks like. We’re telling the compiler that while each iteration of the loop should be run in parallel, they share the same information from vector <code> x </code>, and in the end we want the private (by thread) copies of the variable <code> sum </code> to be added up.  The code <code> cout &lt;&lt;  i &lt;&lt;  ", "omp_get_thread_num() &lt;&lt;  " of " &lt;&lt;  omp_get_num_threads() &lt;&lt;  endl; </code> is C++ standard way to do <code> print() </code>. This code just tells which thread is currently working on the <em>i</em> th iteration, and the total number of thread are working together.</p>
+
+<p>A small experiment is used to compare different methods proposed. A small set of micro-benchmarks in a variety of methods are conducted.</p>
+
+<pre><code class="language-r">
+library(rbenchmark)
+bench = benchmark(
+          vecA%*%vecA,
+          inner(vecA,vecA),
+          sumsq_parallel(vecA,1),
+          sumsq_parallel(vecA,2),
+          sumsq_parallel(vecA,3),
+          sumsq_parallel(vecA,4), order = NULL, replications=1000)
+
+print(bench[,1:4])
+
+# test replications elapsed relative
+# 1           vecA %*% vecA         1000   0.721    4.682
+# 2       inner(vecA, vecA)         1000   0.229    1.487
+# 3 sumsq_parallel(vecA, 1)         1000   0.319    2.071
+# 4 sumsq_parallel(vecA, 2)         1000   0.203    1.318
+# 5 sumsq_parallel(vecA, 3)         1000   0.154    1.000
+# 6 sumsq_parallel(vecA, 4)         1000   0.157    1.019
+</code></pre>
+
+
+<p>We can see that C++ functions are much faster than R function <code> %*% </code>. As more cores were used in parallel computing, the execution time becomes shorter. Because I only had 4 cores on my desktop, the maximal number of core I tested was 4. It seems requiring all the resources on your computer to do the work may slow down the overall performance.</p>
+
+<p><span id="MCMC"></p>
+
+<h2>MCMC for GLMM</h2>
+
+<p></span></p>
+
+<p>This tutorial session has only touched on a small part of Rcpp, giving you the basic tools to rewrite poorly performing R code in C++. With the basic knowledge of Rcpp, it will be much easier for you to understand the example of MCMC for generalized linear mixed model using Adaptive rejection Metropolis sampling (ARMS) I provide <a href="https://github.com/kan-li/Rcpp-arms" target="_blank">here</a> . Three methods are compared. The first method is pure R code, using the <code> arms </code> function in R <code> Hi </code> package. The second method is writing log density functions in C++, but sampling process is still coded in R with modified <code> arms </code> function.  The third method is coding both log density functions and sampling process in Rcpp/C++. The pure R example takes 36.14 mins. The hybrid method takes 9.80 mins and the C++ code used only 1.17 mins.</p>
+
+<p>The log density function coded in R:</p>
+
+<pre><code class="language-r">
+logden.beta &lt; - function(x, myu) {
+  myu.long &lt; - as.vector(mapply(rep, myu, nobs))
+  temp &lt; - as.vector(design.matrix %*% as.matrix(x, ncol=1)) + myu.long
+  return(sum(y*temp - log(1+exp(temp))))
+}
+
+logden.u &lt; - function(x, mybeta, myy, mycovariate, mytau) {
+  temp &lt;- mycovariate %*% as.matrix(mybeta, ncol=1) + x
+  return(sum(myy * temp - log(1+exp(temp))) - 0.5*x^2*mytau)
+}
+</code></pre>
+
+
+<p>The log density function coded in C++:</p>
+
+<pre><code class="language-cpp">
+// [[Rcpp::export]]
+double logden_beta(vec x, vec myu_long, mat design_matrix, vec y){
+  vec temp = design_matrix*x + myu_long;
+  vec one; one.ones(size(temp));
+  vec logden = y%temp - log(one + exp(temp));
+  return(sum(logden));
+}
+
+// [[Rcpp::export]]
+double logden_u(double x, vec mybeta, vec myy, mat mycovariate, double mytau){
+  vec x_long(size(myy)); x_long.fill(x);
+  vec temp = mycovariate*mybeta + x_long;
+  vec one; one.ones(size(temp));
+  vec logden = myy%temp - log(one + exp(temp));
+  return(sum(logden)-0.5*pow(x,2)*mytau);
+}
+</code></pre>
+
+
+<p><span id="MCMC"></p>
+
+<h2>Common Pitfalls</h2>
+
+<p></span></p>
+
+<ul>
+<li>The number one pitfall I have made while working with C++ and R is forgetting that while R starts vector and matrix indexes from 1, C++ (along with pretty much every other programming language), starts indexes from zero, so you need to plan accordingly.</li>
+<li>In C++, we need to define the variable before use it while R does not require that.</li>
+<li>Don't forget to write the semicolon after each line of the code in C++.</li>
+</ul>
+
+
+<p><span id="MCMC"></p>
+
+<h2>Resources</h2>
+
+<p></span></p>
+
+<p>For additional information and advanced use, following resources provide a helpful introduction:</p>
+
+<ul>
+<li><a href="http://www.springer.com/statistics/computational+statistics/book/978-1-4614-6867-7">Rcpp: Seamless R and C++ Integration</a></li>
+<li><a href="http://www.rcpp.org/">Rcpp website</a></li>
+<li><a href="http://www.rcpp.org/book/">Rcpp book</a></li>
+<li><a href="http://cran.rstudio.com/web/packages/Rcpp/vignettes/Rcpp-quickref.pdf">Rcpp Quick Reference Guide</a></li>
+<li><a href="http://adv-r.had.co.nz/Rcpp.html">High performance functions with Rcpp</a></li>
+<li><a href="http://cran.rstudio.com/web/packages/Rcpp/vignettes/Rcpp-attributes.pdf">Introduction to Rcpp Attributes</a></li>
+<li><a href="http://gallery.rcpp.org/">Gallery of examples</a></li>
+<li><a href="http://arma.sourceforge.net/docs.html">Armadillo C++ linear algebra library</a></li>
+<li><a href="http://bisqwit.iki.fi/story/howto/openmp/">Guide into OpenMP</a></li>
+<li><a href="http://www.ee.ryerson.ca/~courses/ee8218/mpi_openmp.pdf">Introduction to MPI and OpenMP</a></li>
+</ul>
+
+
+<p><head>
+    <link href="http://li-kan.com/media/css/prism.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="http://li-kan.com/media/js/prism.js"></script>
+</body></p>
 ]]></content:encoded>
     </item>
     
     <item>
       <title>PART - Parallelizing MCMC with Random Partition Trees</title>
       <link href="http://li-kan.com/2016/10/Parallelizing-MCMC/"/>
-      <pubDate>2016-10-06T00:00:00-05:00</pubDate>
+      <pubDate>2016-10-06T00:00:00-04:00</pubDate>
       <author>Kan Li</author>
       <guid>http://li-kan.com/2016/10/Parallelizing-MCMC </guid>
       <content:encoded><![CDATA[<p><strong>Background</strong>:
@@ -151,7 +433,7 @@ The simulation results is summarized in the blow table. Majority of the paramete
     <item>
       <title>Classification of Alzheimer’s Disease patient base on gene expression data</title>
       <link href="http://li-kan.com/2016/08/Sparse-classification/"/>
-      <pubDate>2016-08-10T00:00:00-05:00</pubDate>
+      <pubDate>2016-08-10T00:00:00-04:00</pubDate>
       <author>Kan Li</author>
       <guid>http://li-kan.com/2016/08/Sparse-classification</guid>
       <content:encoded><![CDATA[<p>The work investigates the sparse classification methods for high dimensional data. Here I provide a toy example to classify patient with Alzheimer’s Disease (AD) using gene expression data (select 500 gene expression). Two methods were adopted to carry out classification: <strong>sparse logistic regression</strong> and <strong>sparse proximal support vector machine</strong> (SVM). I assessed how well the methods can discriminate between patients based on classification accuracy, sensitivity and specificity. I conducted a 5-fold cross validation to avoid overestimation of the performance. All gene expression measures were scaled to zero mean and unit variance. The <a href="https://cran.r-project.org/web/packages/gglasso/index.html" target="_blank">gglasso</a> package is used. The optimal value of penalty parameter lambda was selected from a series of lambdas which gave the minimum cross validation error on training data set. The simulation results were presented in below tables.</p>
@@ -170,7 +452,7 @@ The simulation results is summarized in the blow table. Majority of the paramete
     <item>
       <title>Beta Rectangular (BR) Regression</title>
       <link href="http://li-kan.com/2016/04/Beta-Regression/"/>
-      <pubDate>2016-04-02T00:00:00-05:00</pubDate>
+      <pubDate>2016-04-02T00:00:00-04:00</pubDate>
       <author>Kan Li</author>
       <guid>http://li-kan.com/2016/04/Beta-Regression</guid>
       <content:encoded><![CDATA[<p><strong>Background</strong>: <a href="https://c-path.org/metrics-through-6716/" target="_blank">CAMD</a> of Critical Path Institute developed a quantitative model to describe the progression of cognitive changes in mild to moderate to test and optimize operating characteristics of trial designs for AD (via simulations based on the model). The <a href="https://www.ncbi.nlm.nih.gov/pubmed/22821139" target="_blank">model</a> and the simulation tool got approval from FDA as “Fit for Purpose”. The original ADAS-cog progression model was based on Beta regression. However, as noted by Hahn (2008), Garcia et al. (2011), and Bayes et al. (2012), the Beta distribution considers neither the tail area events nor the outlying events, fails to represent excess variability and overoccurrence of tail-area events, which could limit its applications for modeling the proportional data (data in the open unit interval (0, 1) such as ADAS-cog score after being divided by 70). An alternative to the Beta distribution is the Beta rectangular (BR) distribution, which assigns more weight to extremal tail-area events and more probability to the outliers and extremal events. Specifically, the BR distribution has a shape parameter \theta  (between 0 and 1) controlling the thickness of the tails. When, \theta = 0, the BR distribution reduces to the Beta distribution. In general, when 0&lt;\theta &lt;1, the BR distribution has heavier tails than its Beta distribution counterpart. Please refer to Figure 2 in Wang and Luo (2016) for a visual comparison of Beta and BR distributions.</p>
@@ -188,7 +470,7 @@ The simulation results is summarized in the blow table. Majority of the paramete
     <item>
       <title>IEOR PhD 101</title>
       <link href="http://li-kan.com/2012/05/ieor-phd/"/>
-      <pubDate>2012-05-16T00:00:00-05:00</pubDate>
+      <pubDate>2012-05-16T00:00:00-04:00</pubDate>
       <author>Kan Li</author>
       <guid>http://li-kan.com/2012/05/ieor-phd</guid>
       <content:encoded><![CDATA[<blockquote><p>注： 本文首发于一亩三分田数学统计IEOR版 <a href="http://www.1point3acres.com/bbs/thread-34658-1-1.html">细说IEOR PhD</a></p></blockquote>
@@ -276,7 +558,7 @@ Consultant。 还是推荐 ZS
     <item>
       <title>IEOR 101</title>
       <link href="http://li-kan.com/2012/05/ieor-master/"/>
-      <pubDate>2012-05-13T00:00:00-05:00</pubDate>
+      <pubDate>2012-05-13T00:00:00-04:00</pubDate>
       <author>Kan Li</author>
       <guid>http://li-kan.com/2012/05/ieor-master</guid>
       <content:encoded><![CDATA[<blockquote><p>注： 本文首发于一亩三分田数学统计IEOR版 <a href="http://www.1point3acres.com/bbs/thread-34558-1-1.html">细说IEOR</a></p></blockquote>
