@@ -175,7 +175,7 @@ _Dec. 2007_
 ---
 ## Publications
 ---
-- **Li, K**, Luo, S., 2018. “Bayesian functional joint models for multivariate longitudinal and time-to-event data” Computational Statistics & Data Analysis. <a href="https://www.sciencedirect.com/science/article/pii/S0167947318301816" target="_blank">[Paper]</a>
+- **Li, K**, Luo, S., 2018. “Bayesian Functional Joint Models for Multivariate Longitudinal and Time-to-Event data” Computational Statistics & Data Analysis. <a href="https://www.sciencedirect.com/science/article/pii/S0167947318301816" target="_blank">[Paper]</a>
 
 - **Li, K**, Yuan, S., Wang, W.,  et al., 2018. “Periodic Benefit-Risk Assessment using Bayesian Stochastic Multi-criteria Acceptability Analysis.” Contemporary Clinical Trials. <a href="https://www.contemporaryclinicaltrials.com/article/S1551-7144(17)30775-9/fulltext" target="_blank">[Paper]</a>
 
