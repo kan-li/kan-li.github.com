@@ -175,9 +175,11 @@ _Dec. 2007_
 ---
 ## Publications
 ---
+- **Li, K**, Luo, S., 2018. “Bayesian functional joint models for multivariate longitudinal and time-to-event data” Computational Statistics & Data Analysis. <a href="https://www.sciencedirect.com/science/article/pii/S0167947318301816" target="_blank">[Paper]</a>
+
 - **Li, K**, Yuan, S., Wang, W.,  et al., 2018. “Periodic Benefit-Risk Assessment using Bayesian Stochastic Multi-criteria Acceptability Analysis.” Contemporary Clinical Trials. <a href="https://www.contemporaryclinicaltrials.com/article/S1551-7144(17)30775-9/fulltext" target="_blank">[Paper]</a>
 
-- **Li, K**,  O'Brien, R., Lutz, M., Luo, S., 2018. “A Prognostic Model of Alzheimer's Disease Relying on Multiple Longitudinal Measures and Time-to-Event Data.”  Alzheimer's \& Dementia. <a href="https://www.alzheimersanddementia.com/article/S1552-5260(17)33840-2/abstract" target="_blank">[Paper]</a>
+- **Li, K**,  O'Brien, R., Lutz, M., Luo, S., 2018. “A Prognostic Model of Alzheimer's Disease Relying on Multiple Longitudinal Measures and Time-to-Event Data.”  Alzheimer's & Dementia. <a href="https://www.alzheimersanddementia.com/article/S1552-5260(17)33840-2/abstract" target="_blank">[Paper]</a>
 
 - **Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. <a href="http://journals.sagepub.com/doi/abs/10.1177/0962280217722177" target="_blank">[Paper]</a>
 
