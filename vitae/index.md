@@ -5,7 +5,7 @@ title: Resume
 <!--- Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a> -->
 
 ## Summary
-- Too lazy to update anything since worked on oncology. 
+- Too lazy to update anything here since worked on oncology. 
 
 
 ---
@@ -35,7 +35,7 @@ _Jul. 2009_
 ---
 
 <img align="right" src="{{ site.url }}/image/Merck.png">
-#### Sr. Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
+#### Associate Principal Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
 _May 2021 –  Present_
 #### Sr. Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
 _Apr. 2018 –  Apr. 2021_
