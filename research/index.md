@@ -2,6 +2,11 @@
 layout: page
 title: Research
 ---
+
+## Summary
+- Too lazy to update anything since had kids. 
+
+---
 [Benefit-Risk Assessment](#BRA)<br>
 [Functional Data Analysis](#functional-data-analysis)<br>
 [Dynamic Prediction](#dynamic-prediction)<br>

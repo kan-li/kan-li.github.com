@@ -5,33 +5,12 @@ title: Resume
 <!--- Resume: <a href="{{ site.url }}/files/Kan_Resume_2016.pdf" target="_blank">[PDF]</a> -->
 
 ## Summary
-- Research Interests: Bayesian hierarchical model; Joint model of longitudinal and survival process; Dynamic prediction; Multivariate data analysis; Functional data analysis; Item response theory; Clinical trial. 
-- Proficient in R, SAS, Stan, WinBugs, and implementing parallel computing on HPC clusters.
-- Rich experience in modeling and solving complex system problems using Agent-based modeling, Linear programming, Dynamic Programming, Markov Decision Process.
-- Willing to learn and accept constructive criticism.
-- Outstanding teamwork building ability and strong interpersonal skills.                                                            
+- Too lazy to update anything since worked on oncology. 
 
-[Technical Strengths](#technical-strengths)<br>
-[Education](#education)<br>
-[Employment](#employment)<br>
-[Certifications](#certifications)<br>
-[Honers](#honers)<br>
-[Publications](#publications)<br>
-[Course Work](#course-work)<br>
-
-
----
-## Technical Strengths
----
-
-- Statistical Packages: R, SAS, Stan, WinBugs, Rcpp, Shiny.
-- Programming Languages: Java, Python, Shell, Julia, SQL, VBA. 
-- Platforms: Linux, Windows
 
 ---
 ## Education
 ---
-</span>
 <img align="right" src="{{ site.url }}/image/uth.jpg">
 #### Ph.D. in Biostatistics, The University of Texas Health Science Center at Houston	
 _Mar. 2018_
@@ -57,9 +36,11 @@ _Jul. 2009_
 
 <img align="right" src="{{ site.url }}/image/Merck.png">
 #### Sr. Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
-_Apr. 2018 –  Present_
+_May 2021 –  Present_
+#### Sr. Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
+_Apr. 2018 –  Apr. 2021_
 
-- Late stage statistician on oncology studies.
+- Lead multiple phase 3 oncology studies in cervical and gastric indications form study planning to regulatory submission/post-submission.
 
 <br>
 
@@ -155,10 +136,6 @@ _May 2013_
 
 _July.  2018_
 
-- R.Hardy and C. Morton Hawkins Endowed Scholarship, The University of Texas Health Science Center 
-
-_May. 2016_
-
 - Doctoral Outstanding New Student Scholarship, The University of Texas Health Science Center
 
 _Aug. 2013_
@@ -175,13 +152,34 @@ _Dec. 2007_
 ---
 ## Publications
 ---
+
+- Zou, H., **Li, K**., Luo, S., 2021. Bayesian inference and dynamic prediction of multivariate joint model with functional data: An application to Alzheimer's disease. Statistics in Medicine
+
+- Colombo, N., Dubot, C., Lorusso, D., ..., **Li, K**., et al., 2021. Pembrolizumab for Persistent, Recurrent, or Metastatic Cervical Cancer. New England Journal of Medicine
+
+- Grantz, K. H., Cummings, D. A., Zimmer, S., ..., **Li, K**., et al., 2021. Age-specific social mixing of school-aged children in a US setting using proximity detecting sensors and contact surveys. Scientific Reports
+
+- Mao, R., **Li, K**., Cai, J.Q., et al., 2021. Adjuvant chemotherapy versus observation following resection for patients with nonmetastatic poorly differentiated colorectal neuroendocrine carcinomas. Annals of Surgery
+
+- Lin, J., **Li, K**., Luo, S., 2021. Functional survival forests for multivariate longitudinal outcomes: Dynamic prediction of Alzheimer’s disease progression. Statistical Methods in Medical Research
+
+- Li, F., **Li, K**.,  Li, C.,Luo, S., 2019. Predicting the Risk of Huntington’s Disease with Multiple Longitudinal Biomarkers. Journal of Huntington's Disease
+
+
+- **Li, K**., Luo, S., Yuan, S., Mt‐Isa, S., 2019. A Bayesian Approach for Individual‐level Drug Benefit‐risk Assessment. Statistics in Medicine
+
+- **Li, K**., Luo, S., 2019. Dynamic Prediction of Alzheimer's Disease Progression Using Features of Multiple Longitudinal Outcomes and Time‐to‐Event Data. Statistics in Medicine
+
+
+- Hua, J., Shi, S., **Li, K**., et al., 2019. Outcomes of Lymph Node Dissection for Nonmetastatic Pancreatic Neuroendocrine Tumors: To Dissect or Not To Dissect. Annals of Surgical Oncology
+
+- **Li, K**., Luo, S., 2019. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. <a href="http://journals.sagepub.com/doi/abs/10.1177/0962280217722177" target="_blank">[Paper]</a>
+
 - **Li, K**, Luo, S., 2018. “Bayesian Functional Joint Models for Multivariate Longitudinal and Time-to-Event data” Computational Statistics & Data Analysis. <a href="https://www.sciencedirect.com/science/article/pii/S0167947318301816" target="_blank">[Paper]</a>
 
 - **Li, K**, Yuan, S., Wang, W.,  et al., 2018. “Periodic Benefit-Risk Assessment using Bayesian Stochastic Multi-criteria Acceptability Analysis.” Contemporary Clinical Trials. <a href="https://www.contemporaryclinicaltrials.com/article/S1551-7144(17)30775-9/fulltext" target="_blank">[Paper]</a>
 
 - **Li, K**,  O'Brien, R., Lutz, M., Luo, S., 2018. “A Prognostic Model of Alzheimer's Disease Relying on Multiple Longitudinal Measures and Time-to-Event Data.”  Alzheimer's & Dementia. <a href="https://www.alzheimersanddementia.com/article/S1552-5260(17)33840-2/abstract" target="_blank">[Paper]</a>
-
-- **Li, K**., Luo, S., 2017. “Dynamic Predictions in Bayesian Functional Joint Models for Longitudinal and Time-to-Event Data.” Statistical Methods in Medical Research. <a href="http://journals.sagepub.com/doi/abs/10.1177/0962280217722177" target="_blank">[Paper]</a>
 
 - **Li, K**., Luo, S., 2017. “Functional Joint Model for Longitudinal and Time-to-Event Data: An Application to Alzheimer’s Disease.” Statistics in Medicine. <a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7381/full" target="_blank">[Paper]</a> 
 
@@ -194,26 +192,3 @@ _Dec. 2007_
 - Rafferty, M. R., Schmidt, P. N., Luo, S. T., **Li, K**., Marras, C., Davis, T. L., ... & Simuni, T., 2016. “Regular Exercise, Quality of Life, and Mobility in Parkinson’s Disease: A Longitudinal Analysis of National Parkinson Foundation Quality Improvement Initiative Data.” Journal of Parkinson's Disease. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27858719/" target="_blank">[Paper]</a>
 
 - He, T., **Li, K**., Roberts, M.S., Spaulding, A.C., Ayer, T., Grefenstette, J.J. and Chhatwal, J., 2015.  “Prevention of Hepatitis C by Screening and Treatment in US Prisons.” Annals of Internal Medicine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854298/" target="_blank">[Paper]</a>
-
-
----
-## Course Work
----
-
-- Multiple Regression Analysis (SAS, R)
-- Correlate data Analysis (R)
-- Survival Analysis (SAS, R)
-- Bayesian Data Analysis (R, WinBugs)	
-- Multivariate Statistical Analysis (SAS, R)
-- Categorical Data Analysis (SAS, STATA)
-- Statistical Computing (R, WinBugs, LaTex)
-- Data Mining (R)
-- Nonparametric Regression (R)
-- Distribution free methods (R)
-- Linear Model (R)
-- Sampling Techniques (R) 
-- Theory of Statistics I, II	
-- Time Series Analysis (R)
-- Stochastic Process (R)	
-- Design of Experiments 
-- Practical Bioinformatics (R, Python)
