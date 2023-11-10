@@ -35,10 +35,12 @@ _Jul. 2009_
 ---
 
 <img align="right" src="{{ site.url }}/image/Merck.png">
+#### Principal Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
+_Nov 2023 – present_
 #### Associate Principal Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
-_May 2021 –  Present_
+_May 2021 – Oct. 2023_
 #### Sr. Scientist, Biostatistics, BARDS,  Merck & Co., Inc.
-_Apr. 2018 –  Apr. 2021_
+_Apr. 2018 – Apr. 2021_
 
 - Lead multiple phase 3 oncology studies in cervical and gastric indications form study planning to regulatory submission/post-submission.
 
