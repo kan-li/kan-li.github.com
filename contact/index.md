@@ -3,7 +3,7 @@ layout: page
 title: Contact
 ---
 
-**Email:** kan.li@merck.com         
+**Email:** kan.li@daiichisankyo.com        
 
 **Web:** li-kan.com		  
 
@@ -14,7 +14,6 @@ title: Contact
 **ResearchGate:**   <a href="https://www.researchgate.net/profile/Kan_Li9?ev=hdr_xprf" target="_blank"> Kan Li</a><br>
 
 **Address:**
-Merck Research Laboratories<br>
-UG 1C-46<br>
-351 North Sumneytown Pike<br>
-North Wales, PA 19454
+Daiichi Sankyo, Inc.<br>
+211 Mt Airy Rd<br>
+Basking Ridge, NJ 07920
