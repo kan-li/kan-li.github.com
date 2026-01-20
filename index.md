@@ -11,6 +11,8 @@ I am a Director of Biostatistics at <a href="https://www.daiichisankyo.com/" tar
 
 You can also find me on <a href="https://scholar.google.com/citations?user=sHHdXr8AAAAJ&hl=en6" target="_blank"> Google Scholar</a> and  <a href="https://www.researchgate.net/profile/Kan_Li9?ev=hdr_xprf" target="_blank"> ResearchGate.</a><br>
 
+REDnote: <a href="https://www.xiaohongshu.com/user/profile/5e5e5eff0000000001004abd" target="_blank">  总排在最慢那队的统计师 <br>
+
 I am a big fun of jigsaw puzzles. 
 
 
