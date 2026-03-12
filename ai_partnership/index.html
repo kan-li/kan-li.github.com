@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Catalyst Circle | Building AI Partnership in Pharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #208084;
+            --primary-light: #32b8c6;
+            --dark: #1f2121;
+            --gray-light: #f5f5f5;
+            --gray-medium: #a7a9a9;
+            --accent: #e68157;
+            --success: #32b8c6;
+            --text: #1f2121;
+            --text-light: #626c71;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #fefdfb;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .hero-headline {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .hero-headline .highlight {
+            color: var(--primary);
+        }
+
+        .hero-subheadline {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-cta .cta-button {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-proof {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .hero-proof-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkmark {
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* SECTION STYLING */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .section-title.left {
+            text-align: left;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* THE PROBLEM */
+        .problem {
+            background: linear-gradient(135deg, #fff8f5 0%, #fef5f3 100%);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .problem-left {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .problem-item {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .problem-item::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #e68157;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .problem-quote {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--accent);
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .problem-quote .quote-source {
+            margin-top: 1rem;
+            font-style: normal;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .problem-right {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-text {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* OUR PHILOSOPHY */
+        .philosophy {
+            background: white;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .philosophy-left {
+            order: 2;
+        }
+
+        .philosophy-card {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .philosophy-card-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .philosophy-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .philosophy-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .philosophy-quote {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* WHAT YOU'LL GET */
+        .outcomes {
+            background: linear-gradient(135deg, #f0fafb 0%, #e8f7f9 100%);
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .outcome-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .outcome-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .outcome-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .outcome-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .outcome-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* WHO THIS IS FOR */
+        .audience {
+            background: linear-gradient(135deg, #fef9f5 0%, #fef6f0 100%);
+        }
+
+        /* THE COURSE */
+        .course-structure {
+            background: white;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .module {
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .module-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .module-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .module-topics {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .module-topics li {
+            margin-bottom: 0.5rem;
+            margin-left: 1.5rem;
+        }
+
+        /* COMMUNITY VALUE */
+        .community {
+            background: linear-gradient(135deg, #1f2121 0%, #2a3434 100%);
+            color: white;
+        }
+
+        .community .section-title {
+            color: white;
+        }
+
+        .community .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .community-card {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .community-card h3 {
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .community-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .community-value {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* PORTFOLIO & RECOGNITION */
+        .portfolio {
+            background: white;
+        }
+
+        .portfolio-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .portfolio-left {
+            padding: 2rem;
+            background: var(--gray-light);
+            border-radius: 10px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .portfolio-item:last-child {
+            border-bottom: none;
+        }
+
+        .portfolio-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .portfolio-text h4 {
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        .portfolio-text p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .portfolio-right h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .portfolio-right p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* WHY ME */
+        .why-me {
+            background: linear-gradient(135deg, #fff8f5 0%, #fef5f3 100%);
+        }
+
+        .why-me-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .why-me-left {
+            order: 2;
+        }
+
+        .why-me-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .why-me-check {
+            font-size: 1.5rem;
+            color: var(--success);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .why-me-content h4 {
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-me-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .comparison-table tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table th {
+            text-align: left;
+            padding: 1rem;
+            background: white;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .comparison-table .your-row {
+            background: rgba(32, 128, 132, 0.05);
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* PRICING - commented out
+        .pricing {
+            background: white;
+        }
+
+        .pricing-highlight {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .pricing-highlight h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-highlight .countdown {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(32, 128, 132, 0.15);
+            transform: scale(1.05);
+            background: white;
+        }
+
+        .pricing-stage {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-duration {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .pricing-features li {
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .pricing-features li::before {
+            content: "✓ ";
+            color: var(--success);
+            font-weight: bold;
+        }
+        */
+
+        /* OBJECTION HANDLING */
+        .objections {
+            background: linear-gradient(135deg, #f0fafb 0%, #e8f7f9 100%);
+        }
+
+        .objections-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .objection-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .objection-question {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .objection-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .testimonial-quote {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-role {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .final-cta .cta-button {
+            background: white;
+            color: var(--primary);
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0 0.5rem;
+        }
+
+        .final-cta .cta-button:hover {
+            background: #f5f5f5;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero-headline {
+                font-size: 2rem;
+            }
+
+            .hero-subheadline {
+                font-size: 1rem;
+            }
+
+            .problem-grid,
+            .philosophy-grid,
+            .course-grid,
+            .community-grid,
+            .portfolio-content,
+            .why-me-grid,
+            /* .pricing-grid, */
+            .objections-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-left {
+                order: 0;
+            }
+
+            .why-me-left {
+                order: 0;
+            }
+
+            .module {
+                margin-bottom: 1rem;
+            }
+
+            /* .pricing-card.featured {
+                transform: scale(1);
+            } */
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-proof {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* ACCORDION STYLES */
+        .accordion {
+            background-color: white;
+            color: var(--text);
+            cursor: pointer;
+            padding: 1.5rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: 0.4s;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion:hover, .accordion.active {
+            background-color: var(--gray-light);
+        }
+
+        .panel {
+            padding: 0 1.5rem;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .panel ul {
+            list-style-type: none;
+            padding: 1rem 0;
+        }
+
+        .panel li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .panel li:last-child {
+            border-bottom: none;
+        }
+        
+        .panel li strong {
+            color: var(--primary);
+            min-width: 30px;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: var(--primary);
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            font-size: 1.5rem;
+        }
+
+        .accordion.active:after {
+            content: "\2212";
+        }
+
+        /* INSTRUCTOR SECTION */
+        .instructor {
+            background: linear-gradient(135deg, #f0fafb 0%, #e8f7f9 100%);
+        }
+
+        .instructor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .instructor-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: #e6eaea; 
+            height: 400px;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--text-light);
+            font-weight: bold;
+        }
+        
+        .instructor-content h3 {
+             font-size: 1.8rem;
+             margin-bottom: 1rem;
+             color: var(--text);
+        }
+        
+        .instructor-bio p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .instructor-grid {
+                grid-template-columns: 1fr;
+            }
+            .instructor-img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="https://catalyst-pharma.circle.so/" class="logo" target="_blank" rel="noopener noreferrer"><img src="images/logo_white_bg.jpg" alt="The Catalyst Circle" style="height: 40px; width: auto;"></a>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <a href="#forwho">Audience</a>
+            <a href="#course">Syllabus</a>
+            <a href="#instructor">Instructor</a>
+            <a href="#community">Community</a>
+            <!-- <a href="#pricing">Pricing</a> -->
+            <a href="#QA">Q&A</a>
+            <a href="#ready">Ready?</a>
+            <a href="https://catalyst-pharma.circle.so/c/public/" target="_blank" rel="noopener noreferrer"><button class="cta-button">Join Now</button></a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="hero-headline">AI Won't Replace Us.<br><span class="highlight">It Rewards the Curious Doer.</span></h1>
+        <p class="hero-subheadline"><strong>Building AI Partnership in Pharma: Mindset, Habits & Skills</strong> - The only course designed by a pharma professional, for pharma professionals who want to weaponize their domain expertise with AI</p>
+        
+        <div class="hero-cta">
+            <!-- <a href="https://catalyst-pharma.circle.so/c/building-ai-partnership-in-pharma/" target="_blank" rel="noopener noreferrer"><button class="cta-button">Get Founding Member Access</button></a> -->
+            <a href="#course"><button class="cta-button secondary">See What You'll Learn</button></a>
+        </div>
+
+        <div class="hero-proof">
+            <div class="hero-proof-item">
+                <span class="checkmark">✓</span>
+                <span><strong>50+ spots</strong> for Founding Members</span>
+            </div>
+            <div class="hero-proof-item">
+                <span class="checkmark">✓</span>
+                <span><strong>Lifetime access</strong> to all future content</span>
+            </div>
+            <div class="hero-proof-item">
+                <span class="checkmark">✓</span>
+                <span><strong>Portfolio pieces</strong> you'll actually use</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="problem">
+        <div class="section-container">
+            <h2 class="section-title">We're Watching The Shift Happen</h2>
+            <p class="section-subtitle">The industry urgency is real. The workforce readiness isn't.</p>
+
+            <div class="problem-grid">
+                <div class="problem-left">
+                    <p><strong>You know AI is coming.</strong> 85% of Big Pharmas say it's an "immediate priority." Your managers are asking about it. Your peers are experimenting. But something feels off.</p>
+
+                    <div class="problem-item">You tried your company's Chatbot a few times. Got mediocre results. Not sure where to go next.</div>
+                    <div class="problem-item">You don't know which 30% of your job would actually benefit from automation.</div>
+                    <div class="problem-item">Every course you find assumes you want to learn model training or become an "AI engineer".</div>
+                    <div class="problem-item">The thought of "will this replace me?" keeps you up at night.</div>
+
+                    <div class="problem-quote">
+                        "I am sharing my field notes from partnering with AI in pharma, so you can skip the pitfalls that I learned the hard way.<br><br> I speak your language, simplifying complex AI concepts the same way I simplify statistics for clinicians. <br><br> I know the difference between what truly matters for your growth and what's just noise."
+                        <div class="quote-source">— Kan Li, Director Biostatistics</div>
+                    </div>
+                </div>
+
+                <div class="problem-right">
+                    <div class="stat-box">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-text">of top 20 Big Pharmas cite AI as "immediate priority"</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">34%</div>
+                        <div class="stat-text">cite "lack of skilled talent" as the main barrier</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100,000+</div>
+                        <div class="stat-text">pharma data professionals in the US alone—mostly unprepared</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">0%</div>
+                        <div class="stat-text">of existing courses teach "mindset + habits + skills for pharma workflows"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR PHILOSOPHY -->
+    <section class="philosophy">
+        <div class="section-container">
+            <h2 class="section-title left">Why Most AI Courses Fail You</h2>
+            <p>They teach tools before mindset. You learn prompts, try the tools on generic examples, then revert to old habits a week later, because you never understood *why* or *when* to use AI differently in your domain.</p>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-right">
+                    <div class="philosophy-card">
+                        <div class="philosophy-card-number">1</div>
+                        <h4>Tool-First Teaching</h4>
+                        <p>"Here's ChatGPT. Here're 10 most useful prompts. Now go." You learn outputs, not thinking.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-card-number">2</div>
+                        <h4>Too Generic or Too Technical</h4>
+                        <p>"AI for healthcare" sounds massive and out of reach. "Build AI Agents" sounds another coding bootcamp.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-card-number">3</div>
+                        <h4>Passive Consumption</h4>
+                        <p>Video lectures feel educational but don't stick. Low retention = no real change.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-card-number">4</div>
+                        <h4>No Community</h4>
+                        <p>You complete. You get a certificate. You're alone again.</p>
+                    </div>
+                </div>
+
+                <div class="philosophy-left">
+                    <div class="philosophy-quote">
+                        We start differently.<br><br>
+                        <strong>Mindset</strong> before tools.<br>
+                        <strong>Why</strong> before How.<br>
+                        <strong>Frameworks</strong> before features.<br>
+                        <strong>Your work</strong> before theory. <br><br>
+                        <strong>🔥 Pharma Native</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU'LL GET -->
+    <section class="outcomes">
+        <div class="section-container">
+            <h2 class="section-title">What Actually Changes After This Course</h2>
+            <p class="section-subtitle">Not just knowledge. Tangible outcomes you can point to.</p>
+
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">⚙️</div>
+                    <h3>Agent Skills Portfolio</h3>
+                    <p> Our moat is domain expertise. We help you amplify it. Build 2-3 working agent workflows for tasks you do weekly - data analysis pipeline, trial statistical design, TLFs generation templates. Real things that proof your capability and can be used on Monday.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🎯</div>
+                    <h3>Mental Model Shift</h3>
+                    <p>Understand 'why' before 'How', know when to use AI as a thinking partner, and where to draw compliance lines. Gain a system design thinking for AI integration -  perspectives that usually skip in non-engineering training.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🤝</div>
+                    <h3>Professional Network</h3>
+                    <p>Join a community of pharma professionals navigating the same transformation. Peer learning, collaboration, opportunity sharing. This community grows with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section id="forwho", class="audience">
+        <div class="section-container">
+            <h2 class="section-title">Who This Is For</h2>
+            <p class="section-subtitle">No matter where you're coming from, you'll find a track that resonates with you.</p>
+
+            <div class="outcomes-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto;">
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔨</div>
+                    <h3>The Builders</h3>
+                    <p>Statisticians, programmers, data scientists, data managers, medical writers, medical affairs. You want to automate your daily grind, not necessarily build enterprise tools. You need practical starting points to integrate AI into your actual workflows.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">💡</div>
+                    <h3>The Innovators</h3>
+                    <p>AI/software engineers and product managers entering pharma and healthcare. You understand the tech but not the domain. You need to bridge that gap and find where AI actually creates value in our world.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧭</div>
+                    <h3>The Explorers</h3>
+                    <p>Stats Students and early-career professionals. You want early exposure to how industry reality differs from textbooks, and you want to build a portfolio that demonstrates both the mindset and skills the future pharma industry actually needs.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🎯</div>
+                    <h3>The Strategists</h3>
+                    <p>Managers and leaders. You're navigating the hype and trying to build team capability safely. You need clarity on strategy and an actionable roadmap for your organization.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: var(--text);">
+                This course is for pharma professionals who haven't yet deeply explored <strong>agentic AI</strong> but are anxious about the ground shifting. You might feel like everyone's talking about AI but you're not sure where to start.
+            </p>
+        </div>
+    </section>
+
+    <!-- COURSE STRUCTURE -->
+    <section id="course" class="course-structure">
+        <div class="section-container">
+            <h2 class="section-title">6 Weeks to Sustainable Change</h2>
+            <p class="section-subtitle">Self-paced. Project-driven. Designed for busy professionals (give 3 hours per week).</p>
+
+            <h3 style="text-align: center; margin-bottom: 2rem;">Course Highlights</h3>
+            <div class="course-grid">
+                <div class="module">
+                    <div class="module-title">Module 1: Core Philosophy</div>
+                    <div class="module-description">Why AI partnership matters. Why your domain expertise is your moat, not your vulnerability.</div>
+                    <div class="module-topics">
+                        <ul>
+                            <li>The AI wave in pharma: hype vs. reality</li>
+                            <li>Why "rapid execution" is the wrong response</li>
+                            <li>Identify your specific learning track</li>
+                            <li>Establish a safe "sandbox" for environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-title">Module 2: The Agentic Shift (Mindset)</div>
+                    <div class="module-description">From task executor to manager. Daily habits that build AI fluency.</div>
+                    <div class="module-topics">
+                        <ul>
+                            <li>Shift from casually "chatting" to managerial framework adopting</li>
+                            <li>Thinking in "human judgment + AI execution" pairs</li>
+                            <li>Overcoming "I don't know what to ask" paralysis</li>
+                            <li>Mini-project: Create a data analysis pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-title">Module 3: The Architect's Toolkit</div>
+                    <div class="module-description">Technical foundations explained for non-engineers. Context management, MCP, Agent Skills,RAG, Model Training.</div>
+                    <div class="module-topics">
+                        <ul>
+                            <li>What MCP and RAG actually are (simply)</li>
+                            <li>Why Agent Skills has most potential</li>
+                            <li>Mentor the AI to do trial design</li>
+                            <li>Roadmap for Pharma Company in next 2 years</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-title">Module 4: From Tools to Systems</div>
+                    <div class="module-description">System design thinking. Moving from single tools to integrated pharma workflows.</div>
+                    <div class="module-topics">
+                        <ul>
+                            <li>System Design 101 for pharma professionals</li>
+                            <li>Be the architect of your automation workflow</li>
+                            <li>Engineering system with AI</li>
+                            <li>Let's practice!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 4rem 0 2rem;">Detailed Curriculum</h3>
+            <div style="max-width: 900px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden;">
+                <!-- Preface -->
+                <button class="accordion">Preface</button>
+                <div class="panel">
+                    <ul>
+                        <li><strong>01</strong> From Craftsmen to System Architects — How Pharma Professionals Will Work in 2027</li>
+                   </ul>
+                </div>
+                <!-- Section 1 -->
+                <button class="accordion">Section 1: Core Philosophy</button>
+                <div class="panel">
+                    <ul>
+                        <li><strong>01</strong> Manifesto: The Paradigm Shift - Defines the urgency of the AI shift in Pharma.</li>
+                        <li><strong>02</strong> The Collaborative Ecosystem - Pick a track: Builder, Innovator, Explorer, or Strategist.</li>
+                        <li><strong>03</strong> Preparation: Tool Setup & Mindset - Essential tools and mental preparation.</li>
+                        <li><strong>04</strong> Summary and Reflection - Your First AI Partner.</li>
+                    </ul>
+                </div>
+                <!-- Section 2 -->
+                <button class="accordion">Section 2: The Agentic Shift (Mindset)</button>
+                <div class="panel">
+                    <ul>
+                        <li><strong>01</strong> Strategic Shift - Moving from "Chatting" to "Managing".</li>
+                        <li><strong>02</strong> Evolution of Interaction - Beyond the Chatbot.</li>
+                        <li><strong>03</strong> Anatomy of an Agent - Technical components explained.</li>
+                        <li><strong>04</strong> No Magic: Be a Good Manager - Personal onboarding story.</li>
+                        <li><strong>05</strong> The AI Manager Framework - Structured delegation.</li>
+                        <li><strong>06</strong> Practice - Your First Data Analysis with AI Agent.</li>
+                        <li><strong>07</strong> Summary - The Agentic Mindset.</li>
+                        <li><strong>08</strong> Homework - NotebookLM Exercise.</li>
+                        <li><strong>9-10</strong> Bonuses - Human-in-the-Loop & Know Your Team.</li>
+                    </ul>
+                </div>
+                <!-- Section 3 -->
+                <button class="accordion">Section 3: The Architect's Toolkit</button>
+                <div class="panel">
+                    <ul>
+                         <li><strong>01</strong> Principles Over Hype - Foundational principles.</li>
+                         <li><strong>02</strong> From 'Prompt Whisperer' to 'Context Architect' — How to feed the right information to AI.</li>
+                         <li><strong>03</strong> Practice - Mentoring Your AI Agent (Bayesian Optimal Interval (BOIN) Design Project).</li>
+                         <li><strong>04</strong> Practice - A Two‑Brain "Making Of".</li>
+                         <li><strong>05</strong> Practice - Blueprinting the Skill: Key Considerations.</li>
+                         <li><strong>06</strong> Practice - Best Practices for AI Mentorship.</li>
+                         <li><strong>07</strong> Giving the Agent Hands (MCP) and Training (Skills).</li>
+                         <li><strong>08</strong> The Anatomy of a Skill.</li>
+                         <li><strong>09</strong> Building the Institutional Brain (RAG).</li>
+                         <li><strong>10</strong> From 'Knowing' to 'Thinking' (Reasoning Models).</li>
+                         <li><strong>11</strong> Summary - The Architect's Toolkit.</li>
+                         <li><strong>12</strong> Homework - Build Your Own 'ORR Design' Skill Pack.</li>
+                         <li><strong>13-16</strong> Bonuses - When RAG Fails, The 'Missing Middle', The Organizational Roadmap.</li>
+                    </ul>
+                </div>
+                <!-- Section 4 -->
+                <button class="accordion">Section 4: From Tools to Systems</button>
+                <div class="panel">
+                    <ul>
+                         <li><strong>01</strong> From Craftsman to Architect - From individual task execution to designing systems.</li>
+                         <li><strong>02</strong> Practice - AutoRTLF Deep Dive: a system for automated table generation.</li>
+                         <li><strong>03</strong> Framing System Design for Statisticians - adapting system design concepts.</li>
+                         <li><strong>04</strong> Universal Design Principles (The Compass) - core design principles for building robust AI workflows.</li>
+                         <li><strong>05</strong> Engineering Large Systems with AI - Best Practice for engineering systems with AI collaboration.</li>
+                         <li><strong>06</strong> Summary - From Tools to Systems.</li>
+                         <li><strong>07</strong> Homework - Reusable Efficacy Table Template.</li>
+                    </ul>
+                </div>
+                 <!-- Section 5 -->
+                <button class="accordion">Section 5: Afterword</button>
+                <div class="panel">
+                    <ul>
+                         <li><strong>01</strong> Multi-Agent Workflow: The Digital Department - Exploring the future of multi-agent workflows.</li>
+                         <li><strong>02</strong> AI System Evaluation: The Statistician's New Frontier - Critical role of statisticians in evaluating AI for healthcare.</li>
+                         <li><strong>03</strong> Closing - Final thoughts and a call to action for the future.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-light); border-radius: 10px; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">Capstone Project: Build & Showcase</h3>
+                <p>Choose your own challenge. SDTM validation agent skill. Protocol drafting automation based on templates. TLFs QC workflow. Or even solve a pain point for your clinical scientists.</p>
+                <p style="margin-top: 1rem; color: var(--text); font-weight: 600;">Top projects will be featured on LinkedIn + added to public Guild Portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY VALUE -->
+    <section id="community" class="community">
+        <div class="section-container">
+            <h2 class="section-title">The Hidden Value: Community</h2>
+            <p class="section-subtitle">Courses end. This community grows with you.</p>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="https://catalyst-pharma.circle.so/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/logo_white_bg.jpg" alt="The Catalyst Circle" style="max-width: 300px; height: auto; border-radius: 10px;">
+                </a>
+            </div>
+
+            <div class="community-grid">
+                <div class="community-card">
+                    <h3>🎯 Professional Development</h3>
+                    <p>The network knows your skills, your projects, your goals. We connect, we grow, we share, we shape the best practices and standards for the future AI in pharma.</p>
+                    <div class="community-value">A network that supports your professional growth</div>
+                </div>
+                <div class="community-card">
+                    <h3>💡 Peer Problem-Solving</h3>
+                    <p>Workshop space where members help each other. Someone built a CDISC agent? You ask how. You solved a compliance issue? They learn from you.</p>
+                    <div class="community-value">Members create value for each other</div>
+                </div>
+                <div class="community-card">
+                    <h3>🔗 Ongoing Learning</h3>
+                    <p>The course keeps evolving.The community keeps evolving. More knowledge are shared as AI landscape changes.</p>
+                    <div class="community-value">Lifetime access to all future content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO & RECOGNITION -->
+    <section class="portfolio">
+        <div class="section-container">
+            <h2 class="section-title">Your Work Gets Seen</h2>
+            <p class="section-subtitle">Not hidden behind a login. Built in public on GitHub and LinkedIn.</p>
+
+            <div class="portfolio-content">
+                <div class="portfolio-left">
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon">📂</div>
+                        <div class="portfolio-text">
+                            <h4>GitHub Portfolio</h4>
+                            <p>Your agent skills live in public repos. Real code. Real impact. People study it, use it, and learn from you.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="portfolio-item">
+                        <div class="portfolio-icon">📊</div>
+                        <div class="portfolio-text">
+                            <h4>Guild Portfolio Website</h4>
+                            <p>Public showcase of 50+ member projects. Recruiters, managers, peers see what's possible.</p>
+                        </div>
+                    </div> -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon">🌟</div>
+                        <div class="portfolio-text">
+                            <h4>Featured Builder Posts</h4>
+                            <p>Build something great? Share it in the community. Top projects get amplified — we feature your LinkedIn posts to your network.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon">🏆</div>
+                        <div class="portfolio-text">
+                            <h4>Recognition Tiers</h4>
+                            <p>Verified Builder → Featured Builder → Core Catalyst. Real status. Real access. Real community privileges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-right">
+                    <h3>Why This Matters</h3>
+                    <p>In the AI era, influence comes from <strong>showing</strong>, not just <strong>knowing</strong>.</p>
+                    <p>Opportunity comes when you shift from <strong>consuming</strong> to <strong>creating</strong>. Your work becomes your voice. The community becomes your stage.</p>
+                    <p> <strong> Go-to-Market and Fast Iteration.</strong></p>
+                    <p>This portfolio is proof. And it grows throughout your journey as you build more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTOR -->
+    <section id="instructor" class="instructor">
+        <div class="section-container">
+            <h2 class="section-title">Meet Your Guide</h2>
+            <div class="instructor-grid">
+                <div class="instructor-left">
+                    <img src="images/Li_Kan.jpg" alt="Kan Li" class="instructor-img" style="width: 65%; height: auto; object-fit: contain; margin-left: auto; display: block;">
+                </div>
+                <div class="instructor-content">
+                    <h3>Kan Li</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Biostatistician | Engineer | System Architect | ACRP-CP</p>
+                    <div class="instructor-bio">
+                        <p>I'm a biostatistician, rooted in pharma and clinical research. But I'm also an engineer who cares deeply about system design and practical solutions—perspectives often missing from traditional statistical training.</p>
+                        <p>I am a learner, just like you. I have been growing alongside AI, integrating it into how I actually work every day. I understand the friction you face because I face it too.</p>
+                        <p>My role is to be a filter. I help you figure out what truly matters for your professional growth and what's just AI noise. We aren't aiming to become AI Engineers. We are becoming Architects of our own domain.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTOR LINKS -->
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://www.linkedin.com/in/kan-li-a3340116" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #0077B5; color: white; text-decoration: none; border-radius: 5px; margin: 0 0.5rem; font-weight: 600; transition: background 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn Profile
+        </a>
+        <a href="https://scholar.google.com/citations?user=sHHdXr8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #4285F4; color: white; text-decoration: none; border-radius: 5px; margin: 0 0.5rem; font-weight: 600; transition: background 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+            </svg>
+            Google Scholar
+        </a>
+        <a href="http://li-kan.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 0 0.5rem; font-weight: 600; transition: background 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            Personal Website
+        </a>
+    </div>
+    
+    <!-- WHY ME -->
+    <section class="why-me">
+        <div class="section-container">
+            <h2 class="section-title left">Why Choose This Course</h2>
+
+            <div class="why-me-grid">
+                <div class="why-me-right">
+                    <div class="why-me-item">
+                        <div class="why-me-check">✓</div>
+                        <div class="why-me-content">
+                            <h4>Built by a Pharma Professional, Not a Consultant</h4>
+                            <p>I'm in pharma. I do this work. I'm not theorizing about AI—I'm solving real SDTM, clinical reporting, and regulatory challenges alongside you.</p>
+                        </div>
+                    </div>
+                    <div class="why-me-item">
+                        <div class="why-me-check">✓</div>
+                        <div class="why-me-content">
+                            <h4>Designed for Non-Engineers in Pharma Operations</h4>
+                            <p>Statisticians, statistical programmers, data scientists, data managers, medical writers, medical affairs. Not drug discovery. Not Python. We address your actual constraints.</p>
+                        </div>
+                    </div>
+                    <div class="why-me-item">
+                        <div class="why-me-check">✓</div>
+                        <div class="why-me-content">
+                            <h4>Mindset-First Framework</h4>
+                            <p>Most courses teach tools. We teach thinking. Once you understand *why*, the tools become obvious.</p>
+                        </div>
+                    </div>
+                    <div class="why-me-item">
+                        <div class="why-me-check">✓</div>
+                        <div class="why-me-content">
+                            <h4>Course and Community Evolve Together</h4>
+                            <p>This isn't a pre-recorded course frozen in time. As we learn more together and the technology shifts, the material grows. </p>
+                        </div>
+                    </div>
+                    <div class="why-me-item">
+                        <div class="why-me-check">✓</div>
+                        <div class="why-me-content">
+                            <h4>Real Portfolio Outcomes</h4>
+                            <p>You build actual agent skills. You showcase real work. Not badges. Not certificates. Tangible proof.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-me-left">
+                    <h3 style="margin-bottom: 1.5rem;">How We Compare</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th style="width: 30%;">Dimension</th>
+                            <th>Existing Programs</th>
+                            <th>The Catalyst Circle</th>
+                        </tr>
+<!--                         <tr>
+                            <td><strong>Price</strong></td>
+                            <td>$400-50k</td>
+                            <td class="your-row">$299 (Standard)</td>
+                        </tr> -->
+                        <tr>
+                            <td><strong>Prerequisites</strong></td>
+                            <td>Technical/Exec role</td>
+                            <td class="your-row">None</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Format</strong></td>
+                            <td>Video/Live cohorts</td>
+                            <td class="your-row">Text (30,000+ words), 10+ Videos,  5+ Projects</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Focus</strong></td>
+                            <td>Technology, Products, Drug discovery or generic</td>
+                            <td class="your-row">Pharma operations (data related)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Outcome</strong></td>
+                            <td>Certificate</td>
+                            <td class="your-row">Portfolio + network</td>
+                        </tr>
+<!--                         <tr>
+                            <td><strong>Refund Policy</strong></td>
+                            <td>Rarely / Strict "No Refund" Policies</td>
+                            <td class="your-row">Risk-Free 14-Day Money-Back Guarantee</td>
+                        </tr> -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJECTION HANDLING -->
+    <section id = 'QA', class="objections">
+        <div class="section-container">
+            <h2 class="section-title">Common Questions</h2>
+
+            <div class="objections-grid">
+                <div class="objection-card">
+                    <div class="objection-question">Q: I'm not technical. Is this too advanced?</div>
+                    <div class="objection-answer">No. This course is designed for pharma data professionals. While basic familiarity with data or programming helps, we focus on mindset and architecture, not writing complex software code from scratch. We explain MCP, RAG, and Multi-Agent in pharma language, focusing specifically on the agent skills that has the most potential to amplify your existing domain expertise.</div>
+                </div> 
+                <div class="objection-card">
+                    <div class="objection-question">Q: My company has compliance restrictions on AI tools. Will this apply?</div>
+                    <div class="objection-answer">Yes. We specifically discuss "agentic AI in regulated industries". You do not need to use your company's data or infrastructure. We guide you finding public-domain datasets and documents. Experient in personal environments so you can build your skills freely before bringing them to work.</div>
+                </div>
+                <div class="objection-card">
+                    <div class="objection-question">Q: I'm too busy for a long course.</div>
+                    <div class="objection-answer">6 weeks, self-paced, 3-4 hours per week. Designed for 40+ hour work weeks. No required live sessions.</div>
+                </div>
+                <div class="objection-card">
+                    <div class="objection-question">Q: How is this different from other tutorials?</div>
+                    <div class="objection-answer">Sequencing. Frameworks. Pharma-specific examples. Peer community. Capstone projects. It's the difference between watching cooking videos and actually cooking dinner for 100 people.</div>
+                </div>
+                <div class="objection-card">
+                    <div class="objection-question">Q: Will others actually care about this?</div>
+                    <div class="objection-answer">People care about results. When you can show an SDTM validation agent skill you built, or a system that saved your team 10 hours a week—that matters far more than any certificate.</div>
+                </div>
+                <div class="objection-card">
+                    <div class="objection-question">Q: What if I don't finish?</div>
+                    <div class="objection-answer">You keep lifetime access to all content and the community. Members often re-engage after 3-6 months as they identify new use cases in their work.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING - commented out
+    <section id="pricing" class="pricing">
+        <div class="section-container">
+            <h2 class="section-title">Pricing: Phase-Based Escalation</h2>
+
+            <div class="pricing-highlight">
+                <h3>⏰ Founding Member Period: 3 Weeks</h3>
+                <p>First 50 members get lifetime access to ALL future content.</p>
+                <div class="countdown">🎁 Early Adopter Price: <strong>$🤫</strong> </div>
+                <span style="color: var(--text-light); text-decoration: line-through; margin-left: 1em;">$299</span>
+
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-light); border-radius: 10px;">
+                <h3 style="text-align: left; margin-bottom: 1rem; color: var(--text);">Why is there a price? (A Personal Story)</h3>
+                <p style="text-align: left; color: var(--text-light); font-size: 0.95rem; line-height: 1.8;">
+                    I have 100+ free courses bookmarked in 'Favorite' folders. I've finished zero. 
+                    <br> 
+                    The only courses that actually changed me were the ones I paid for mysef. When your money is on the line, you show up differently. <strong>You fight to get your money's worth. You actually do the work.</strong> 
+                    <br>
+                    I priced this course for exactly the same reason: to help you flip that switch. Yes, it covers my costs—but more importantly, it demands your commitment.
+                    <br>
+                    I want this to be the most valuable investment you make this year. So I offer a <strong>14-Day Money-Back Guarantee</strong>. 
+                    <br>
+                    If you jump in, do the work, and feel it wasn't worth it, I'll refund you. No hard feelings. The ultimate goal is to push you to learn and master the skill. 
+                    <br>
+                    <em>All I ask is you use this policy honestly—don't take advantage of a creator trying to help you grow.</em>
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-stage">Phase 1: Weeks 1-3</div>
+                    <div class="pricing-price">$199</div>
+                    <div class="pricing-duration">Founding Member</div>
+                    <div class="pricing-features">
+                        <li>All 4 core modules</li>
+                        <li>Lifetime community access</li>
+                        <li>All future bonus sections FREE</li>
+                        <li>Guild Portfolio access</li>
+                        <li>Founding Member recognition</li>
+                    </div>
+                    <a href="https://catalyst-pharma.circle.so/c/building-ai-partnership-in-pharma/" target="_blank" rel="noopener noreferrer"><button class="cta-button" style="width: 100%; margin-top: 1.5rem;">Get Founding Access (50 spots)</button></a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-stage">Phase 2: Week 4-Month 6</div>
+                    <div class="pricing-price">$299</div>
+                    <div class="pricing-duration">Standard Price</div>
+                    <div class="pricing-features">
+                        <li>All 4 core modules</li>
+                        <li>Lifetime community access</li>
+                        <li>All future bonus sections FREE</li>
+                        <li>Guild Portfolio access</li>
+                        <br>
+                    </div>
+                    <button class="cta-button secondary" style="width: 100%; margin-top: 1.5rem;">Join at $299 Later</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-stage">Phase 3: Months 6+</div>
+                    <div class="pricing-price">$349+</div>
+                    <div class="pricing-duration">Including Bonus Sections</div>
+                    <div class="pricing-features">
+                        <li>All 4 core modules</li>
+                        <li>One Whole Bonus Section added</li>
+                        <li>Lifetime community access</li>
+                        <li>All future bonus sections FREE</li>
+                        <li>Guild Portfolio access</li>
+                    </div>
+                    <button class="cta-button secondary" style="width: 100%; margin-top: 1.5rem;">Join at $349+ Later</button>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-light); border-radius: 10px;">
+                <p style="text-align: center; color: var(--text-light); font-size: 0.95rem;">
+                    <strong>Team Pricing:</strong> For groups of 10+ colleagues, contact us at <a href="mailto:catalyst.circle.pharma@gmail.com">The Catalyst Circle Pharma</a> for bulk enrollment at $245/seat (18% savings vs. standard $299). Plus a dedicated, private spaces exclusively for your team. <br>
+                    <strong>Internal Program:</strong> For DSI employees, a royalty-free version will be available via internal training. Note that this may exclude wider community access. <br>
+					
+                </p>
+            </div> 
+            
+        </div>
+    </section>
+    -->
+
+    <!-- TESTIMONIALS -->
+<!--     <section class="testimonials">
+        <div class="section-container">
+            <h2 class="section-title">From Beta Testers</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-quote"> </div>
+                    <div class="testimonial-author"> </div>
+                    <div class="testimonial-role"> </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote"> </div>
+                    <div class="testimonial-author"> </div>
+                    <div class="testimonial-role"> </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"I was spending 6 hours every week on SDTM QC checks. After this course, I built an agent that does the first pass in 30 minutes. My manager asked me to train the team."</div>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Clinical Data Manager, CRO</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"I came from Google. I thought I'd just 'apply AI to pharma.' This course taught me that the hard part isn't the AI—it's understanding workflows well enough to know what to automate."</div>
+                    <div class="testimonial-author">James Rodriguez</div>
+                    <div class="testimonial-role">Product Manager, Biotech Startup</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"In my interviews, I showed the CDISC QC agent I built. Three companies asked if they could use it. I got offers from all three."</div>
+                    <div class="testimonial-author">Maria Silva</div>
+                    <div class="testimonial-role">Recent Biostatistics MS Graduate</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"My team took this course together. Within 3 months, we'd automated 40% of our data review process. Our SVP asked me to present our approach to all of R&D."</div>
+                    <div class="testimonial-author">David Thompson</div>
+                    <div class="testimonial-role">Director of Biostatistics, Pharma</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FINAL CTA -->
+    <section id="ready" class="final-cta">
+        <div class="section-container">
+            <h2>Ready to Catalyze Your Future?</h2>
+
+            <p style="margin-bottom: 2rem;">Still deciding? Check out my <a href="https://www.linkedin.com/in/kan-li-a3340116" target="_blank" rel="noopener noreferrer" style="color: white;">LinkedIn Posts</a>. If you like how I think, you'll like how I teach.</p>
+         
+            
+            <div style="max-width: 900px; margin: 2rem auto 3rem; text-align: left;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid white;">
+                    <h3 style="color: white; font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Start Small, Think Big.</h3>
+                    <p style="color: rgba(255, 255, 255, 0.95); line-height: 1.8; margin: 0;">
+                        AI-driven drug development sounds massive and out of reach. But here's what's real: start with what we do every day. Decompose our daily work into manageable pieces. Run experiments. Understand what AI can and can't do. Document our why, how, and what. Capture the lessons. This is how we build both the mindset and the habits. Not through vision—through doing. This is the practical path where AI actually integrates into pharma.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; border-left: 4px solid white;">
+                    <h3 style="color: white; font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Don't Limit It to Work.</h3>
+                    <p style="color: rgba(255, 255, 255, 0.95); line-height: 1.8; margin: 0;">
+                        More importantly, don't confine AI partnership to our job—let it become a way of thinking that transforms your life. We'll make better decisions, ask better questions, think more clearly about what we want. The conversations we have with AI sharpen our own judgment. The assistant becomes a mentor. And that extends far beyond the job description.
+                    </p>
+                </div>
+            </div>
+            
+              
+            <div>
+                <!-- <a href="https://catalyst-pharma.circle.so/c/building-ai-partnership-in-pharma/" target="_blank" rel="noopener noreferrer"><button class="cta-button">Get Founding Member Access</button></a> -->
+                <a href="#course" style="text-decoration: none;"><button class="cta-button" style="background: white; color: var(--primary); margin-left: 1rem;">See the Full Curriculum</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="section-container">
+            <p>The Catalyst Circle | Building AI Partnership in Pharma | Contact: <a href="mailto:catalyst.circle.pharma@gmail.com" style="color: rgb(204, 200, 200);">catalyst.circle.pharma@gmail.com</a></p>
+            <!-- <p style="margin-top: 1rem; opacity: 0.6;">Proudly Supporting St. Jude Children's Research Hospital</p> -->
+        </div>
+    </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>
